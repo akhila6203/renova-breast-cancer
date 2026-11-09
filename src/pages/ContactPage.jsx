@@ -72,7 +72,7 @@ export default function ContactPage() {
   className="border-b border-[#e5e9e3] bg-[#f7f9f6]"
 >
   <div className="page-container px-5 py-4 sm:px-8 lg:px-12">
-    <ol className="flex items-center gap-2 text-[15px]">
+    <ol className="flex items-center gap-2 text-[16px]">
       <li>
         <Link
           to="/"
@@ -97,7 +97,8 @@ export default function ContactPage() {
 </nav>
 
 {/* CONTACT PAGE HEADING */}
-<section className="mx-auto w-full max-w-7xl px-5 pt-10 text-center sm:px-8 sm:pt-12 lg:px-12">
+{/* <section className="mx-auto w-full max-w-7xl px-5 pt-10 text-center sm:px-8 sm:pt-12 lg:px-12"> */}
+<section className="page-container mx-auto w-full px-5 pt-10 text-center sm:px-8 sm:pt-12 lg:px-12">
   <p className="text-sm font-bold tracking-[0.18em] text-[#f26322]">
     CONTACT US
   </p>
@@ -112,7 +113,8 @@ export default function ContactPage() {
   </p>
 </section>
       {/* CONTACT INFORMATION + COMPACT FORM */}
-      <section className="page-container mx-auto grid w-full max-w-7xl items-start gap-6 px-5 pb-10 pt-8 sm:px-8 sm:pt-10 lg:grid-cols-2 lg:gap-8 lg:px-12">
+      <section className="page-container mx-auto grid w-full items-start gap-6 px-5 pb-10 pt-8 sm:px-8 sm:pt-10 lg:grid-cols-2 lg:gap-8 lg:px-12">
+      {/* <section className="page-container mx-auto grid w-full max-w-7xl items-start gap-6 px-5 pb-10 pt-8 sm:px-8 sm:pt-10 lg:grid-cols-2 lg:gap-8 lg:px-12"> */}
        
 
         {/* LEFT: TWO ADDRESSES + CONTACT NUMBERS */}
@@ -136,14 +138,14 @@ export default function ContactPage() {
                     size={17}
                     className="mt-1 shrink-0 text-royal"
                   />
-                  <p className="text-[15px] leading-6 text-ink">
+                  <p className="text-[16px] leading-6 text-ink">
                     {location.address}
                   </p>
                 </div>
 
                 <a
                   href={`tel:${location.phone.replace(/[^+\d]/g, "")}`}
-                  className="mt-3 flex items-start gap-2 text-[15px] font-semibold text-royal transition-colors hover:text-[#f26322]"
+                  className="mt-3 flex items-start gap-2 text-[16px] font-semibold text-royal transition-colors hover:text-[#f26322]"
                 >
                   <Phone size={17} className="mt-0.5 shrink-0" />
                   <span>{location.phone}</span>
@@ -151,7 +153,7 @@ export default function ContactPage() {
 
                 <a
                   href={`mailto:${location.email}`}
-                  className="mt-2 flex items-start gap-2 break-all text-[15px] font-semibold text-royal transition-colors hover:text-[#f26322]"
+                  className="mt-2 flex items-start gap-2 break-all text-[16px] font-semibold text-royal transition-colors hover:text-[#f26322]"
                 >
                   <Mail size={17} className="mt-0.5 shrink-0" />
                   <span>{location.email}</span>
@@ -170,10 +172,10 @@ export default function ContactPage() {
               <h2 className="text-[16px] font-bold text-heading">
                 Opening hours
               </h2>
-              <p className="mt-1 text-[15px] leading-6 text-ink">
+              <p className="mt-1 text-[16px] leading-6 text-ink">
                 {hospital.hours}
               </p>
-              <p className="mt-2 text-[15px] leading-6 text-ink">
+              <p className="mt-2 text-[16px] leading-6 text-ink">
                 General email:{" "}
                 <a
                   href={`mailto:${hospital.email}`}
@@ -185,29 +187,29 @@ export default function ContactPage() {
             </div>
           </article>
           {/* FOLLOW US */}
-<div className="rounded-2xl border border-line bg-white p-5 shadow-sm">
-  <h2 className="text-lg font-bold text-heading">Follow Us</h2>
+          <div className="rounded-2xl border border-line bg-white p-5 shadow-sm">
+            <h2 className="text-lg font-bold text-heading">Follow Us</h2>
 
-  <p className="mt-1 text-[15px] text-ink">
-    Stay connected with our healthcare updates.
-  </p>
+            <p className="mt-1 text-[15px] text-ink">
+              Stay connected with our healthcare updates.
+            </p>
 
-  <div className="mt-3 flex gap-3">
-    {socialLinks.map(({ name, Icon, href }) => (
-      <a
-        key={name}
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={name}
-        title={name}
-        className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-royal transition duration-300 hover:-translate-y-1 hover:bg-royal hover:text-white"
-      >
-        <Icon size={19} />
-      </a>
-    ))}
-  </div>
-</div>
+            <div className="mt-3 flex gap-3">
+              {socialLinks.map(({ name, Icon, href }) => (
+                <a
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={name}
+                  title={name}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-royal transition duration-300 hover:-translate-y-1 hover:bg-royal hover:text-white"
+                >
+                  <Icon size={19} />
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
 
 
@@ -303,7 +305,8 @@ export default function ContactPage() {
       {/* MAPS SECTION */}
       <section
   id="locations"
-  className="page-container mx-auto mt-12 w-full max-w-7xl scroll-mt-28 px-5 pb-12 sm:mt-16 sm:px-8 lg:px-12"
+  className="page-container mx-auto mt-12 w-full scroll-mt-28 px-5 pb-12 sm:mt-16 sm:px-8 lg:px-12"
+  // className="page-container mx-auto mt-12 w-full max-w-7xl scroll-mt-28 px-5 pb-12 sm:mt-16 sm:px-8 lg:px-12"
 >
         <SectionTitle
           center={true}
@@ -343,14 +346,14 @@ export default function ContactPage() {
                     size={20}
                     className="mt-0.5 shrink-0 text-ink"
                   />
-                  <p className="text-[15px] leading-6 text-ink">
+                  <p className="text-[16px] leading-6 text-ink">
                     {location.address}
                   </p>
                 </div>
 
                 <a
                   href={`tel:${location.phone.replace(/[^+\d]/g, "")}`}
-                  className="mt-3 flex items-start gap-3 text-[15px] font-semibold text-royal hover:text-[#f26322]"
+                  className="mt-3 flex items-start gap-3 text-[16px] font-semibold text-royal hover:text-[#f26322]"
                 >
                   <Phone size={19} className="mt-0.5 shrink-0" />
                   <span>{location.phone}</span>
@@ -358,7 +361,7 @@ export default function ContactPage() {
 
                 <a
                   href={`mailto:${location.email}`}
-                  className="mt-3 flex items-start gap-3 break-all text-[15px] font-semibold text-royal hover:text-[#f26322]"
+                  className="mt-3 flex items-start gap-3 break-all text-[16px] font-semibold text-royal hover:text-[#f26322]"
                 >
                   <Mail size={19} className="mt-0.5 shrink-0" />
                   <span>{location.email}</span>

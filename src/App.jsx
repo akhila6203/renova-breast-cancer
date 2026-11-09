@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import FloatingActions from "./components/FloatingActions";
 import {
   HomePage,
-  // AboutPage,
+  AboutPage,
   // ServicesPage,
   // ServiceDetailPage,
   // TeamPage,
@@ -18,6 +18,11 @@ import {
   NotFoundPage,
 } from "./pages/Pages";
 import PatientCareDetailPage from "./pages/PatientCareDetailPage";
+
+import DoctorsPage from "./pages/DoctorsPage";
+import DoctorDetailsPage from "./pages/DoctorDetailsPage";
+import SpecialitiesPage from "./pages/SpecialitiesPage";
+import SpecialityDetailPage from "./pages/SpecialityDetailPage";
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -47,7 +52,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/about" element={<AboutPage />} /> */}
+        <Route path="/about" element={<AboutPage />} />
         {/* <Route path="/services" element={<ServicesPage />} /> */}
         {/* <Route path="/services/:slug" element={<ServiceDetailPage />} /> */}
         {/* <Route path="/our-team" element={<TeamPage />} /> */}
@@ -55,9 +60,15 @@ export default function App() {
         {/* <Route path="/blogs" element={<BlogsPage />} /> */}
         <Route path="/patient-care" element={<PatientCarePage />} />\
         <Route
-  path="/patient-care/:programme"
-  element={<PatientCareDetailPage />}
-/>
+          path="/patient-care/:programme"
+          element={<PatientCareDetailPage />}
+        />
+
+        <Route path="/specialities" element={<SpecialitiesPage />} />
+        <Route path="/specialities/:slug" element={<SpecialityDetailPage />} />
+        <Route path="/doctors" element={<DoctorsPage />} />
+        <Route path="/doctors/:slug" element={<DoctorDetailsPage />} />
+
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/appointments" element={<AppointmentsPage />} />
         <Route path="*" element={<NotFoundPage />} />

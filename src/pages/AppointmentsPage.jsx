@@ -48,15 +48,19 @@ export default function AppointmentsPage() {
       </nav>
 
       {/* PAGE HEADING */}
-      <section className="mx-auto w-full max-w-5xl px-5 pt-10 text-center sm:px-8 sm:pt-12 lg:px-12">
+      {/* <section className="mx-auto w-full max-w-5xl px-5 pt-10 text-center sm:px-8 sm:pt-12 lg:px-12"> */}
+      <section className="page-container mx-auto w-full px-5 pt-10 text-center sm:px-8 sm:pt-12 lg:px-12">
         
         <p className="text-sm font-bold tracking-[0.18em] text-[#f26322]">
           APPOINTMENTS
         </p>
-
+{/* 
         <h1 className="display-font mx-auto mt-3 max-w-3xl text-3xl font-bold leading-tight text-[#304b3c] sm:text-4xl lg:text-5xl">
           Let's arrange your consultation
-        </h1>
+        </h1> */}
+        <h1 className="display-font mx-auto mt-3 w-full text-3xl font-bold leading-tight text-[#304b3c] sm:text-4xl lg:whitespace-nowrap lg:text-5xl">
+  Let's arrange your consultation
+</h1>
 
         <p className="mx-auto mt-4 max-w-2xl text-[16px] leading-7 text-[#304b3c]">
           Request an appointment with our healthcare team. Share your details
@@ -66,6 +70,7 @@ export default function AppointmentsPage() {
 
       {/* APPOINTMENT FORM */}
       <section className="mx-auto w-full max-w-6xl px-5 pb-14 pt-8 sm:px-8 sm:pb-16 sm:pt-10 lg:px-12">
+      {/* <section className="page-container mx-auto w-full px-5 pb-14 pt-8 sm:px-8 sm:pb-16 sm:pt-10 lg:px-12"> */}
         <div className="rounded-3xl border border-[#dce5da] bg-white p-5 shadow-sm sm:p-8 lg:p-10">
           {submitted ? (
             <div
@@ -175,6 +180,40 @@ export default function AppointmentsPage() {
                     />
                   </div>
                 </label>
+                {/* CITY / COUNTRY */}
+<label className="block text-[15px] font-semibold text-[#304b3c]">
+  City / Country
+
+  <input
+    name="cityCountry"
+    type="text"
+    autoComplete="country-name"
+    maxLength={150}
+    placeholder="Enter your city and country"
+    className="mt-2 min-h-11 w-full rounded-xl border border-[#cfded0] bg-[#fffdf9] px-3 py-2.5 text-[15px] font-normal text-[#304b3c] outline-none transition focus:border-[#304b3c] focus:ring-2 focus:ring-[#304b3c]/10"
+  />
+</label>
+{/* PREFERRED RENOVA LOCATION */}
+<label className="block text-[15px] font-semibold text-[#304b3c]">
+  Preferred RENOVA Location
+
+  <select
+    name="preferredLocation"
+    defaultValue=""
+    className="mt-2 min-h-11 w-full rounded-xl border border-[#cfded0] bg-[#fffdf9] px-3 py-2.5 text-[15px] font-normal text-[#304b3c] outline-none transition focus:border-[#304b3c] focus:ring-2 focus:ring-[#304b3c]/10"
+  >
+    <option value="">Choose a RENOVA location</option>
+    <option value="Care Hospitals - Hi-tech City">
+      kims Hospitals - Hi-tech City
+    </option>
+    <option value="Care Hospitals - Banjara Hills">
+      Kims Hospitals - Banjara Hills
+    </option>
+    <option value="No Preference">
+      No Preference
+    </option>
+  </select>
+</label>
 
                 <label className="block text-[15px] font-semibold text-[#304b3c]">
                   Age
@@ -322,6 +361,23 @@ export default function AppointmentsPage() {
                     className="mt-2 min-h-20 w-full resize-y rounded-xl border border-[#cfded0] bg-[#fffdf9] px-3 py-2.5 text-[15px] font-normal leading-6 text-[#304b3c] outline-none transition focus:border-[#304b3c] focus:ring-2 focus:ring-[#304b3c]/10"
                   />
                 </label>
+                {/* UPLOAD REPORTS - OPTIONAL */}
+<label className="block text-[15px] font-semibold text-[#304b3c] md:col-span-2">
+  Upload Reports <span className="font-normal">(Optional)</span>
+
+  <input
+    name="reports"
+    type="file"
+    accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+    multiple
+    className="mt-2 block min-h-11 w-full rounded-xl border border-[#cfded0] bg-[#fffdf9] px-3 py-2 text-[14px] font-normal text-[#304b3c] outline-none file:mr-4 file:rounded-lg file:border-0 file:bg-[#e8f0ea] file:px-4 file:py-2 file:font-semibold file:text-[#304b3c] hover:file:bg-[#dce9df] focus:border-[#304b3c]"
+  />
+
+  <span className="mt-1 block text-[13px] font-normal text-[#52735d]">
+    You can upload medical reports, scans or prescriptions.
+    Accepted formats: PDF, JPG, PNG, DOC and DOCX.
+  </span>
+</label>
               </div>
 
               {/* CONSENT */}

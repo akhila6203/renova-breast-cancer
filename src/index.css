@@ -30,7 +30,14 @@ html {
   -ms-overflow-style: none;
 }
 
-* {
+/* * { */
+  /* scrollbar-width: none;
+  -ms-overflow-style: none;
+} */
+ *,
+*::before,
+*::after {
+  box-sizing: border-box;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -128,9 +135,12 @@ img {
     @apply px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24;
   }
 
-  .page-container {
+  /* .page-container {
     @apply mx-auto w-full max-w-[1440px];
-  }
+  } */
+   .page-container {
+  @apply mx-auto w-full max-w-[1600px];
+}
 
   .premium-card {
     @apply rounded-[1.75rem] border border-line bg-white shadow-premium;
@@ -292,5 +302,70 @@ footer.site-footer svg {
 
   .connector {
     animation: none;
+  }
+}
+
+
+
+/* =========================================
+   SPECIALITY CARDS - SUBTLE PULSE ANIMATION
+========================================= */
+
+.speciality-card {
+  isolation: isolate;
+  animation: speciality-soft-pulse 4s ease-in-out infinite;
+}
+
+.speciality-card:nth-child(3n + 1) {
+  animation-delay: 0s;
+}
+
+.speciality-card:nth-child(3n + 2) {
+  animation-delay: 0.6s;
+}
+
+.speciality-card:nth-child(3n + 3) {
+  animation-delay: 1.2s;
+}
+
+.speciality-card-glow {
+  background: linear-gradient(
+    135deg,
+    rgba(232, 240, 234, 0.75),
+    rgba(255, 243, 236, 0.5)
+  );
+}
+
+@keyframes speciality-soft-pulse {
+  0%,
+  100% {
+    box-shadow: 0 5px 20px rgba(47, 70, 56, 0.07);
+  }
+
+  50% {
+    box-shadow: 0 8px 24px rgba(79, 115, 89, 0.13);
+  }
+}
+
+/* Hover movement */
+.speciality-card:hover {
+  animation-play-state: paused;
+  transform: translateY(-7px);
+}
+
+/* Detail page smooth sections */
+.speciality-detail-section {
+  scroll-margin-top: 100px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .speciality-card {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .speciality-card:hover {
+    transform: none !important;
   }
 }
