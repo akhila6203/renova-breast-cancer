@@ -413,10 +413,14 @@ export default function Header() {
             <BrandLogo onClick={closeAll} compact />
 
             {/* DESKTOP NAVIGATION */}
-            <nav
+            {/* <nav
               className="ml-auto hidden items-center gap-4 2xl:flex"
               aria-label="Main navigation"
-            >
+            > */}
+            <nav
+  className="ml-auto hidden items-center gap-3 min-[1300px]:flex xl:gap-3"
+  aria-label="Main navigation"
+>
               {navigation.map((item) => (
                 <div
                   key={item.label}
@@ -438,13 +442,20 @@ export default function Header() {
                     to={item.path}
                     end={item.path === "/"}
                     onClick={() => setActiveDropdown(null)}
+                    // className={({ isActive }) =>
+                    //   `whitespace-nowrap py-6 text-[16px] font-semibold transition-colors duration-200 ${
+                    //     isActive
+                    //       ? "text-[#E98A43]"
+                    //       : "text-ink hover:text-[#08614F]"
+                    //   }`
+                    // }
                     className={({ isActive }) =>
-                      `whitespace-nowrap py-6 text-[16px] font-semibold transition-colors duration-200 ${
-                        isActive
-                          ? "text-[#E98A43]"
-                          : "text-ink hover:text-[#08614F]"
-                      }`
-                    }
+  `whitespace-nowrap py-6 text-[14px] min-[1450px]:text-[15px] min-[1600px]:text-[16px] font-semibold transition-colors duration-200 ${
+    isActive
+      ? "text-[#E87744]"
+      : "text-ink hover:text-[#4F7359]"
+  }`
+}
                   >
                     {item.label}
                   </NavLink>
@@ -512,12 +523,16 @@ export default function Header() {
             </nav>
 
             {/* APPOINTMENT AND MOBILE MENU */}
-            <div className="ml-auto flex shrink-0 items-center gap-2 2xl:ml-3">
-
-              <Link
+            {/* <div className="ml-auto flex shrink-0 items-center gap-2 2xl:ml-3"> */}
+                <div className="ml-3 flex shrink-0 items-center gap-2 min-[1300px]:ml-2">
+              {/* <Link
                 to="/appointments"
                 className="btn-header hidden sm:inline-flex"
-              >
+              > */}
+              <Link
+  to="/appointments"
+  className="btn-header hidden min-[1300px]:inline-flex"
+>
                 <CalendarDays size={16} />
                 Book an Appointment
               </Link>
@@ -530,8 +545,8 @@ export default function Header() {
                 }}
                 aria-label={open ? "Close menu" : "Open menu"}
                 aria-expanded={open}
-                aria-controls="mobile-navigation"
-                className="rounded-xl border border-line p-2 text-navy 2xl:hidden"
+                aria-controls="mobile-navigation"className="rounded-xl border border-line p-2 text-navy min-[1300px]:hidden"
+                // className="rounded-xl border border-line p-2 text-navy 2xl:hidden"
               >
                 {open ? <X size={22} /> : <Menu size={22} />}
               </button>

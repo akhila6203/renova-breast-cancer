@@ -463,174 +463,6 @@ export const healthCategories = [
   },
 ];
 
-// export const healthCategories = [
-//   {
-//     slug: "cancer-basics",
-//     title: "Cancer Basics",
-//     subtitle: "Understand cancer from the beginning.",
-//     description:
-//       "Learn what cancer is, how abnormal cells develop, how tumours grow, and the difference between benign and malignant tumours. Explore cancer stages, grades, metastasis and the role of a multidisciplinary tumour board.",
-//     image:
-//       "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85",
-//     topics: [
-//       "What Is Cancer?",
-//       "How Cancer Develops",
-//       "Benign vs Malignant Tumours",
-//       "Understanding Cancer Stages",
-//       "Cancer Grades Explained",
-//       "How Cancer Spreads",
-//       "What Is Metastasis?",
-//       "What Is a Tumour Board?"
-//     ]
-//   },
-//   {
-//     slug: "cancer-symptoms",
-//     title: "Cancer Symptoms",
-//     subtitle: "Recognise warning signs and understand when to seek help.",
-//     description:
-//       "Cancer symptoms vary depending on the type and location of cancer. Learn about unusual lumps, unexplained bleeding, persistent pain, unexplained weight loss and other changes that may need medical evaluation.",
-//     image:
-//       "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1000&q=85",
-//     topics: [
-//       "Common Warning Signs",
-//       "Symptoms by Cancer Type",
-//       "Unusual Lumps and Swelling",
-//       "Unexplained Bleeding",
-//       "Unexplained Weight Loss",
-//       "Persistent Pain",
-//       "Symptoms That Should Not Be Ignored",
-//       "Can Cancer Have No Early Symptoms?"
-//     ]
-//   },
-//   {
-//     slug: "diagnosis-tests",
-//     title: "Diagnosis & Tests",
-//     subtitle: "Understand scans, biopsies and cancer testing.",
-//     description:
-//       "Explore how doctors investigate and diagnose cancer. Understand biopsies, pathology reports, CT, MRI and PET/CT scans, cancer staging, biomarkers, molecular testing and liquid biopsy.",
-//     image:
-//       "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=85",
-//     topics: [
-//       "What Is a Cancer Biopsy?",
-//       "Understanding a Pathology Report",
-//       "CT vs MRI vs PET/CT",
-//       "How Is Cancer Staged?",
-//       "What Are Cancer Biomarkers?",
-//       "Molecular and Genomic Testing",
-//       "What Is a Liquid Biopsy?",
-//       "Immunohistochemistry",
-//       "Understanding PET Imaging"
-//     ]
-//   },
-//   {
-//     slug: "cancer-treatments",
-//     title: "Cancer Treatments",
-//     subtitle: "Explore cancer treatment approaches and technologies.",
-//     description:
-//       "Cancer treatment plans are individualised according to cancer type, stage, test results and patient needs. Explore the treatments and technologies available through RENOVA's existing Services and Treatments section.",
-//     image:
-//       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=85",
-//     topics: [
-//       "Surgery",
-//       "Chemotherapy",
-//       "Radiation Therapy",
-//       "Immunotherapy",
-//       "Targeted Therapy",
-//       "Hormone Therapy",
-//       "Precision Oncology",
-//       "Stem Cell Transplant",
-//       "CAR T-Cell Therapy",
-//       "TIL Therapy",
-//       "HIPEC",
-//       "Proton Therapy",
-//       "Robotic Surgery"
-//     ],
-//     externalPath: "/services/treatments",
-// externalLabel: "Explore Treatments & Technology",
-//   },
-//   {
-//     slug: "latest-treatments-innovation",
-//     title: "Latest Treatments & Innovation",
-//     subtitle: "Discover advances in modern cancer care.",
-//     description:
-//       "Explore newer cancer treatment approaches, precision medicine, advanced radiation techniques, cell therapies, theranostics, digital pathology, AI-supported imaging and emerging cancer research.",
-//     image:
-//       "https://images.unsplash.com/photo-1581093458791-9d42e3c6e5f2?auto=format&fit=crop&w=1000&q=85",
-//     topics: [
-//       "Antibody-Drug Conjugates",
-//       "Bispecific Antibodies",
-//       "CAR T-Cell Therapy",
-//       "TIL Therapy",
-//       "Radioligand Therapy",
-//       "Theranostics",
-//       "Tumour-Agnostic Therapy",
-//       "MR-Guided Adaptive Radiation",
-//       "Proton Therapy",
-//       "Digital Pathology and AI",
-//       "Liquid Biopsy and MRD",
-//       "Cancer Vaccines",
-//       "Established vs Investigational Treatments"
-//     ]
-//   },
-//   {
-//     slug: "risk-factors-prevention",
-//     title: "Risk Factors & Prevention",
-//     subtitle: "Learn about cancer risks and prevention.",
-//     description:
-//       "Understand factors associated with cancer risk, including tobacco, alcohol, obesity, UV exposure, infections and inherited risk. Learn about vaccination, screening and healthy lifestyle choices.",
-//     image:
-//       "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1000&q=85",
-//     topics: [
-//       "Tobacco and Cancer",
-//       "Alcohol and Cancer Risk",
-//       "Obesity and Physical Activity",
-//       "UV Exposure",
-//       "HPV and Hepatitis Vaccination",
-//       "Family History",
-//       "Genetic Counselling",
-//       "Cancer Screening"
-//     ]
-//   },
-//   {
-//     slug: "living-with-cancer",
-//     title: "Living With Cancer",
-//     subtitle: "Support for everyday life during treatment.",
-//     description:
-//       "Find practical information about nutrition, fatigue, exercise, nausea, mental wellbeing, work, fertility, sexual health, pain management and supporting someone with cancer.",
-//     image:
-//       "https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=1000&q=85",
-//     topics: [
-//       "Nutrition During Treatment",
-//       "Managing Cancer Fatigue",
-//       "Exercise During Treatment",
-//       "Nausea and Appetite Changes",
-//       "Mental Health Support",
-//       "Work and Daily Life",
-//       "Sexual Health and Fertility",
-//       "Supporting Someone With Cancer",
-//       "Managing Cancer Pain"
-//     ]
-//   },
-//   {
-//     slug: "survivorship",
-//     title: "Survivorship",
-//     subtitle: "Guidance for life after cancer treatment.",
-//     description:
-//       "Learn about follow-up care, long-term effects, fear of recurrence, rehabilitation, returning to work, nutrition and emotional wellbeing after cancer treatment.",
-//     image:
-//       "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1000&q=85",
-//     topics: [
-//       "Life After Cancer Treatment",
-//       "Follow-Up Care",
-//       "Fear of Cancer Recurrence",
-//       "Long-Term Treatment Effects",
-//       "Returning to Work",
-//       "Rehabilitation and Exercise",
-//       "Nutrition After Treatment",
-//       "Emotional Wellbeing"
-//     ]
-//   }
-// ];
 
 const blogTitles = [
   ["diagnosed-what-next", "Just Diagnosed With Cancer: What Should You Do Next?", "cancer-basics"],
@@ -793,17 +625,17 @@ export const healthVideos = [
   {
     title: "Understanding Cancer",
     category: "Cancer Basics",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/_DEO7Mbq2nY?si=zoiAcP2VVvrz6A9Q"
   },
   {
     title: "Cancer Symptoms and Warning Signs",
     category: "Cancer Awareness",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/QvWKbCSicVg?si=yKP8sn4KeGaOQpIv"
   },
   {
     title: "Cancer Diagnosis and Tests",
     category: "Diagnosis & Tests",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/RrSRPn1vuXg?si=cgccLr6HgeuZi4QO"
   },
   {
     title: "Cancer Treatment Options",
