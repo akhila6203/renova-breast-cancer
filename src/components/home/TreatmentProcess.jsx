@@ -61,7 +61,7 @@ export default function TreatmentProcess() {
     >
       <div className="mx-auto w-full max-w-[1450px] px-4 sm:px-6 lg:px-10">
 
-        {/* Section Heading */}
+        {/* Heading */}
         <div className="mx-auto mb-10 max-w-[850px] text-center sm:mb-14">
           <p className="mb-3 flex items-center justify-center gap-3 text-xs font-extrabold tracking-[1.8px] text-[#E87744] sm:text-sm">
             <span className="h-[2px] w-8 bg-[#E87744]" />
@@ -79,29 +79,25 @@ export default function TreatmentProcess() {
           </p>
         </div>
 
-        {/* Treatment Journey */}
-        <div className="grid grid-cols-2 gap-x-4 gap-y-9 md:gap-x-7 lg:grid-cols-4 lg:gap-x-5 lg:gap-y-0">
+        {/* Circular Treatment Steps */}
+        <div className="grid grid-cols-2 gap-x-4 gap-y-7 md:gap-x-7 lg:grid-cols-4 lg:gap-x-5 lg:gap-y-0">
 
           {treatmentSteps.map((step, index) => (
             <div
               key={step.title}
-              className="group relative flex min-w-0 flex-col items-center text-center"
+              className="group relative flex min-w-0 justify-center"
             >
 
-              {/* Step Title - Above Icon */}
-              <h3 className="mb-5 flex min-h-[48px] max-w-[220px] items-center justify-center text-center text-sm font-extrabold leading-6 text-[#4F7359] sm:text-base">
-                {step.title}
-              </h3>
+              {/* Complete Circle */}
+              <div className="flex h-[175px] w-[175px] flex-col items-center justify-center rounded-full border-2 border-[#C9D9CE] bg-[#F6F9F6] px-3 transition-all duration-300 group-hover:-translate-y-1 group-hover:border-[#4F7359] group-hover:shadow-lg sm:h-[195px] sm:w-[195px] lg:h-[205px] lg:w-[205px]">
 
-              {/* Circular Icon */}
-              <div className="flex h-[125px] w-[125px] items-center justify-center rounded-full border-2 border-[#C9D9CE] bg-[#F6F9F6] transition-all duration-300 group-hover:-translate-y-1 group-hover:border-[#4F7359] group-hover:shadow-lg sm:h-[145px] sm:w-[145px] lg:h-[155px] lg:w-[155px]">
-
-                <div className="flex h-[94px] w-[94px] items-center justify-center rounded-full bg-[#E8F0EA] sm:h-[110px] sm:w-[110px]">
+                {/* Icon */}
+                <div className="mb-3 flex h-[65px] w-[65px] shrink-0 items-center justify-center rounded-full bg-[#E8F0EA] sm:h-[75px] sm:w-[75px]">
                   <svg
                     viewBox="0 0 48 48"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-11 w-11 stroke-[#4F7359] stroke-[2.2] sm:h-12 sm:w-12"
+                    className="h-9 w-9 stroke-[#4F7359] stroke-[2.2] sm:h-11 sm:w-11"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     aria-hidden="true"
@@ -109,12 +105,18 @@ export default function TreatmentProcess() {
                     {step.icon}
                   </svg>
                 </div>
+
+                {/* Name inside Circle */}
+                <h3 className="max-w-[145px] text-center text-sm font-extrabold leading-5 text-[#4F7359] sm:max-w-[165px] sm:text-base sm:leading-6">
+                  {step.title}
+                </h3>
+
               </div>
 
               {/* Desktop Arrow */}
               {index !== treatmentSteps.length - 1 && (
                 <span
-                  className="absolute -right-[22px] top-[73px] hidden -translate-y-1/2 text-3xl font-normal text-[#E87744] lg:block"
+                  className="absolute -right-[22px] top-1/2 hidden -translate-y-1/2 text-3xl font-normal text-[#E87744] lg:block"
                   aria-hidden="true"
                 >
                   ➜
