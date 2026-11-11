@@ -1,283 +1,732 @@
-
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  ClipboardList,
+  HeartHandshake,
+  HeartPulse,
+  MessageCircleHeart,
+  Stethoscope,
+  UsersRound,
+  BookOpenCheck,
+  CalendarDays,
+  ShieldCheck,
+  Activity,
+} from "lucide-react";
+import SectionTitle from "../components/SectionTitle";
 
-const programmes = [
+import ContentVideoCarousel from "../components/ContentVideoCarousel";
+import { doctors } from "../data/doctorsData";
+
+import patientCareImage from "../assets/home/patientCare.jpg";
+import diagnosisImage from "../assets/home/diagnosis.jpg";
+import treatmentImage from "../assets/home/treatmentBanner3.jpg";
+import recoveryImage from "../assets/home/patient-support.jpg";
+
+const programmeStages = [
   {
     id: "b-ready",
-    name: "B-READY",
-    subtitle: "Breast Rapid Evaluation, Assessment and Diagnosis",
-    description:
-      "From presentation to actionable diagnosis as quickly as possible, because each patient's diagnostic pathway is unique.",
-    points: [
-      "Triple assessment: clinical examination, breast imaging and pathology.",
-      "Digital breast tomosynthesis to assess suspicious breast findings.",
-      "Stereotactic biopsy for suitable non-palpable lesions.",
-      "Histopathology and immunohistochemistry, including ER, PR and HER2 when indicated.",
-      "Genomic profiling where clinically appropriate to help guide treatment decisions.",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1100&q=85",
-    imageAlt: "Healthcare professionals reviewing diagnostic information",
-    path: "/patient-care/b-ready",
     number: "01",
-    label: "DIAGNOSIS",
+    name: "B-READY",
+    label: "DIAGNOSTIC SERVICES",
+    title: "Rapid evaluation, assessment and diagnosis",
+    description:
+      "From an abnormal finding to an actionable diagnosis, the programme brings clinical assessment, breast imaging and pathology together. The diagnostic pathway is selected for each patient's individual needs.",
+    image: diagnosisImage,
+    alt: "Diagnostic imaging equipment in a clinical setting",
+    highlights: [
+      "Triple assessment: clinical examination, imaging and pathology",
+      "Digital breast tomosynthesis and image-guided biopsy when appropriate",
+      "Onco-pathology, immunohistochemistry and relevant biomarker testing",
+      "Genomic profiling when clinically appropriate",
+    ],
+    path: "/patient-care/b-ready",
   },
   {
     id: "b-ahead",
-    name: "B-AHEAD",
-    subtitle: "Molecular Subtype-Tailored Treatment",
-    description:
-      "The right treatment, planned together and explained before it begins. Specialists coordinate treatment according to the diagnosis and the patient's clinical needs.",
-    points: [
-      "Consultations with surgical, medical and radiation oncologists.",
-      "Multidisciplinary tumour board review and individualised planning.",
-      "Breast-conserving and oncoplastic surgery when appropriate.",
-      "Specialist radiotherapy options for eligible patients.",
-      "Systemic treatment and supportive care based on clinical indication.",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1100&q=85",
-    imageAlt: "Healthcare specialists discussing a treatment plan",
-    path: "/patient-care/b-ahead",
     number: "02",
-    label: "TREATMENT",
+    name: "B-AHEAD",
+    label: "TREATMENT SERVICES",
+    title: "Advanced, high-precision, evidence-based treatment",
+    description:
+      "Before treatment begins, patients are offered coordinated discussions with surgical, medical and radiation oncology specialists. A multidisciplinary tumour board reviews the case and supports an individualised treatment plan.",
+    image: treatmentImage,
+    alt: "Patient speaking with a healthcare professional",
+    highlights: [
+      "Consultations with surgical, medical and radiation oncologists",
+      "Multidisciplinary tumour board review",
+      "Surgery and precision radiotherapy options when suitable",
+      "Systemic treatment and supportive care based on clinical indication",
+    ],
+    path: "/patient-care/b-ahead",
   },
   {
     id: "b-you",
-    name: "B-YOU",
-    subtitle: "Recover. Rebuild. Rediscover You.",
-    description:
-      "Holistic rehabilitation supports physical, emotional and social wellbeing during recovery, throughout follow-up and into long-term survivorship.",
-    points: [
-      "Lymphoedema care and physiotherapy.",
-      "Counselling and support for patients and families.",
-      "Nutrition guidance and appropriate exercise support.",
-      "Follow-up care and monitoring.",
-      "Support for long-term wellbeing and survivorship.",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=1100&q=85",
-    imageAlt: "A supportive conversation between a healthcare professional and patient",
-    path: "/patient-care/b-you",
     number: "03",
-    label: "REHABILITATION",
+    name: "B-YOU",
+    label: "REHABILITATION SERVICES",
+    title: "Back to you: recover, rebuild and rediscover",
+    description:
+      "Rehabilitation is part of the care journey. Physiotherapy, lymphoedema care, nutrition, emotional support, pain management and suitable mind-body activities can help patients work towards strength, comfort and quality of life.",
+    image: recoveryImage,
+    alt: "Caregiver supporting a patient during recovery",
+    highlights: [
+      "Physiotherapy and lymphoedema assessment and management",
+      "Nutrition, psychiatry and counselling support",
+      "Pain management and supervised yoga where suitable",
+      "Follow-up and long-term survivorship support",
+    ],
+    path: "/patient-care/b-you",
   },
 ];
 
+
+
+const ongoingSupportItems = [
+  {
+    title: "Oncology nutrition",
+    text: "Dietitians can help with maintaining strength, appetite or digestive changes, nutrition during treatment and recovery, and avoiding unnecessary dietary restrictions.",
+  },
+  {
+    title: "Psycho-oncology",
+    text: "Psychological support may help with anxiety, low mood, fear, body-image concerns, treatment stress, family adjustment and fear of recurrence.",
+  },
+  {
+    title: "Cancer rehabilitation",
+    text: "Support may include physiotherapy, mobility and strength recovery, occupational rehabilitation, speech and swallow therapy, lymphoedema assessment and return-to-activity planning.",
+  },
+  {
+    title: "Pain and palliative care",
+    text: "Specialist palliative care can help manage pain, nausea, breathlessness, fatigue, sleep problems and other difficult symptoms. It can be provided alongside cancer treatment.",
+  },
+  {
+    title: "Fertility and reproductive support",
+    text: "Some cancer treatments can affect fertility. If having children in the future is important to you, discuss fertility preservation before starting treatment that may affect fertility.",
+  },
+  {
+    title: "Genetic counselling",
+    text: "Genetic counselling can help assess inherited cancer risk using personal and family history and support decisions about appropriate genetic testing.",
+  },
+  {
+    title: "Caregiver and family support",
+    text: "Caregivers may need guidance about communication, treatment schedules, home care, nutrition, symptom monitoring and their own wellbeing.",
+  },
+  {
+    title: "International patient services",
+    text: "Where these services are available, information may cover medical-record review, appointment coordination, treatment estimates, visa documentation, travel or accommodation guidance, interpreters and follow-up coordination. Please confirm current services with the hospital.",
+  },
+  {
+    title: "Insurance and financial guidance",
+    text: "Please contact the hospital to confirm accepted insurance, cashless processes, pre-authorisation, billing assistance and financial counselling. Costs and coverage depend on the approved process and individual policy.",
+  },
+  {
+    title: "Survivorship and life after treatment",
+    text: "Follow-up care may address surveillance, long-term treatment effects, rehabilitation, nutrition, emotional wellbeing, lifestyle guidance and returning to work or everyday activities.",
+  },
+];
+
+const patientPreparationSections = [
+  {
+    id: "newly-diagnosed",
+    eyebrow: "START HERE",
+    title: "Newly Diagnosed: What Happens Next?",
+    description:
+      "A new cancer diagnosis can feel overwhelming. Start by understanding three important things: what exactly the diagnosis is, how extensive the cancer is, and which treatment choices are available.",
+    image: diagnosisImage,
+    alt: "Patient discussing a diagnosis with a doctor",
+    points: [
+      "What exactly is my diagnosis?",
+      "What stage is the cancer?",
+      "Are additional pathology, imaging or biomarker tests needed?",
+      "What treatment is recommended and why?",
+      "Should treatment start with surgery, medicines or radiation?",
+      "Are there reasonable alternative approaches?",
+      "Would a second opinion be useful?",
+    ],
+  },
+  {
+    id: "first-appointment",
+    eyebrow: "BE PREPARED",
+    title: "Preparing for Your First Appointment",
+    description:
+      "Bring all available medical information so your care team can review your case efficiently and understand your medical history.",
+    image: treatmentImage,
+    alt: "Doctor reviewing medical information",
+    points: [
+      "Pathology and biopsy reports",
+      "Imaging reports and scan images",
+      "CT / MRI / PET reports",
+      "Blood-test results",
+      "Previous surgery records",
+      "Previous chemotherapy or immunotherapy details",
+      "Previous radiation records",
+      "Current medication list",
+      "Genetic or molecular test results",
+      "Relevant family cancer history",
+      "A written list of questions",
+    ],
+  },
+];
+
+const oncologistQuestions = [
+  "What type of cancer do I have?",
+  "What is the stage and grade?",
+  "Has it spread?",
+  "Do I need more tests?",
+  "Should molecular or genetic testing be considered?",
+  "What is the goal of treatment?",
+  "What are my treatment choices?",
+  "Do I need surgery?",
+  "Do I need chemotherapy?",
+  "Could targeted therapy or immunotherapy be relevant?",
+  "Do I need radiation?",
+  "Are there alternatives?",
+  "What side effects should I expect?",
+  "Could treatment affect fertility?",
+  "Can I continue working?",
+  "How will we know treatment is working?",
+  "Should I get a second opinion?",
+  "Are clinical trials relevant?",
+  "What happens after treatment?",
+];
+
+const approvedPatientStories = [];
+
+function Breadcrumbs() {
+  return (
+    <nav aria-label="Breadcrumb" className="border-b border-[#e4e9e2] bg-[#f7f9f6]">
+      <div className="page-container px-5 py-3 sm:px-8 lg:px-12">
+        <ol className="flex items-center gap-2 text-sm">
+          <li><Link to="/" className="font-semibold text-[#476b55] hover:text-[#e87744]">Home</Link></li>
+          <li aria-hidden="true" className="text-[#9aa89c]">/</li>
+          <li aria-current="page" className="font-semibold text-[#263c30]">Patient Support</li>
+        </ol>
+      </div>
+    </nav>
+  );
+}
+
+function getYouTubeId(url = "") {
+  try {
+    const parsedUrl = new URL(url);
+    const host = parsedUrl.hostname.replace(/^www\./, "");
+
+    let videoId = "";
+
+    if (host === "youtu.be") {
+      videoId = parsedUrl.pathname.split("/").filter(Boolean)[0] || "";
+    } else if (
+      host === "youtube.com" ||
+      host === "m.youtube.com" ||
+      host === "youtube-nocookie.com"
+    ) {
+      videoId =
+        parsedUrl.searchParams.get("v") ||
+        parsedUrl.pathname.match(/\/(?:embed|shorts)\/([^/?]+)/)?.[1] ||
+        "";
+    }
+
+    if (!videoId || videoId.startsWith("YOUR_VIDEO_ID")) {
+      return "";
+    }
+
+    return videoId;
+  } catch {
+    return "";
+  }
+}
+
 export default function PatientCarePage() {
+  const patientTestimonialItems = [
+  ...new Map(
+    doctors.flatMap((doctor) =>
+      (doctor.testimonialVideos || []).map((video) => {
+        const videoId = getYouTubeId(video.youtubeUrl);
+
+        if (!videoId) return null;
+
+        return [
+          videoId,
+          {
+            id: `patient-story-${videoId}`,
+            title: video.title || "Patient Testimonial",
+            category: doctor.speciality,
+            href: video.youtubeUrl,
+            thumbnail:
+              video.thumbnail ||
+              `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+          },
+        ];
+      }).filter(Boolean)
+    )
+  ).values(),
+];
+
+
   return (
     <main className="overflow-hidden bg-[#fffdf9] text-[#304b3c]">
-      {/* Small breadcrumb only — no large banner */}
-      <nav
-        aria-label="Breadcrumb"
-        className="border-b border-[#e5e9e3] bg-[#f7f9f6]"
-      >
-        <div className="page-container px-5 py-4 sm:px-8 lg:px-12">
-          <ol className="flex items-center gap-2 text-[15px]">
-            <li>
-              <Link
-                to="/"
-                className="font-medium text-[#476b55] transition-colors hover:text-[#f26322]"
-              >
-                Home
-              </Link>
-            </li>
-            <li className="text-[#aab5aa]" aria-hidden="true">/</li>
-            <li aria-current="page" className="font-semibold text-[#263c30]">
-              Patient Care
-            </li>
-          </ol>
-        </div>
-      </nav>
+      <Breadcrumbs />
 
-      {/* Intro — centred heading and description */}
-      <section className="px-5 pb-10 pt-12 sm:px-8 sm:pb-14 sm:pt-16 lg:px-12">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="inline-flex items-center gap-3 text-sm font-bold tracking-[0.2em] text-[#f26322]">
-            {/* <span className="h-px w-8 bg-[#f26322]" /> */}
-            BREAST HEALTH INITIATIVE
-            {/* <span className="h-px w-8 bg-[#f26322]" /> */}
+      <section className="bg-[#f7f9f6] py-6 sm:py-8 lg:py-12">
+  <div className="page-container px-5 sm:px-8 lg:px-12">
+
+    <div className="mx-auto mb-6 max-w-4xl text-center sm:mb-12">
+      <p className="text-sm font-bold tracking-[0.2em] text-[#e87744]">
+        ABOUT THE PROGRAMME
+      </p>
+
+      <h1 className="display-font mt-4 text-3xl font-bold leading-tight text-[#263c30] sm:text-4xl lg:text-5xl">
+        Care Across Every Stage of Your Patient Journey
+      </h1>
+
+      <p className="mx-auto mt-3 max-w-4xl text-base leading-8 text-[#536458] sm:text-lg">
+        Support through diagnosis, treatment and recovery, bringing
+        together the care and guidance patients need at every stage.
+      </p>
+    </div>
+
+    <div className="grid items-center gap-9 lg:grid-cols-2 lg:gap-14">
+
+      <div>
+        <span className="text-sm font-bold tracking-wider text-[#e87744]">
+          RENOVA BREAST HEALTH INITIATIVE
+        </span>
+
+        <h2 className="display-font mt-1 text-2xl font-bold leading-snug text-[#263c30] sm:text-3xl">
+          Every Step of Your Journey Matters
+        </h2>
+
+        <p className="mt-4 text-[16px] leading-6 text-[#4b5d50] sm:text-[18px]">
+          A cancer diagnosis can bring uncertainty and many questions.
+          Having the right information, specialists and support can
+          help patients understand their options and make informed
+          decisions about their care.
+        </p>
+
+        <p className="mt-4 text-[16px] leading-6 text-[#4b5d50] sm:text-[18px] ">
+          RENOVA's Breast Health Initiative is organised around
+          three connected pillars: B-READY, B-AHEAD and B-YOU.
+          Together, they address diagnostic assessment, treatment
+          planning and rehabilitation.
+        </p>
+
+        <p className="mt-4 text-[16px] leading-6 text-[#4b5d50] sm:text-[18px]">
+          The care pathway is individualised according to each
+          patient's diagnosis, clinical needs and treatment plan.
+        </p>
+
+        <Link
+          to="#programme-pillars"
+          className="mt-7 inline-flex min-h-12 items-center gap-3 rounded-full bg-[#476b55] px-4 py-2 font-semibold text-white transition hover:bg-[#304b3c]"
+        >
+          Explore Our Programme
+          <ArrowRight size={18} />
+        </Link>
+      </div>
+
+      <div className="relative">
+        <div className="absolute -right-3 -top-3 h-24 w-24 rounded-full bg-[#e87744]/15 sm:-right-5 sm:-top-5" />
+
+        <img
+          src={patientCareImage}
+          alt="Patient receiving guidance from a healthcare professional"
+          className="relative h-[280px] w-full rounded-[24px] object-cover shadow-lg sm:h-[390px] lg:h-[440px]"
+        />
+
+        <div className="absolute -bottom-5 left-6 right-8 rounded-xl border border-[#e4e9e2] bg-white p-10 shadow-md sm:left-16 sm:right-20 sm:p-5">
+          <p className="text-xs font-bold tracking-wider text-[#e87744]">
+            OUR THREE CONNECTED PILLARS
           </p>
 
-          <h1 className="display-font mt-5 text-3xl font-bold leading-tight text-[#304b3c] sm:text-4xl lg:text-5xl">
-            Care across the entire patient journey
-          </h1>
-
-          <p className="mx-auto mt-5 max-w-3xl text-[16px] leading-8 text-[#425b4c] sm:text-lg">
-            Our Breast Health Initiative brings together coordinated care
-            across diagnosis, treatment and rehabilitation. Each stage is
-            designed around the patient's individual diagnosis, clinical
-            needs and ongoing wellbeing.
+          <p className="mt-2 text-base font-bold text-[#304b3c] sm:text-lg">
+            B-READY <span className="text-[#e87744]">·</span>
+            B-AHEAD <span className="text-[#e87744]">·</span>
+            B-YOU
           </p>
         </div>
+      </div>
 
-        <div className="page-container mt-9 grid gap-4 sm:grid-cols-3">
+    </div>
+  </div>
+</section>
+
+
+      {/* BEFORE THE THREE PILLARS */}
+<section className="bg-white py-14 sm:py-16 lg:py-20">
+  <div className="page-container px-5 sm:px-8 lg:px-12">
+
+    <div className="mx-auto mb-10 max-w-3xl text-center">
+      <p className="text-sm font-bold tracking-[0.2em] text-[#e87744]">
+        YOUR CARE JOURNEY
+      </p>
+
+      <h2 className="display-font mt-4 text-3xl font-bold text-[#263c30] sm:text-4xl">
+        Understanding Your Next Steps
+      </h2>
+
+      <p className="mt-4 text-base leading-8 text-[#536458]">
+        Every patient's journey is different. Understanding your
+        diagnosis and available care options is an important
+        starting point.
+      </p>
+    </div>
+
+    <div className="grid items-center gap-9 lg:grid-cols-2 lg:gap-14">
+
+      <div>
+        <h3 className="display-font text-2xl font-bold text-[#263c30] sm:text-3xl">
+          Begin With Clarity, Care and Guidance
+        </h3>
+
+        <p className="mt-5 text-[15px] leading-8 text-[#4b5d50] sm:text-base">
+          After a diagnosis, your first discussions with the oncology
+          team help establish what is known about the cancer and
+          whether further investigations are needed.
+        </p>
+
+        <ul className="mt-6 space-y-4 " >
           {[
-            ["01", "B-READY", "Diagnosis", "/patient-care/b-ready"],
-            ["02", "B-AHEAD", "Treatment", "/patient-care/b-ahead"],
-            ["03", "B-YOU", "Rehabilitation", "/patient-care/b-you"],
-          ].map(([number, name, label, path]) => (
-            <Link
-              key={name}
-              to={path}
-              className="group flex items-center gap-4 rounded-2xl border border-[#e5e9e3] bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#f26322]/50 hover:shadow-lg sm:p-5"
-            >
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#fff0e7] font-bold text-[#f26322] transition-colors group-hover:bg-[#f26322] group-hover:text-white">
-                {number}
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="block font-bold tracking-wide text-[#304b3c]">
-                  {name}
-                </span>
-                <span className="mt-1 block text-[15px] text-[#425b4c]">
-                  {label}
-                </span>
-              </span>
-              <ArrowRight
-                size={19}
-                className="shrink-0 text-[#f26322] transition-transform duration-300 group-hover:translate-x-1"
+            "Understand the type, stage and grade of the cancer.",
+            "Review pathology, biopsy and imaging findings.",
+            "Discuss additional tests, including biomarker or molecular testing where appropriate.",
+            "Understand the available treatment approaches and their objectives.",
+            "Discuss questions, concerns and whether a second opinion may be useful.",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <CheckCircle2
+                size={20}
+                className="mt-1 shrink-0 text-[#e87744]"
               />
-            </Link>
+              <span className="text-[18px] leading-7 text-[#4b5d50]">
+                {item}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <img
+          src={diagnosisImage}
+          alt="Cancer diagnostic assessment"
+          loading="lazy"
+          className="h-[280px] w-full rounded-[24px] object-cover shadow-lg sm:h-[390px]"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+      {/* Three programme pillars */}
+      <section id="programme-pillars" className="section-padding scroll-mt-24 bg-[#f4f7f2]">
+        <div className="page-container">
+          <SectionTitle
+            eyebrow="THREE PILLARS OF OUR PROGRAMME"
+            title="One connected journey. Three focused pillars."
+            description="The programme brochure presents three linked pillars: rapid diagnosis, personalised treatment and structured rehabilitation. Select a pillar to explore its services in more detail."
+          />
+          <div className="space-y-8 lg:space-y-10">
+            {programmeStages.map((stage, index) => (
+              <article key={stage.id} className="grid items-stretch overflow-hidden rounded-[26px] border border-[#e1e8e0] bg-white shadow-sm lg:grid-cols-2">
+                <div className={`relative min-h-[250px] overflow-hidden ${index % 2 ? "lg:order-2" : ""}`}>
+                  <img src={stage.image} alt={stage.alt} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1e382b]/55 via-transparent to-transparent" />
+                  <span className="absolute left-5 top-5 rounded-full bg-white px-4 py-2 text-xs font-extrabold tracking-[0.14em] text-[#476b55] shadow">{stage.label}</span>
+                  <span className="absolute bottom-5 left-5 text-5xl font-black text-white/90">{stage.number}</span>
+                </div>
+                <div className={`flex flex-col justify-center p-6 sm:p-8 lg:p-10 ${index % 2 ? "lg:order-1" : ""}`}>
+                  <p className="text-sm font-extrabold tracking-[0.18em] text-[#e87744]">{stage.name}</p>
+                  <h2 className="display-font mt-3 text-2xl font-bold leading-tight text-[#263c30] sm:text-3xl">{stage.title}</h2>
+                  <p className="mt-4 text-[16px] leading-7 text-[#4b5d50] sm:text-base">{stage.description}</p>
+                  <ul className="mt-5 space-y-3">
+                    {stage.highlights.map((point) => (
+                      <li key={point} className="flex items-start gap-3 text-[17px] leading-6 text-[#304b3c]">
+                        <CheckCircle2 size={19} className="mt-0.5 shrink-0 text-[#e87744]" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link to={stage.path} className="mt-7 inline-flex min-h-11 w-fit items-center gap-2 rounded-full bg-[#476b55] px-6 py-3 font-semibold text-white transition hover:bg-[#304b3c]">
+                    Explore {stage.name} <ArrowRight size={18} />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+     
+{/* PATIENT RESOURCES */}
+<section
+  id="patient-resources"
+  className="scroll-mt-24 bg-[#f7f9f6] py-14 sm:py-16 lg:py-20"
+>
+  <div className="page-container px-5 sm:px-8 lg:px-12">
+
+    <div className="mx-auto mb-12 max-w-3xl text-center">
+      <p className="text-sm font-bold tracking-[0.2em] text-[#e87744]">
+        PATIENT RESOURCES
+      </p>
+
+      <h2 className="display-font mt-4 text-3xl font-bold text-[#263c30] sm:text-4xl">
+        Information to Guide Your Care Journey
+      </h2>
+
+      <p className="mt-4 text-base leading-8 text-[#536458]">
+        Helpful information for patients and families to understand
+        a diagnosis, prepare for consultations and take informed
+        decisions throughout cancer care.
+      </p>
+    </div>
+
+    <div className="space-y-14 lg:space-y-20">
+
+      {patientPreparationSections.map((section) => (
+        <article
+          key={section.id}
+          id={section.id}
+          className="grid items-stretch gap-8 lg:grid-cols-2 lg:gap-12"
+        >
+
+          {/* LEFT SIDE - CONTENT */}
+          <div className="flex flex-col justify-center">
+
+            <h3 className="display-font text-2xl font-bold leading-snug text-[#263c30] sm:text-3xl">
+              {section.title}
+            </h3>
+
+            <p className="mt-4 text-[16px] leading-8 text-[#4b5d50] sm:text-base">
+              {section.description}
+            </p>
+
+            <ul className="mt-6 space-y-3">
+              {section.points.map((point) => (
+                <li
+                  key={point}
+                  className="flex items-start gap-3"
+                >
+                  <CheckCircle2
+                    size={19}
+                    className="mt-1 shrink-0 text-[#e87744]"
+                  />
+
+                  <span className="text-[15px] leading-7 text-[#435849] sm:text-[18px]">
+                    {point}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+          </div>
+
+          {/* RIGHT SIDE - IMAGE */}
+          <div className="relative min-h-[280px] self-stretch sm:min-h-[340px] lg:min-h-0">
+            <img
+              src={section.image}
+              alt={section.alt}
+              loading="lazy"
+              className="absolute inset-0 h-full w-full rounded-[24px] object-cover"
+            />
+          </div>
+
+        </article>
+      ))}
+
+    </div>
+  </div>
+</section>
+
+
+
+{/* QUESTIONS TO ASK YOUR ONCOLOGIST */}
+<section className="bg-white py-14 sm:py-16 lg:py-20">
+  <div className="page-container px-5 sm:px-8 lg:px-12">
+
+    <div className="mx-auto mb-10 max-w-3xl text-center">
+      <p className="text-sm font-bold tracking-[0.2em] text-[#e87744]">
+        YOUR CONSULTATION CHECKLIST
+      </p>
+
+      <h2 className="display-font mt-4 text-3xl font-bold text-[#263c30] sm:text-4xl">
+        Questions to Ask Your Oncologist
+      </h2>
+
+      <p className="mt-4 text-base leading-8 text-[#536458]">
+        Preparing questions before your appointment can help you
+        understand your diagnosis, treatment choices and the next
+        steps in your care.
+      </p>
+    </div>
+
+    <div className="grid items-center gap-9 lg:grid-cols-[0.8fr_1.2fr] lg:gap-12">
+
+      <div>
+        <img
+          src={recoveryImage}
+          alt="Patient receiving support from a healthcare professional"
+          loading="lazy"
+          className="h-[300px] w-full rounded-[24px] object-cover shadow-md sm:h-[460px]"
+        />
+
+        <div className="mt-5 rounded-2xl bg-[#edf3ed] p-5">
+          <h3 className="font-bold text-[#304b3c]">
+            A little preparation can help
+          </h3>
+
+          <p className="mt-2 text-[17px] leading-7 text-[#4b5d50]">
+            Write down your questions, bring your reports and,
+            if helpful, ask a family member or caregiver to
+            accompany you.
+          </p>
+        </div>
+      </div>
+
+      <div className="rounded-[24px] border border-[#e1e8e0] bg-[#f8faf7] p-5 sm:p-8">
+
+        <h3 className="mb-6 text-xl font-bold text-[#263c30]">
+          Your appointment checklist
+        </h3>
+
+        <div className="grid gap-x-6 gap-y-4 sm:grid-cols-2">
+          {oncologistQuestions.map((question, index) => (
+            <div
+              key={question}
+              className="flex items-start gap-3 border-b border-[#e3eae3] pb-3"
+            >
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#fff0e7] text-xs font-bold text-[#c9673c]">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              <p className="text-[16px] leading-6 text-[#435849] sm:text-[17px]">
+                {question}
+              </p>
+            </div>
           ))}
         </div>
-      </section>
 
-      {/* Programme sections — image and content alternate */}
-      <section className="page-container space-y-16 px-5 pb-16 sm:space-y-20 sm:px-8 sm:pb-20 lg:px-12">
-        {programmes.map((item, index) => (
-          <article
-            key={item.id}
-            className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14"
-          >
-            {/* Image: right for B-AHEAD; left for B-READY and B-YOU */}
-            <div
-              className={`relative ${
-                index % 2 === 1 ? "lg:order-2" : ""
-              }`}
-            >
-              <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-[#fff0e7]" />
-              <div className="absolute -right-3 -top-3 h-20 w-20 rounded-full bg-[#e7eee7]" />
+      </div>
+    </div>
+  </div>
+</section>
 
-              <div className="relative overflow-hidden rounded-[24px] bg-[#edf2ec] shadow-md">
-                <img
-                  src={item.image}
-                  alt={item.imageAlt}
-                  loading="lazy"
-                  className="h-[280px] w-full object-cover transition-transform duration-700 hover:scale-[1.04] sm:h-[360px] lg:h-[410px]"
-                />
-                <span className="absolute left-4 top-4 rounded-full bg-white px-4 py-2 text-sm font-bold tracking-wide text-[#304b3c] shadow-sm">
-                  {item.label}
-                </span>
-              </div>
-            </div>
+{/* SUPPORTIVE CARE SERVICES */}
+<section className="bg-[#f7f9f6] py-14 sm:py-16 lg:py-20">
+  <div className="page-container px-5 sm:px-8 lg:px-12">
 
-            {/* Text: centred vertically, left-aligned */}
-            <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-              <p className="flex items-center gap-3 text-sm font-bold tracking-[0.2em] text-[#f26322]">
-                {item.name}
-                <span className="h-px w-12 bg-[#f26322]" />
-              </p>
+    <div className="mx-auto mb-10 max-w-3xl text-center">
+      <p className="text-sm font-bold tracking-[0.2em] text-[#e87744]">
+        CONTINUED SUPPORT
+      </p>
 
-              <h2 className="display-font mt-4 text-2xl font-bold leading-tight text-[#304b3c] sm:text-3xl lg:text-[38px]">
-                {item.subtitle}
-              </h2>
+      <h2 className="display-font mt-4 text-3xl font-bold text-[#263c30] sm:text-4xl">
+        Support Beyond Treatment
+      </h2>
 
-              <p className="mt-5 text-[16px] leading-8 text-[#425b4c]">
-                {item.description}
-              </p>
+      <p className="mt-4 text-base leading-8 text-[#536458]">
+        Supportive services can address the physical, emotional
+        and practical needs of patients and their families.
+      </p>
+    </div>
 
-              <ul className="mt-5 space-y-3">
-                {item.points.map((point) => (
-                  <li
-                    key={point}
-                    className="flex gap-3 text-[15px] leading-7 text-[#304b3c] sm:text-[16px]"
-                  >
-                    <CheckCircle2
-                      size={19}
-                      className="mt-1 shrink-0 text-[#f26322]"
-                    />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
+    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {ongoingSupportItems.map((item, index) => (
+        <article
+          key={item.title}
+          className="rounded-2xl border border-[#e1e8e0] bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+        >
+          <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#edf3ed] text-[#476b55]">
+            {index === 0 ? <HeartPulse size={22} /> :
+             index === 1 ? <HeartHandshake size={22} /> :
+             index === 2 ? <Activity size={22} /> :
+             index === 3 ? <ShieldCheck size={22} /> :
+             index === 4 ? <UsersRound size={22} /> :
+             <Stethoscope size={22} />}
+          </span>
 
-              <Link
-                to={item.path}
-                className="group mt-7 inline-flex items-center gap-2 rounded-full bg-[#304b3c] px-6 py-3 font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-[#3D5A47] hover:shadow-md"
-                // className="group mt-7 inline-flex items-center gap-2 rounded-full bg-[#f26322] px-6 py-3 font-semibold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-[#d95116] hover:shadow-md"
-              >
-                Know More
-                <ArrowRight
-                  size={18}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                />
-              </Link>
-            </div>
-          </article>
-        ))}
-      </section>
+          <h3 className="mt-4 text-lg font-bold text-[#263c30]">
+            {item.title}
+          </h3>
+
+          <p className="mt-3 text-[18px] leading-7 text-[#4b5d50]">
+            {item.text}
+          </p>
+        </article>
+      ))}
+    </div>
+
+    {/* <p className="mt-7 text-sm leading-6 text-[#657468]">
+      Please contact RENOVA to confirm the availability of individual
+      services, international patient assistance and insurance support.
+    </p> */}
+
+  </div>
+</section>
+
+
+
+
+    {/* PATIENT TESTIMONIAL VIDEOS - ALL SPECIALITIES */}
+
+{patientTestimonialItems.length > 0 && (
+  <ContentVideoCarousel
+    eyebrow="PATIENT STORIES"
+    title="Stories of Strength and Support"
+    subtitle="Explore genuine patient experiences and educational
+        videos shared by RENOVA, helping patients and families
+        understand different aspects of cancer care."
+    items={patientTestimonialItems}
+    slidesPerView={4}
+    autoPlay
+    interval={4500}
+    background="white"
+  />
+)}
+
+
+      {/* CONTACT AND APPOINTMENTS */}
+<section className="bg-[#edf3ed] px-5 py-14 sm:px-8 lg:px-12">
+  <div className="page-container flex flex-col justify-between gap-7 md:flex-row md:items-center">
+
+    <div className="max-w-2xl">
+      <p className="text-xs font-bold tracking-[0.2em] text-[#e87744]">
+        WE ARE HERE TO HELP
+      </p>
+
+      <h2 className="display-font mt-3 text-2xl font-bold text-[#263c30] sm:text-3xl">
+        Have Questions About Your Care Journey?
+      </h2>
+
+      <p className="mt-3 text-[15px] leading-7 text-[#4b5d50]">
+        Connect with our team for appointment assistance,
+        information about available services and guidance
+        on preparing for your consultation.
+      </p>
+    </div>
+
+    <div className="flex flex-wrap gap-3">
+      <Link
+        to="/contact"
+        className="inline-flex min-h-12 items-center gap-2 rounded-full border border-[#476b55] px-6 py-3 font-semibold text-[#304b3c] transition hover:bg-white"
+      >
+        Contact Us
+        <MessageCircleHeart size={18} />
+      </Link>
+
+      <Link
+        to="/appointments"
+        className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[#476b55] px-6 py-3 font-semibold text-white transition hover:bg-[#304b3c]"
+      >
+        Book an Appointment
+        <CalendarDays size={18} />
+      </Link>
+    </div>
+
+  </div>
+</section>
     </main>
   );
 }
 
-
-
-// import { Link } from "react-router-dom";
-// import { HeartPulse } from "lucide-react";
-// import { PageLayout } from "../components/PageChrome";
-
-// export default function PatientCarePage() {
-//   return (
-//     <PageLayout
-//       eyebrow="PATIENT CARE"
-//       title="Support for you and your family"
-//       breadcrumbItems={[
-//         { label: "Home", path: "/" },
-//         { label: "Patient Care" },
-//       ]}
-//       description="Practical guidance for preparing for appointments, understanding information and navigating the care journey."
-//     >
-//       <div className="grid gap-5 md:grid-cols-2">
-//         {[
-//           [
-//             "Before your appointment",
-//             "Bring relevant reports, a medication list and your questions. Consider bringing a trusted support person.",
-//           ],
-//           [
-//             "Understanding your diagnosis",
-//             "Ask your clinician to explain the diagnosis, stage, pathology and any additional tests you may need.",
-//           ],
-//           [
-//             "During treatment",
-//             "Discuss expected benefits, side effects, practical arrangements and when to seek urgent medical attention.",
-//           ],
-//           [
-//             "After treatment",
-//             "Ask about follow-up appointments, recommended imaging, recovery and available supportive care.",
-//           ],
-//           [
-//             "Emotional wellbeing",
-//             "Anxiety and uncertainty are common. Ask about counselling, specialist nursing support and trusted organisations.",
-//           ],
-//           [
-//             "Nutrition and daily life",
-//             "A dietitian or nurse can advise on eating well during treatment, fatigue and returning to everyday activities.",
-//           ],
-//         ].map(([title, text]) => (
-//           <article key={title} className="premium-card p-7">
-//             <HeartPulse className="mb-4 text-royal" size={30} />
-//             <h2 className="display-font text-xl font-semibold text-heading">{title}</h2>
-//             <p className="mt-3 text-[16px] leading-7 text-ink">{text}</p>
-//           </article>
-//         ))}
-//       </div>
-//       <div className="mt-10">
-//         <Link to="/contact" className="btn-primary">
-//           Contact our team
-//         </Link>
-//       </div>
-//     </PageLayout>
-//   );
-// }
 

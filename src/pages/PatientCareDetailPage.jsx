@@ -3,59 +3,127 @@ import { Link, useParams } from "react-router-dom";
 import {
   ArrowLeft,
   ArrowRight,
+  CalendarDays,
   CheckCircle2,
+  HeartPulse,
+  HeartHandshake,
+  Microscope,
+  ScanLine,
+  UsersRound,
+  Activity,
+  ShieldCheck,
+  Stethoscope,
 } from "lucide-react";
+
+// Programme hero images
+import diagnosisImage from "../assets/home/diagnosis.jpg";
+import treatmentImage from "../assets/home/treatmentBanner3.jpg";
+import recoveryImage from "../assets/home/patient-support.jpg";
+
+// B-READY images
+import tripleAssessmentImage from "../assets/patients-support/Triple assessment.jpg";
+import tomosynthesisImage from "../assets/patients-support/Digital breast tomosynthesis.jpg";
+import biopsyImage from "../assets/patients-support/Stereotactic breast biopsy.jpg";
+import pathologyImage from "../assets/patients-support/Onco-pathology.jpg";
+import genomicImage from "../assets/patients-support/Genomic profiling.jpg";
+
+// B-AHEAD images
+import oncologyConsultationsImage from "../assets/patients-support/Oncology consultations.jpg";
+import tumourBoardImage from "../assets/patients-support/Tumour board.jpg";
+import breastSurgeryImage from "../assets/patients-support/Breast surgery.jpg";
+import brachytherapyImage from "../assets/patients-support/Breast brachytherapy.jpg";
+import heartSparingImage from "../assets/patients-support/Heart-sparing radiotherapy.jpg";
+import imageGuidedImage from "../assets/patients-support/Image-guided radiotherapy.jpg";
+import systemicTreatmentImage from "../assets/patients-support/Systemic treatment.jpg";
+import supportiveCareImage from "../assets/patients-support/Supportive care.jpg";
+
+// B-YOU images
+import physiotherapyImage from "../assets/patients-support/Physiotherapy and lymphoedema care.jpg";
+import nutritionImage from "../assets/patients-support/Nutrition support.jpg";
+import emotionalSupportImage from "../assets/patients-support/Emotional support.jpg";
+import painManagementImage from "../assets/patients-support/Pain management.jpg";
+import yogaImage from "../assets/patients-support/Yoga and wellbeing.jpg";
+import pinkRoomImage from "../assets/patients-support/Pink Room and B-Well Wednesdays.jpg";
+import survivorshipImage from "../assets/patients-support/Long-term survivorship.jpg";
 
 const details = {
   "b-ready": {
     name: "B-READY",
-    label: "DIAGNOSIS",
-    title: "Breast Rapid Evaluation, Assessment and Diagnosis",
-    intro:
-      "From presentation to actionable diagnosis as quickly as possible, because each patient and her diagnostic pathway is unique.",
-    image:
-      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=85",
+    label: "DIAGNOSTIC SERVICES",
+    title: "Rapid Evaluation, Assessment and Diagnosis",
+    description:
+      "B-READY brings together clinical assessment, advanced breast imaging, biopsy, pathology and genomic profiling to help patients understand their diagnosis and available care options. The diagnostic pathway is planned according to each patient's individual clinical needs.",
+    image: diagnosisImage,
+    introPoints: [
+      "Clinical breast assessment and diagnostic evaluation.",
+      "Advanced breast imaging and image-guided procedures.",
+      "Detailed pathology and biomarker assessment.",
+      "Genomic profiling when clinically appropriate.",
+    ],
     sections: [
       {
         title: "Triple assessment",
-        text: "Clinical examination, breast imaging and pathology are considered together to improve diagnostic confidence, help identify suspicious findings and provide reassurance when findings are benign.",
+        icon: Stethoscope,
+        image: tripleAssessmentImage,
+        text:
+          "Triple assessment combines clinical examination, breast imaging and tissue diagnosis to evaluate a breast abnormality. The findings help the clinical team understand the nature of the condition and plan appropriate next steps.",
         bullets: [
-          "Clinical examination.",
-          "Appropriate breast imaging.",
-          "Pathology and tissue sampling when required.",
+          "Clinical breast examination by a specialist.",
+          "Appropriate breast imaging based on clinical findings.",
+          "Pathological assessment through biopsy when indicated.",
+          "Integrated review of findings for further management.",
         ],
       },
       {
         title: "Digital breast tomosynthesis",
-        text: "Digital breast tomosynthesis (DBT) produces multiple low-dose images reconstructed into thin slices. Reducing overlapping tissue can help clinicians assess masses, architectural distortions and calcifications, particularly in dense breasts.",
+        icon: ScanLine,
+        image: tomosynthesisImage,
+        text:
+          "Digital breast tomosynthesis is an advanced breast imaging technique that captures multiple images from different angles to create detailed views of breast tissue.",
         bullets: [
-          "Supports assessment of suspicious breast findings.",
-          "May reduce unnecessary recalls and additional imaging in appropriate settings.",
+          "Provides multiple image views of breast tissue.",
+          "Helps assess overlapping breast structures.",
+          "Supports evaluation of suspicious breast findings.",
+          "Imaging is recommended according to individual clinical needs.",
         ],
       },
       {
         title: "Stereotactic breast biopsy",
-        text: "This image-guided technique can sample suitable non-palpable lesions, including microcalcifications, small masses and architectural distortions. It may establish a tissue diagnosis without open surgical biopsy when clinically appropriate.",
+        icon: Microscope,
+        image: biopsyImage,
+        text:
+          "Stereotactic breast biopsy is an image-guided procedure used to collect tissue samples from a specific area of the breast for laboratory examination.",
         bullets: [
-          "Targeted tissue sampling guided by imaging.",
-          "Pathology findings help inform the next care steps.",
+          "Uses imaging guidance to identify the target area.",
+          "Helps obtain tissue samples from suspicious findings.",
+          "Supports accurate pathological evaluation.",
+          "The procedure is recommended when clinically indicated.",
         ],
       },
       {
-        title: "Dedicated onco-pathology laboratory",
-        text: "Histopathology (HPE) and immunohistochemistry (IHC) help characterise a tumour and identify biomarkers relevant to treatment planning. The programme describes streamlined, standardised laboratory workflows.",
+        title: "Onco-pathology and immunohistochemistry",
+        icon: Microscope,
+        image: pathologyImage,
+        text:
+          "Onco-pathology examines tissue samples to identify the type and characteristics of a tumour. Immunohistochemistry helps assess specific markers that may guide treatment decisions.",
         bullets: [
-          "Histopathology reporting.",
-          "ER, PR and HER2 testing where indicated.",
-          "Other clinically relevant markers according to diagnostic needs.",
+          "Detailed examination of biopsy and tissue samples.",
+          "Assessment of tumour characteristics.",
+          "Relevant biomarker and receptor testing.",
+          "Reports support individualised treatment planning.",
         ],
       },
       {
-        title: "Rapid genomic profiling",
-        text: "The programme brochure describes the Thermo Fisher Genexus Integrated Sequencer. Next-generation sequencing can help identify clinically relevant genomic alterations and may inform targeted therapy selection or clinical trial eligibility where appropriate.",
+        title: "Genomic profiling",
+        icon: ShieldCheck,
+        image: genomicImage,
+        text:
+          "Genomic profiling examines selected genetic features of a tumour. When appropriate, the results may provide additional information to help the oncology team understand the tumour and consider treatment options.",
         bullets: [
-          "Automated genomic profiling workflow.",
-          "Results interpreted by the treating specialist team.",
+          "Assessment of selected tumour-related genetic features.",
+          "Additional information about tumour characteristics.",
+          "May support treatment decision-making in selected cases.",
+          "Testing is recommended according to clinical indication.",
         ],
       },
     ],
@@ -63,79 +131,120 @@ const details = {
 
   "b-ahead": {
     name: "B-AHEAD",
-    label: "TREATMENT",
-    title: "Molecular Subtype-Tailored Treatment",
-    intro:
-      "The right treatment, planned together and explained before it begins. Treatment decisions are individualised according to the diagnosis, tumour characteristics and clinical needs.",
-    image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=85",
+    label: "TREATMENT SERVICES",
+    title: "Advanced, High-Precision, Evidence-Based Treatment",
+    description:
+      "B-AHEAD brings together surgical, medical and radiation oncology specialists to develop an individualised treatment approach. Treatment decisions are guided by diagnosis, disease characteristics and each patient's clinical needs.",
+    image: treatmentImage,
+    introPoints: [
+      "Coordinated consultations with oncology specialists.",
+      "Multidisciplinary tumour board discussions.",
+      "Surgical and advanced radiotherapy options.",
+      "Systemic treatment and supportive care.",
+    ],
     sections: [
       {
         title: "Consultations with all three oncology specialties",
-        text: "The programme describes consultations with surgical, medical and radiation oncologists before treatment begins, helping patients understand the proposed approach and the roles of each specialist.",
+        icon: UsersRound,
+        image: oncologyConsultationsImage,
+        text:
+          "Patients can receive coordinated consultations with surgical, medical and radiation oncology specialists. These discussions help explain the available treatment approaches and support an individualised care plan.",
         bullets: [
-          "Discuss diagnosis and treatment goals.",
-          "Understand treatment sequencing and available options.",
-          "Ask about benefits, risks and expected recovery.",
+          "Consultation with surgical oncology specialists.",
+          "Consultation with medical oncology specialists.",
+          "Consultation with radiation oncology specialists.",
+          "Coordinated discussions about treatment options.",
         ],
       },
       {
         title: "Multidisciplinary tumour board",
-        text: "Relevant specialists review the patient's diagnosis and available clinical information together to agree on an individualised treatment plan.",
+        icon: UsersRound,
+        image: tumourBoardImage,
+        text:
+          "A multidisciplinary tumour board brings specialists together to review a patient's diagnosis, investigation results and treatment requirements. The team discusses suitable treatment approaches based on the individual case.",
         bullets: [
-          "Coordinated specialist input.",
-          "Planning based on tumour characteristics and patient needs.",
+          "Collaborative review by relevant specialists.",
+          "Discussion of pathology and imaging findings.",
+          "Review of available treatment approaches.",
+          "Support for coordinated treatment planning.",
         ],
       },
       {
         title: "Breast-conserving and oncoplastic surgery",
-        text: "When oncologically appropriate, the team aims to preserve the breast. Oncoplastic techniques may help optimise cosmetic outcomes while meeting surgical treatment objectives.",
+        icon: Activity,
+        image: breastSurgeryImage,
+        text:
+          "Breast surgery options are considered according to tumour characteristics, clinical findings and patient preferences. Where suitable, breast-conserving and oncoplastic techniques may be discussed.",
         bullets: [
-          "Surgical planning tailored to the individual case.",
-          "Discussion of suitable surgical options and recovery.",
+          "Assessment of appropriate surgical options.",
+          "Breast-conserving surgery when suitable.",
+          "Oncoplastic techniques where clinically appropriate.",
+          "Individualised surgical planning with the treating team.",
         ],
       },
       {
-        title: "Breast brachytherapy",
-        text: "For selected eligible patients, accelerated partial breast irradiation (APBI) using brachytherapy may reduce the volume of breast tissue receiving radiation and shorten the treatment course. The brochure references the Elekta Flexitron system.",
+        title: "Breast brachytherapy and partial-breast irradiation",
+        icon: HeartPulse,
+        image: brachytherapyImage,
+        text:
+          "Breast brachytherapy and partial-breast irradiation are specialised radiation treatment approaches that may be considered for selected patients depending on their clinical suitability.",
         bullets: [
-          "Suitability assessed by the radiation oncology team.",
-          "Treatment depends on individual clinical indications.",
+          "Specialist assessment for treatment suitability.",
+          "Consideration of targeted radiation approaches.",
+          "Treatment planning based on individual clinical factors.",
+          "Follow-up according to the treating team's recommendations.",
         ],
       },
       {
         title: "Heart-sparing radiotherapy",
-        text: "Deep inspiration breath hold (DIBH) helps move the heart away from the treatment field during breast radiation. The programme brochure describes the Elekta Active Breathing Coordinator (ABC).",
+        icon: ShieldCheck,
+        image: heartSparingImage,
+        text:
+          "Heart-sparing radiotherapy techniques aim to reduce radiation exposure to the heart during selected breast cancer treatments, particularly when the left breast is being treated.",
         bullets: [
-          "Breathing coordination during selected treatments.",
-          "Planning aims to limit exposure of nearby healthy tissues.",
+          "Radiotherapy planning with attention to heart exposure.",
+          "Evaluation of suitable heart-sparing techniques.",
+          "Individualised treatment positioning and planning.",
+          "Ongoing assessment by the radiation oncology team.",
         ],
       },
       {
-        title: "Image-guided and adaptive radiotherapy",
-        text: "Image-guided and adaptive workflows allow the team to review anatomical changes and adjust a treatment plan when appropriate. The brochure references Accuray Radixact X9 and Elekta Versa HD, as well as Accuray Synchrony motion tracking on Radixact X9.",
+        title: "Image-guided, adaptive and motion-tracking radiotherapy",
+        icon: ScanLine,
+        image: imageGuidedImage,
+        text:
+          "Advanced radiotherapy approaches use imaging and treatment-planning technologies to support accurate delivery of radiation. The selected technique depends on the treatment area and individual clinical requirements.",
         bullets: [
-          "Review of anatomical changes during the treatment course.",
-          "Motion tracking to help align treatment delivery with the target.",
+          "Imaging support during radiotherapy planning and delivery.",
+          "Assessment of patient positioning and treatment accuracy.",
+          "Adaptive planning when clinically appropriate.",
+          "Motion-management techniques where indicated.",
         ],
       },
       {
         title: "Systemic treatment and scalp cooling",
-        text: "Systemic treatment is selected according to cancer subtype and clinical indication. Scalp cooling using the Paxman system may be available for eligible patients who wish to reduce treatment-related hair loss.",
+        icon: HeartPulse,
+        image: systemicTreatmentImage,
+        text:
+          "Systemic treatment may include chemotherapy, hormonal therapy, targeted therapy or other recommended medicines depending on the diagnosis. Scalp cooling may be discussed for selected patients receiving certain chemotherapy treatments.",
         bullets: [
-          "Chemotherapy, endocrine therapy, targeted therapy or immunotherapy when indicated.",
-          "Oncology day-care sessions under specialist supervision.",
-          "Comfortable treatment facilities as described in the programme brochure.",
+          "Treatment selection based on tumour characteristics.",
+          "Individualised systemic treatment planning.",
+          "Discussion of possible side effects and supportive measures.",
+          "Scalp cooling assessment when appropriate.",
         ],
       },
       {
         title: "Supportive care during treatment",
-        text: "Supportive services are integrated into the treatment pathway to help patients manage treatment-related and everyday concerns.",
+        icon: HeartHandshake,
+        image: supportiveCareImage,
+        text:
+          "Supportive care helps patients manage treatment-related symptoms and maintain wellbeing throughout their treatment journey. Support is planned according to individual needs.",
         bullets: [
-          "Nutrition guidance tailored to treatment needs and appetite.",
-          "Dedicated pain clinic support.",
-          "Psychological support for patients and families.",
-          "Preventive anti-nausea medication according to regimen risk.",
+          "Guidance on managing treatment-related symptoms.",
+          "Support with nutrition and general wellbeing.",
+          "Emotional and practical support during treatment.",
+          "Coordination with the treating oncology team.",
         ],
       },
     ],
@@ -143,52 +252,304 @@ const details = {
 
   "b-you": {
     name: "B-YOU",
-    label: "REHABILITATION",
-    title: "Recover. Rebuild. Rediscover You.",
-    intro:
-      "Holistic rehabilitation supports physical, emotional and social wellbeing through recovery, ongoing care and long-term survivorship.",
-    image:
-      "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=1200&q=85",
+    label: "REHABILITATION SERVICES",
+    title: "Back to You: Recover, Rebuild and Rediscover",
+    description:
+      "B-YOU focuses on rehabilitation, recovery and wellbeing. The programme brings together physical rehabilitation, nutrition, emotional support, pain management and survivorship guidance to help patients work towards improved comfort and quality of life.",
+    image: recoveryImage,
+    introPoints: [
+      "Physiotherapy and lymphoedema care.",
+      "Nutrition and emotional wellbeing support.",
+      "Pain management and mind-body wellbeing.",
+      "Long-term survivorship and follow-up guidance.",
+    ],
     sections: [
       {
-        title: "Lymphoedema care and physiotherapy",
-        text: "Rehabilitation support can help patients manage physical changes and work towards mobility and daily activities following treatment.",
+        title: "Physiotherapy and lymphoedema care",
+        icon: Activity,
+        image: physiotherapyImage,
+        text:
+          "Physiotherapy and lymphoedema care support patients experiencing movement difficulties, stiffness, swelling or physical changes during and after cancer treatment.",
         bullets: [
-          "Assessment and guidance for lymphoedema-related concerns.",
-          "Physiotherapy support according to individual needs.",
-          "Advice on suitable movement and rehabilitation goals.",
+          "Assessment of movement and physical function.",
+          "Guidance on appropriate exercises and mobility.",
+          "Lymphoedema assessment and management.",
+          "Individualised rehabilitation support.",
         ],
       },
       {
-        title: "Counselling and support groups",
-        text: "Cancer diagnosis and treatment can affect emotional wellbeing and family life. Counselling and support groups provide opportunities to discuss concerns and access emotional support.",
+        title: "Nutrition support",
+        icon: HeartPulse,
+        image: nutritionImage,
+        text:
+          "Nutrition support helps patients understand their dietary needs during treatment and recovery. Guidance can be adapted to appetite changes, nutritional requirements and individual health needs.",
         bullets: [
-          "Psychological support for patients and families.",
-          "Support with emotional adjustment during recovery.",
-          "Guidance on available support services.",
+          "Assessment of individual nutritional requirements.",
+          "Guidance on balanced meals and food choices.",
+          "Support with treatment-related appetite changes.",
+          "Nutrition guidance during recovery and follow-up.",
         ],
       },
       {
-        title: "Nutrition and exercise support",
-        text: "Nutrition guidance can be adapted to treatment needs, appetite changes and recovery. Physical activity recommendations should reflect each patient's health, treatment and recovery stage.",
+        title: "Psychiatry, counselling and emotional support",
+        icon: UsersRound,
+        image: emotionalSupportImage,
+        text:
+          "A cancer diagnosis and its treatment can affect emotional wellbeing. Counselling and psychological support can help patients and families address concerns and cope with the challenges of the care journey.",
         bullets: [
-          "Nutrition guidance for changing needs during treatment.",
-          "Support for gradually returning to appropriate physical activity.",
-          "Advice tailored to recovery and everyday life.",
+          "Emotional support during diagnosis and treatment.",
+          "Counselling for anxiety, fear and treatment-related stress.",
+          "Support with body-image and lifestyle changes.",
+          "Guidance for patients and family members.",
         ],
       },
       {
-        title: "Follow-up and long-term survivorship",
-        text: "After active treatment, follow-up helps the care team monitor recovery, discuss ongoing concerns and plan appropriate surveillance and supportive care.",
+        title: "Pain management",
+        icon: HeartHandshake,
+        image: painManagementImage,
+        text:
+          "Pain management focuses on assessing and addressing pain and other difficult symptoms that may occur during or after cancer treatment.",
         bullets: [
-          "Follow-up appointments and monitoring as advised by the treating team.",
-          "Discussion of persistent or new symptoms.",
-          "Support for long-term wellbeing and survivorship.",
+          "Assessment of pain and related symptoms.",
+          "Individualised pain-management guidance.",
+          "Support for treatment-related discomfort.",
+          "Follow-up based on patient needs.",
+        ],
+      },
+      {
+        title: "Yoga and mind-body wellbeing",
+        icon: Activity,
+        image: yogaImage,
+        text:
+          "Suitable mind-body activities may support relaxation, physical confidence and general wellbeing. Activities are selected according to a patient's health, physical ability and treating team's advice.",
+        bullets: [
+          "Guidance on suitable mind-body activities.",
+          "Relaxation and breathing practices.",
+          "Gentle movement according to individual ability.",
+          "Wellbeing support during recovery.",
+        ],
+      },
+      {
+        title: "The Pink Room and B-Well Wednesdays",
+        icon: CalendarDays,
+        image: pinkRoomImage,
+        text:
+          "The Pink Room and B-Well Wednesdays provide opportunities for patients to engage with supportive activities and wellbeing initiatives as part of their care journey.",
+        bullets: [
+          "A welcoming environment for patient support.",
+          "Wellbeing activities and patient engagement.",
+          "Opportunities to connect with support services.",
+          "Activities according to the programme schedule.",
+        ],
+      },
+      {
+        title: "Long-term survivorship",
+        icon: ShieldCheck,
+        image: survivorshipImage,
+        text:
+          "Survivorship support focuses on life after treatment, including follow-up care, long-term wellbeing and guidance on returning to everyday activities.",
+        bullets: [
+          "Follow-up and surveillance guidance.",
+          "Support with long-term treatment effects.",
+          "Rehabilitation and lifestyle guidance.",
+          "Emotional wellbeing and return-to-activity support.",
         ],
       },
     ],
   },
 };
+
+// Breadcrumb is placed directly inside the page.
+
+function PageBreadcrumb({ name }) {
+  return (
+    <nav
+      aria-label="Breadcrumb"
+      className="w-full border-b border-[#e4e9e2] bg-[#f7f9f6]"
+    >
+      <div className="page-container w-full px-5 py-3 sm:px-8 lg:px-12">
+        <ol className="flex w-full flex-wrap items-center gap-2 text-sm">
+          <li>
+            <Link
+              to="/"
+              className="font-semibold text-[#476b55] transition-colors hover:text-[#e87744]"
+            >
+              Home
+            </Link>
+          </li>
+
+          <li aria-hidden="true" className="text-[#9aa89c]">
+            /
+          </li>
+
+          <li>
+            <Link
+              to="/patient-care"
+              className="font-semibold text-[#476b55] transition-colors hover:text-[#e87744]"
+            >
+              Patient Support
+            </Link>
+          </li>
+
+          <li aria-hidden="true" className="text-[#9aa89c]">
+            /
+          </li>
+
+          <li
+            aria-current="page"
+            className="font-semibold text-[#263c30]"
+          >
+            {name}
+          </li>
+        </ol>
+      </div>
+    </nav>
+  );
+}
+
+
+function ProgrammeHero({ item }) {
+  return (
+    <section className="bg-[#f7f9f6] py-8 sm:py-12 lg:py-16">
+      <div className="page-container px-5 sm:px-8 lg:px-12">
+        <div className="grid items-center gap-9 lg:grid-cols-2 lg:gap-14">
+
+          {/* LEFT CONTENT */}
+          <div>
+            <span className="inline-flex items-center rounded-full border border-[#dce7dc] bg-white px-4 py-2 text-xs font-bold tracking-[0.15em] text-[#e87744]">
+              {item.label}
+            </span>
+
+            <h1 className="display-font mt-5 text-3xl font-bold leading-tight text-[#263c30] sm:text-4xl lg:text-5xl">
+              {item.title}
+            </h1>
+
+            <p className="mt-5 text-base leading-8 text-[#536458] sm:text-lg">
+              {item.description}
+            </p>
+
+            <div className="mt-6 space-y-3">
+              {item.introPoints.map((point) => (
+                <div key={point} className="flex items-start gap-3">
+                  <CheckCircle2
+                    size={19}
+                    className="mt-1 shrink-0 text-[#e87744]"
+                  />
+
+                  <p className="text-[15px] leading-7 text-[#405747] sm:text-[18px]">
+                    {point}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <Link
+              to="/patient-care"
+              className="mt-7 inline-flex min-h-12 items-center gap-2 rounded-full bg-[#476b55] px-4 py-2 font-semibold text-white transition hover:bg-[#304b3c]"
+            >
+              <ArrowLeft size={18} />
+              Back to Patient Support
+            </Link>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="relative">
+            <div className="absolute -right-3 -top-3 h-20 w-20 rounded-full bg-[#e87744]/15 sm:-right-4 sm:-top-4 sm:h-24 sm:w-24" />
+
+            <img
+              src={item.image}
+              alt={item.title}
+              className="relative h-[260px] w-full rounded-[24px] object-cover shadow-lg sm:h-[360px] lg:h-[430px]"
+            />
+
+            <div className="absolute -bottom-4 left-4 right-4 rounded-xl border border-[#e5ebe4] bg-white p-4 shadow-md sm:left-8 sm:right-8 sm:p-5">
+              <p className="text-xs font-bold tracking-[0.16em] text-[#e87744]">
+                RENOVA BREAST HEALTH INITIATIVE
+              </p>
+
+              <p className="mt-1 text-lg font-bold text-[#304b3c]">
+                {item.name}
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// Image + content layout for each service.
+// The image and content alternate on desktop.
+// On mobile, image always appears before the content.
+function ProgrammeSection({ section, index }) {
+  const Icon = section.icon;
+  const imageFirst = index % 2 === 0;
+
+  return (
+    <article className="grid items-center gap-7 lg:grid-cols-2 lg:gap-12">
+
+      {/* IMAGE */}
+      <div
+        className={`relative min-h-[230px] overflow-hidden rounded-[22px] sm:min-h-[300px] lg:min-h-[340px] ${
+          imageFirst ? "lg:order-1" : "lg:order-2"
+        }`}
+      >
+        <img
+          src={section.image}
+          alt={section.title}
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      </div>
+
+      {/* CONTENT */}
+      <div
+        className={`flex flex-col justify-center py-2 lg:py-5 ${
+          imageFirst ? "lg:order-2" : "lg:order-1"
+        }`}
+      >
+        <div className="flex items-start gap-4">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#edf3ed] text-[#476b55]">
+            <Icon size={24} strokeWidth={1.8} />
+          </div>
+
+          <div>
+            <p className="text-xs font-bold tracking-[0.16em] text-[#e87744]">
+              PATIENT CARE SERVICES
+            </p>
+
+            <h3 className="display-font mt-2 text-xl font-bold leading-snug text-[#263c30] sm:text-2xl lg:text-[26px]">
+              {section.title}
+            </h3>
+          </div>
+        </div>
+
+        <p className="mt-5 text-[15px] leading-8 text-[#536458] sm:text-[16px]">
+          {section.text}
+        </p>
+
+        <div className="my-5 h-px w-full bg-[#e7ede5]" />
+
+        <ul className="space-y-3">
+          {section.bullets.map((bullet) => (
+            <li key={bullet} className="flex items-start gap-3">
+              <CheckCircle2
+                size={18}
+                className="mt-1 shrink-0 text-[#e87744]"
+              />
+
+              <span className="text-[16px] leading-7 text-[#405747] sm:text-[18px]">
+                {bullet}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </article>
+  );
+}
 
 export default function PatientCareDetailPage() {
   const { programme } = useParams();
@@ -196,172 +557,115 @@ export default function PatientCareDetailPage() {
 
   if (!item) {
     return (
-      <main className="min-h-[50vh] bg-[#fffdf9] px-5 py-16 text-center">
-        <h1 className="display-font text-3xl font-bold text-[#304b3c]">
-          Programme not found
-        </h1>
-        <Link
-          to="/patient-care"
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#304b3c] px-6 py-3 font-semibold text-white transition hover:bg-[#3D5A47]"
-        //   className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#f26322] px-6 py-3 font-semibold text-white transition hover:bg-[#d95116]"
-        >
-          <ArrowLeft size={18} />
-          Back to Patient Care
-        </Link>
+      <main className="flex min-h-[60vh] items-center justify-center bg-[#fffdf9] px-5">
+        <div className="w-full max-w-lg rounded-2xl border border-[#e3eae2] bg-white p-8 text-center shadow-sm">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#f4f7f2]">
+            <HeartPulse size={30} className="text-[#476b55]" />
+          </div>
+
+          <h1 className="mt-5 text-2xl font-bold text-[#263c30]">
+            Programme Not Found
+          </h1>
+
+          <p className="mt-3 text-[15px] leading-7 text-[#536458]">
+            The requested patient support programme could not be found.
+            Please return to Patient Support and select a programme.
+          </p>
+
+          <Link
+            to="/patient-care"
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#476b55] px-6 py-3 font-semibold text-white transition hover:bg-[#304b3c]"
+          >
+            <ArrowLeft size={18} />
+            Back to Patient Support
+          </Link>
+        </div>
       </main>
     );
   }
 
   return (
     <main className="overflow-hidden bg-[#fffdf9] text-[#304b3c]">
-      {/* Breadcrumb */}
-      <nav
-        aria-label="Breadcrumb"
-        className="border-b border-[#e5e9e3] bg-[#f7f9f6]"
-      >
-        <div className="page-container flex flex-wrap items-center gap-2 px-5 py-4 text-[15px] sm:px-8 lg:px-12">
-          <Link
-            to="/"
-            className="font-medium text-[#476b55] transition-colors hover:text-[#f26322]"
-          >
-            Home
-          </Link>
-          <span className="text-[#aab5aa]">/</span>
-          <Link
-            to="/patient-care"
-            className="font-medium text-[#476b55] transition-colors hover:text-[#f26322]"
-          >
-            Patient Care
-          </Link>
-          <span className="text-[#aab5aa]">/</span>
-          <span className="font-semibold text-[#263c30]">{item.name}</span>
-        </div>
-      </nav>
 
-      {/* Detail page introduction */}
-      <section className="px-5 py-10 sm:px-8 sm:py-14 lg:px-12 lg:py-16">
-        <div className="page-container grid items-center gap-9 lg:grid-cols-2 lg:gap-14">
-          <div>
+      {/* BREADCRUMB - SAME PAGE CONTAINER WIDTH */}
+      <PageBreadcrumb name={item.name} />
+
+      {/* PROGRAMME INTRODUCTION */}
+      <ProgrammeHero item={item} />
+
+      {/* PROGRAMME SERVICES */}
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
+        <div className="page-container px-5 sm:px-8 lg:px-12">
+
+          {/* SECTION HEADING */}
+          <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
+            <span className="inline-block rounded-full bg-[#edf3ed] px-4 py-2 text-xs font-bold tracking-[0.16em] text-[#e87744]">
+              {item.name} PROGRAMME
+            </span>
+
+            <h2 className="display-font mt-4 text-2xl font-bold leading-tight text-[#263c30] sm:text-3xl lg:text-4xl">
+              Explore Our {item.label.toLowerCase()}
+            </h2>
+
+            <p className="mt-4 text-[15px] leading-8 text-[#536458] sm:text-base">
+              Learn more about the services and support available through
+              this programme. Each patient's care plan is based on individual
+              clinical requirements.
+            </p>
+
+            <div className="mx-auto mt-6 h-1 w-20 rounded-full bg-[#e87744]" />
+          </div>
+
+          {/* ALTERNATING IMAGE AND CONTENT - NO CARDS */}
+          <div className="space-y-12 sm:space-y-16 lg:space-y-20">
+            {item.sections.map((section, index) => (
+              <ProgrammeSection
+                key={section.title}
+                section={section}
+                index={index}
+              />
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* CONTACT CTA */}
+      <section className="bg-[#263c30] py-12 sm:py-16">
+        <div className="page-container px-5 sm:px-8 lg:px-12">
+          <div className="flex flex-col items-start justify-between gap-7 md:flex-row md:items-center">
+
+            <div className="max-w-2xl">
+              <p className="text-xs font-bold tracking-[0.18em] text-[#f3a078]">
+                RENOVA PATIENT SUPPORT
+              </p>
+
+              <h2 className="display-font mt-3 text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-4xl">
+                We are here to support your journey
+              </h2>
+
+              <p className="mt-4 text-[15px] leading-8 text-white/80 sm:text-base">
+                Speak with our team to understand the available services
+                and support options for your individual care needs.
+              </p>
+            </div>
+
             <Link
-              to="/patient-care"
-              className="inline-flex items-center gap-2 text-[15px] font-semibold text-[#476b55] transition-colors hover:text-[#f26322]"
+              to="/contact"
+              className="inline-flex min-h-12 shrink-0 items-center gap-2 rounded-full bg-[#e87744] px-7 py-3.5 font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#d86635] hover:shadow-lg"
             >
-              <ArrowLeft size={17} />
-              All Patient Care Programmes
+              Contact Us
+              <ArrowRight size={19} />
             </Link>
 
-            <p className="mt-7 flex items-center gap-3 text-sm font-bold tracking-[0.2em] text-[#f26322]">
-              {item.name}
-              <span className="h-px w-12 bg-[#f26322]" />
-            </p>
-
-            <h1 className="display-font mt-4 text-3xl font-bold leading-tight text-[#304b3c] sm:text-4xl lg:text-5xl">
-              {item.title}
-            </h1>
-
-            <p className="mt-5 text-[16px] leading-8 text-[#425b4c]">
-              {item.intro}
-            </p>
-
-            <div className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#fff0e7] px-4 py-2.5 text-[15px] font-semibold text-[#a94419]">
-              <CheckCircle2 size={19} className="text-[#f26322]" />
-              {item.label}
-            </div>
-          </div>
-
-          <div className="group relative">
-            <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-[#fff0e7]" />
-            <div className="absolute -right-3 -top-3 h-20 w-20 rounded-full bg-[#e7eee7]" />
-            <img
-              src={item.image}
-              alt={item.title}
-              loading="lazy"
-              className="relative h-[280px] w-full rounded-[24px] object-cover shadow-lg transition-transform duration-700 group-hover:scale-[1.02] sm:h-[380px] lg:h-[430px]"
-            />
           </div>
         </div>
       </section>
 
-      {/* Detailed information */}
-      <section className="page-container space-y-5 px-5 pb-14 sm:px-8 sm:pb-20 lg:px-12">
-        <div className="mb-8 max-w-3xl">
-          <p className="text-sm font-bold tracking-[0.2em] text-[#f26322]">
-            PROGRAMME DETAILS
-          </p>
-          <h2 className="display-font mt-3 text-2xl font-bold text-[#304b3c] sm:text-3xl">
-            Understand your care pathway
-          </h2>
-          <p className="mt-3 text-[16px] leading-8 text-[#425b4c]">
-            Explore the services and approaches described in our breast health
-            programme. Your appropriate care options will be discussed with
-            your treating specialist.
-          </p>
-        </div>
-
-        {item.sections.map((section, index) => (
-          <article
-            key={section.title}
-            className="group rounded-2xl border border-[#e5e9e3] bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-[#f26322]/40 hover:shadow-md sm:p-7"
-          >
-            <div className="flex items-start gap-4 sm:gap-5">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#fff0e7] text-sm font-bold text-[#e65b1c] transition-colors duration-300 group-hover:bg-[#304b3c] group-hover:text-white">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-
-              <div className="min-w-0 flex-1">
-                <h2 className="display-font text-xl font-bold leading-snug text-[#304b3c] sm:text-2xl">
-                  {section.title}
-                </h2>
-
-                <p className="mt-3 text-[16px] leading-8 text-[#425b4c]">
-                  {section.text}
-                </p>
-
-                <ul className="mt-4 space-y-2.5">
-                  {section.bullets.map((bullet) => (
-                    <li
-                      key={bullet}
-                      className="flex items-start gap-3 text-[15px] leading-7 text-[#304b3c] sm:text-[16px]"
-                    >
-                      <CheckCircle2
-                        size={19}
-                        className="mt-1 shrink-0 text-[#f26322]"
-                      />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </article>
-        ))}
-
-        {/* Contact CTA */}
-        <div className="mt-10 rounded-[24px] bg-[#304b3c] p-6 text-white sm:p-9">
-          <p className="text-sm font-bold tracking-[0.18em] text-[#ff9868]">
-            WE ARE HERE TO HELP
-          </p>
-          <h2 className="display-font mt-3 text-2xl text-[#ecf0ee]  font-bold sm:text-3xl">
-            Discuss your care with our team
-          </h2>
-          <p className="mt-3 max-w-2xl text-[16px] leading-8 text-white">
-            Your care plan depends on your individual diagnosis and clinical
-            needs. Contact the team to discuss your questions and appropriate
-            next steps.
-          </p>
-
-          <Link
-            to="/contact"
-            className="group mt-6 inline-flex items-center gap-2 rounded-full bg-[#f26322] px-6 py-3 font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#d95116]"
-          >
-            Contact Our Team
-            <ArrowRight
-              size={18}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </Link>
-        </div>
-      </section>
     </main>
   );
 }
+
+
+
+

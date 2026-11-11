@@ -1,53 +1,33 @@
-import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+
 import { Link } from "react-router-dom";
 import SectionTitle from "../SectionTitle";
-import { blogs } from "../../data/siteData";
+import BlogCard from "../health-library/BlogCard";
+import { healthBlogs } from "../../data/healthLibraryData";
 
 export default function HomeBlogs() {
-  const reduceMotion = useReducedMotion();
-
   return (
     <section className="section-padding bg-mist">
       <div className="page-container">
         <SectionTitle
-          eyebrow="THE LATEST"
+          eyebrow="HEALTH LIBRARY"
           title="Knowledge for your care journey"
-          description="Accessible articles about breast health, diagnosis, treatment and patient support."
+          description="Patient-friendly articles about cancer, diagnosis, treatment options and wellbeing."
         />
-        <div className="cards-row">
-          {blogs.slice(0, 3).map((blog, index) => (
-            <motion.article
-              key={blog.id || blog.title}
-              initial={{ opacity: 0, y: reduceMotion ? 0 : 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: reduceMotion ? 0 : index * 0.1 }}
-              className="overflow-hidden rounded-3xl bg-white shadow-sm"
-            >
-              <img
-                src={blog.image}
-                alt=""
-                loading="lazy"
-                className="h-48 w-full object-cover sm:h-52"
-              />
-              <div className="p-6">
-                <p className="text-[15px] font-bold tracking-[0.16em] text-royal">{blog.category}</p>
-                <h3 className="display-font mt-3 text-xl font-semibold text-heading">{blog.title}</h3>
-                <p className="mt-3 text-[16px] leading-7 text-ink">{blog.description}</p>
-                <Link
-                  to={blog.path}
-                  className="mt-5 inline-flex items-center gap-2 text-[16px] font-bold text-royal"
-                >
-                  Read article <ArrowUpRight size={16} />
-                </Link>
-              </div>
-            </motion.article>
+
+        <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {healthBlogs.slice(0, 4).map((blog) => (
+            <BlogCard key={blog.id || blog.slug} blog={blog} />
           ))}
         </div>
-        <div className="mt-8 text-center">
-          <Link to="/blogs" className="text-[16px] font-bold text-royal">
-            View all articles →
+
+        {/* View All Blogs Button */}
+        <div className="mt-8 flex justify-center">
+          <Link
+            to="/health-library/blogs"
+            className="inline-flex items-center justify-center rounded-full bg-royal px-7 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E87744] hover:shadow-lg"
+          >
+            View All Blogs
+            <span className="ml-2" aria-hidden="true">→</span>
           </Link>
         </div>
       </div>

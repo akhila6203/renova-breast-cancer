@@ -22,12 +22,11 @@ import {
 
 import SectionTitle from "../components/SectionTitle";
 
-import breastBanner from "../assets/home/breast-banner.png";
-import assessmentImage from "../assets/home/assessment.jpg";
-import patientCareImage from "../assets/home/patientCare.jpg";
-import diagnosticImagingImage from "../assets/home/diagnostic-imaging.jpg";
-import treatmentImage from "../assets/home/treatmentBanner3.jpg";
-
+import breastBanner from "../assets/home/about-breast-care1.jpg";
+import assessmentImage from "../assets/home/assessment1.jpg";
+import patientCareImage from "../assets/home/patient-care1.jpg";
+import diagnosticImagingImage from "../assets/home/diagnostic-imaging1.jpg";
+import treatmentImage from "../assets/home/cancer-treatment1.jpg";
 // --------------------------------------------------
 // REUSABLE REVEAL ANIMATION
 // --------------------------------------------------

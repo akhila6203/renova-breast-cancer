@@ -116,44 +116,89 @@ export function getServiceBySlug(slug) {
   return services.find((service) => service.slug === slug);
 }
 
+
 export const slides = [
   {
     eyebrow: "RENOVA HOSPITALS · BREAST CARE",
     title: "Compassionate breast care, explained with clarity.",
     description:
       "From first assessment to recovery, we help you understand the next step and feel supported while you take it.",
-    image:
-      breastBanner,
+    image: breastBanner,
+
     primary: "Book an Appointment",
     primaryPath: "/appointments",
+
     secondary: "Explore Our Services",
     secondaryPath: "/services",
   },
+
   {
     eyebrow: "CLEARER ANSWERS",
     title: "When something feels different, seek assessment.",
     description:
       "Most breast lumps are not cancer. Persistent or unusual changes still deserve a timely clinical review.",
-    image:
-      diagnosisBanner,
+    image: diagnosisBanner,
+
     primary: "Learn the Signs",
-    primaryPath: "/breast-cancer",
+    primaryPath: "/health-library",
+
     secondary: "Find a Specialist",
-    secondaryPath: "/our-team",
+    secondaryPath: "/doctors",
   },
+
   {
     eyebrow: "PERSONALISED SUPPORT",
     title: "A care pathway built around you.",
     description:
       "Diagnosis, treatment and recovery are connected stages. We explain options so you can take part in every decision.",
-    image:
-      treatmentBanner,
+    image: treatmentBanner,
+
     primary: "Find a Specialist",
-    primaryPath: "/our-team",
-    secondary: "Patient Care",
+    primaryPath: "/doctors",
+
+    secondary: "Patient Support",
     secondaryPath: "/patient-care",
   },
 ];
+
+// export const slides = [
+//   {
+//     eyebrow: "RENOVA HOSPITALS · BREAST CARE",
+//     title: "Compassionate breast care, explained with clarity.",
+//     description:
+//       "From first assessment to recovery, we help you understand the next step and feel supported while you take it.",
+//     image:
+//       breastBanner,
+//     primary: "Book an Appointment",
+//     primaryPath: "/appointments",
+//     secondary: "Explore Our Services",
+//     secondaryPath: "/services",
+//   },
+//   {
+//     eyebrow: "CLEARER ANSWERS",
+//     title: "When something feels different, seek assessment.",
+//     description:
+//       "Most breast lumps are not cancer. Persistent or unusual changes still deserve a timely clinical review.",
+//     image:
+//       diagnosisBanner,
+//     primary: "Learn the Signs",
+//     primaryPath: "/breast-cancer",
+//     secondary: "Find a Specialist",
+//     secondaryPath: "/our-team",
+//   },
+//   {
+//     eyebrow: "PERSONALISED SUPPORT",
+//     title: "A care pathway built around you.",
+//     description:
+//       "Diagnosis, treatment and recovery are connected stages. We explain options so you can take part in every decision.",
+//     image:
+//       treatmentBanner,
+//     primary: "Find a Specialist",
+//     primaryPath: "/our-team",
+//     secondary: "Patient Care",
+//     secondaryPath: "/patient-care",
+//   },
+// ];
 
 export const doctors = [
   {
