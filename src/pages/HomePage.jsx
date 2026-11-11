@@ -16,6 +16,9 @@ import PhotoGallery from "../components/PhotoGallery";
 import TrustStrip from "../components/home/TrustStrip";
 import TreatmentProcess from "../components/home/TreatmentProcess";
 
+import HomeTechnologies from "../components/home/HomeTechnologies";
+import HomeTreatments from "../components/home/HomeTreatments";
+
 
 export default function HomePage() {
   return (
@@ -27,15 +30,17 @@ export default function HomePage() {
       <HomePathway />
       {/* <WaveDivider from="#FFFFFF" to="#F6F9F6" /> */}
       <HomeServices />
+      <HomeDoctors />
       {/* <WaveDivider from="#F6F9F6" to="#FFFFFF" flip /> */}
       <HomeBrochures />
       <WaveDivider from="#FFFFFF" to="#F6F9F6" /> 
       <HomeAboutTeaser />
-      <HomeDoctors />
+      {/* <HomeDoctors /> */}
       <HomeWhy />
-
+        <HomeTechnologies />
+<HomeTreatments />
       <TreatmentProcess />
-      
+
       <HomePatientCare />
       <TestimonialsSlider />
       <VideoSlider />

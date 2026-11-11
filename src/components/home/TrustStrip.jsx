@@ -55,7 +55,8 @@ export default function TrustStrip() {
   className="relative z-10 -mt-1 w-full px-0 pb-0 pt-0"
   aria-label="Our commitments"
 >
-     <div className="mx-auto grid w-full grid-cols-2 overflow-hidden rounded-none border-y border-[#D4E0D6] bg-[#c4f7d5] px-2 py-2 sm:px-4 lg:grid-cols-4 lg:px-3">
+  {/* bg-[#c4f7d5] */}
+     <div className="mx-auto grid w-full grid-cols-2 overflow-hidden rounded-none border-y border-[#D4E0D6] bg-[#b6c8bc] px-2 py-2 sm:px-4 lg:grid-cols-4 lg:px-3">
         {trustItems.map((item, index) => (
           <div
             key={item.title}

@@ -640,107 +640,84 @@ export const healthVideos = [
   {
     title: "Cancer Treatment Options",
     category: "Cancer Treatments",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/corOEbctfco?si=EplpgQLRw36Ryv68"
   },
   {
     title: "Chemotherapy Explained",
     category: "Cancer Treatments",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/KYYc-mrorr8?si=ebKXzs9Uk5XDl3RD"
   },
   {
     title: "Understanding Immunotherapy",
     category: "Cancer Treatments",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/m-ShnON0Dnc?si=LKltf-vKrOzyUS-3"
   },
   {
     title: "Radiation Therapy Explained",
     category: "Cancer Treatments",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/SRntDPG_iN0?si=VPzFzedf7Mc-uIiE"
   },
   {
     title: "Nutrition During Cancer Treatment",
     category: "Living With Cancer",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/9AnP5tfGCHs?si=pQiunD36_FQiLZdF"
   },
   {
     title: "Managing Cancer-Related Fatigue",
     category: "Living With Cancer",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/JD4hqPouulg?si=5TZSZybTirFOWe4x"
   },
   {
     title: "Cancer Screening and Prevention",
     category: "Prevention",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/lLI7rXL_YBA?si=mW7AoC7rTysBehWs"
   },
   {
     title: "Understanding Cancer Biomarkers",
     category: "Diagnosis & Tests",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/qn_8jINSwiw?si=zVT0Aa6FmzfV93Vu"
   },
   {
     title: "Life After Cancer Treatment",
     category: "Survivorship",
-    youtubeId: ""
+    youtubeId: "https://youtu.be/1gY4F6vPxPE?si=mVwcXcAIRd8TMzul"
   },
   {
     title: "Supporting a Loved One With Cancer",
     category: "Caregiver Support",
-    youtubeId: ""
+    youtubeId: "https://youtu.be/qGRgu1wT6bY?si=z4H8RipnI0a_IADw"
   },
   {
     title: "Latest Advances in Cancer Care",
     category: "Innovation",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/QL8ddXWxfu8?si=_7fS4fQi0xmcyObO"
   },
-  {
-    title: "Questions to Ask Your Oncologist",
-    category: "Patient Education",
-    youtubeId: ""
-  },
+
   {
     title: "Importance of Follow-Up Care",
     category: "Survivorship",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/xZ-cGrK7yXc?si=bA7pH0IIz2Hrm8rS"
   },
-  {
-    title: "Cancer Surgery Explained",
-    category: "Cancer Treatments",
-    youtubeId: ""
-  },
-  {
-    title: "Targeted Therapy Explained",
-    category: "Cancer Treatments",
-    youtubeId: ""
-  },
-  {
-    title: "Emotional Wellbeing During Cancer Care",
-    category: "Living With Cancer",
-    youtubeId: ""
-  },
-  {
-    title: "Healthy Habits and Cancer Prevention",
-    category: "Prevention",
-    youtubeId: ""
-  },
+ 
   {
     title: "Understanding Genetic Testing",
     category: "Diagnosis & Tests",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/2sTFJf6eR5M?si=xFxTNLj5GXseYRLZ"
   },
   {
     title: "Caregiver Support",
     category: "Caregiver Support",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/6G9Hgj3cq8g?si=73yPsyvCSA-f_RE1"
   },
   {
     title: "Precision Oncology",
     category: "Latest Treatments",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/VfuattAura4?si=WqKfKuHolAg1P8Aw"
   },
   {
     title: "Cancer Survivorship",
     category: "Survivorship",
-    youtubeId: ""
+    youtubeId: "https://youtube.com/shorts/xP88P1KM86s?si=s0UG7wVKNtLG26Vb"
   }
 ];
 

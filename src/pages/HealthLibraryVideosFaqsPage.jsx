@@ -68,11 +68,53 @@ export default function HealthLibraryVideosFaqsPage() {
     setSelectedVideo(null);
   };
 
-  const getVideoEmbedUrl = (video) => {
-    if (!video?.youtubeId) return "";
+ // Extract YouTube video ID from either a full URL or an ID
+const getYouTubeVideoId = (value) => {
+  if (!value) return "";
 
-    return `https://www.youtube-nocookie.com/embed/${video.youtubeId}?autoplay=1&rel=0`;
-  };
+  // Already a video ID
+  if (/^[a-zA-Z0-9_-]{11}$/.test(value)) {
+    return value;
+  }
+
+  try {
+    const url = new URL(value);
+
+    if (url.hostname.includes("youtu.be")) {
+      return url.pathname.split("/").filter(Boolean)[0] || "";
+    }
+
+    if (url.pathname.includes("/shorts/")) {
+      return url.pathname.split("/shorts/")[1]?.split("/")[0] || "";
+    }
+
+    if (url.pathname.includes("/embed/")) {
+      return url.pathname.split("/embed/")[1]?.split("/")[0] || "";
+    }
+
+    return url.searchParams.get("v") || "";
+  } catch {
+    return "";
+  }
+};
+
+// Generate YouTube thumbnail automatically
+const getVideoThumbnail = (video) => {
+  const videoId = getYouTubeVideoId(video?.youtubeId);
+
+  if (!videoId) return "";
+
+  return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+};
+
+// Generate YouTube embed URL
+const getVideoEmbedUrl = (video) => {
+  const videoId = getYouTubeVideoId(video?.youtubeId);
+
+  if (!videoId) return "";
+
+  return `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+};
 
   return (
     <main className="min-h-screen bg-white">
@@ -208,37 +250,42 @@ export default function HealthLibraryVideosFaqsPage() {
                     className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#D4E0D6] bg-white text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#E87744]/60 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4F7359]"
                   >
                     {/* VIDEO THUMBNAIL */}
-                    <div className="relative aspect-video w-full overflow-hidden bg-[#E8F0EA]">
+                    {/* VIDEO THUMBNAIL */}
+<div className="relative aspect-video w-full overflow-hidden bg-[#E8F0EA]">
 
-                      {video.thumbnail ? (
-                        <img
-                          src={video.thumbnail}
-                          alt={video.title}
-                          loading="lazy"
-                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                      ) : (
-                        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#E8F0EA] to-[#F6F9F6]">
-                          <Video
-                            size={45}
-                            className="text-[#4F7359]/50"
-                          />
-                        </div>
-                      )}
+  {getVideoThumbnail(video) ? (
+    <img
+      src={getVideoThumbnail(video)}
+      alt={video.title}
+      loading="lazy"
+      onError={(event) => {
+        event.currentTarget.style.display = "none";
+      }}
+      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+    />
+  ) : (
+    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#E8F0EA] to-[#F6F9F6]">
+      <Video
+        size={45}
+        className="text-[#4F7359]/50"
+      />
+    </div>
+  )}
 
-                      {/* PLAY BUTTON */}
-                      <div className="absolute inset-0 flex items-center justify-center bg-[#243528]/10 transition duration-300 group-hover:bg-[#243528]/30">
+  {/* PLAY BUTTON */}
+  <div className="absolute inset-0 flex items-center justify-center bg-[#243528]/10 transition duration-300 group-hover:bg-[#243528]/30">
 
-                        <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-[#4F7359] shadow-lg transition duration-300 group-hover:scale-110 group-hover:bg-[#E87744] group-hover:text-white">
-                          <PlayCircle size={32} />
-                        </span>
+    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-[#4F7359] shadow-lg transition duration-300 group-hover:scale-110 group-hover:bg-[#E87744] group-hover:text-white">
+      <PlayCircle size={32} />
+    </span>
 
-                      </div>
+  </div>
 
-                      <span className="absolute bottom-3 left-3 rounded-full bg-[#243528]/75 px-3 py-1 text-xs font-semibold text-white">
-                        Watch Video
-                      </span>
-                    </div>
+  <span className="absolute bottom-3 left-3 rounded-full bg-[#243528]/75 px-3 py-1 text-xs font-semibold text-white">
+    {getYouTubeVideoId(video.youtubeId) ? "Watch Video" : "Coming Soon"}
+  </span>
+
+</div>
 
                     {/* VIDEO TITLE */}
                     <div className="flex flex-1 flex-col p-5">
