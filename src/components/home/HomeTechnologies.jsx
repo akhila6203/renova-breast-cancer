@@ -62,7 +62,7 @@ export default function HomeTechnologies() {
                   {item.title}
                 </h3>
 
-                <p className="mt-3 flex-1 text-sm leading-6 text-[#59695D]">
+                <p className="mt-3 flex-1 text-[17px] leading-7 text-[#59695D]">
                   {item.description}
                 </p>
 

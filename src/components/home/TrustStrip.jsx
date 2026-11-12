@@ -56,7 +56,7 @@ export default function TrustStrip() {
   aria-label="Our commitments"
 >
   {/* bg-[#c4f7d5] */}
-     <div className="mx-auto grid w-full grid-cols-2 overflow-hidden rounded-none border-y border-[#D4E0D6] bg-[#b6c8bc] px-2 py-2 sm:px-4 lg:grid-cols-4 lg:px-3">
+     <div className="mx-auto grid w-full grid-cols-2 overflow-hidden rounded-none border-y border-[#D4E0D6] bg-[#F6F9F6] px-2 py-2 sm:px-4 lg:grid-cols-4 lg:px-3">
         {trustItems.map((item, index) => (
           <div
             key={item.title}
@@ -83,10 +83,10 @@ export default function TrustStrip() {
             </svg>
 
             <div className="flex min-w-0 flex-col gap-0.5">
-              <strong className="text-xs font-extrabold leading-snug text-[#3a3d3b] sm:text-sm">
+              <strong className="text-[18px] font-extrabold leading-snug text-[#3a3d3b] sm:text-[20px]">
                 {item.title}
               </strong>
-              <span className="text-xs font-medium leading-snug text-[#3d3e3d] sm:text-sm">
+              <span className="text-[16px] font-medium leading-snug text-[#3d3e3d] sm:text-[17px]">
                 {item.description}
               </span>
             </div>

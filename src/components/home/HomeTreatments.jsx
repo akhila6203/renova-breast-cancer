@@ -121,11 +121,11 @@ export default function HomeTreatments() {
 
                 {/* Card Content */}
                 <div className="flex flex-1 flex-col p-5">
-                  <h3 className="min-h-[56px] text-lg font-bold leading-7 text-[#263C30] transition-colors duration-300 group-hover:text-[#E87744]">
+                  <h3 className="text-lg font-bold text-[#263C30] transition-colors group-hover:text-[#E87744]">
                     {service.title}
                   </h3>
 
-                  <p className="mt-3 min-h-[96px] flex-1 text-sm leading-6 text-[#59695D]">
+                  <p className="mt-3 min-h-[96px] flex-1 text-[17px] leading-7 text-[#59695D]">
                     {service.cardDescription}
                   </p>
 

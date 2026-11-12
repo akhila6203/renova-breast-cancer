@@ -17,6 +17,7 @@ import {
   AppointmentsPage,
   NotFoundPage,
 } from "./pages/Pages";
+
 import PatientCareDetailPage from "./pages/PatientCareDetailPage";
 
 import DoctorsPage from "./pages/DoctorsPage";
@@ -40,6 +41,8 @@ import HealthLibraryCategoryPage from "./pages/HealthLibraryCategoryPage";
 import HealthLibraryBlogsPage from "./pages/HealthLibraryBlogsPage";
 import HealthLibraryArticlePage from "./pages/HealthLibraryArticlePage";
 import HealthLibraryVideosFaqsPage from "./pages/HealthLibraryVideosFaqsPage";
+
+import OurVisionMissionPage from "./pages/OurVisionMissionPage";
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -69,7 +72,13 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+
         <Route path="/about" element={<AboutPage />} />
+        <Route
+          path="/about/vision-mission"
+          element={<OurVisionMissionPage />}
+        />
+        
         {/* <Route path="/services" element={<ServicesPage />} /> */}
         {/* <Route path="/services/:slug" element={<ServiceDetailPage />} /> */}
         {/* <Route path="/our-team" element={<TeamPage />} /> */}

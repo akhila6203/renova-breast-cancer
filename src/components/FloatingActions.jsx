@@ -1,11 +1,19 @@
-import { MapPin, CalendarDays, Stethoscope } from "lucide-react";
+// import { MapPin, CalendarDays, Stethoscope } from "lucide-react";
+import { MapPin, CalendarDays, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { hospital } from "../data/siteData";
 
 const actions = [
-  { label: "Location", path: "/contact#locations", Icon: MapPin },
+  {
+    label: "Call Now",
+    path: hospital.phoneHref,
+    Icon: Phone,
+    isCall: true,
+  },
   { label: "Appointment", path: "/appointments", Icon: CalendarDays },
-  { label: "Find a Doctor", path: "/our-team", Icon: Stethoscope },
+  { label: "Location", path: "/contact#locations", Icon: MapPin },
+  // { label: "Appointment", path: "/appointments", Icon: CalendarDays },
+  // { label: "Find a Doctor", path: "/our-team", Icon: Stethoscope },
 ];
 
 function WhatsAppIcon() {
@@ -28,7 +36,7 @@ export default function FloatingActions() {
   <>
     {/* MOBILE AND TABLET: Keep the original bottom navigation */}
     <div className="fixed bottom-0 left-0 right-0 z-40 grid grid-cols-3 border-t border-line bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_25px_rgba(20,38,74,0.08)] backdrop-blur lg:hidden">
-      {actions.map(({ label, path, Icon }) => (
+      {/* {actions.map(({ label, path, Icon }) => (
         <Link
           key={label}
           to={path}
@@ -37,12 +45,22 @@ export default function FloatingActions() {
           <Icon size={22} />
           <span className="text-[15px] font-semibold">{label}</span>
         </Link>
-      ))}
+      ))} */}
+      {actions.map(({ label, path, Icon, isCall }) => (
+  <Link
+    key={label}
+    to={path}
+    className="flex min-h-[64px] flex-col items-center justify-center gap-1 text-navy transition hover:bg-ice"
+  >
+    <Icon size={22} />
+    <span className="text-[15px] font-semibold">{label}</span>
+  </Link>
+))}
     </div>
 
     {/* WINDOWS / DESKTOP: Three icons vertically above WhatsApp */}
     <div className="fixed bottom-[88px] right-6 z-40 hidden flex-col gap-3 lg:flex">
-      {actions.map(({ label, path, Icon }) => (
+      {/* {actions.map(({ label, path, Icon }) => (
         <Link
           key={label}
           to={path}
@@ -52,7 +70,18 @@ export default function FloatingActions() {
         >
           <Icon size={20} />
         </Link>
-      ))}
+      ))} */}
+      {actions.map(({ label, path, Icon, isCall }) => (
+  <Link
+    key={label}
+    to={path}
+    title={label}
+    aria-label={label}
+    className="flex h-12 w-12 items-center justify-center rounded-full bg-royal text-white shadow-premium transition hover:bg-royaldeep"
+  >
+    <Icon size={20} />
+  </Link>
+))}
     </div>
 
     {/* WHATSAPP: Original position on desktop and above mobile navigation */}

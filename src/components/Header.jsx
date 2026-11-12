@@ -114,11 +114,21 @@ const navigation = [
     label: "Home",
     path: "/",
   },
+  // {
+  //   label: "About Us",
+  //   path: "/about",
+  // },
   {
-    label: "About Us",
-    path: "/about",
-  },
- 
+  label: "About Us",
+  path: "/about",
+  children: [
+    {
+      label: "Our Vision & Mission",
+      path: "/about/vision-mission",
+      Icon: HeartHandshake,
+    },
+  ],
+},
   {
   label: "Specialties",
   path: "/specialities",
@@ -200,53 +210,6 @@ const navigation = [
     //   { label: "Survivorship", path: "/patient-care" },
     // ],
   },
- 
-  //   {
-  //   label: "Health Library",
-  //   path: "/health-library",
-  //   children: [
-  //     {
-  //       label: "Cancer Basics",
-  //       path: "/health-library/cancer-basics",
-  //     },
-  //     {
-  //       label: "Symptoms",
-  //       path: "/health-library/cancer-symptoms",
-  //     },
-  //     {
-  //       label: "Diagnosis & Tests",
-  //       path: "/health-library/diagnosis-tests",
-  //     },
-  //     {
-  //       label: "Treatments",
-  //       path: "/health-library/cancer-treatments",
-  //     },
-  //     {
-  //       label: "Latest Treatments & Innovation",
-  //       path: "/health-library/latest-treatments-innovation",
-  //     },
-  //     {
-  //       label: "Risk Factors & Prevention",
-  //       path: "/health-library/risk-prevention",
-  //     },
-  //     {
-  //       label: "Living With Cancer",
-  //       path: "/health-library/living-with-cancer",
-  //     },
-  //     {
-  //       label: "Survivorship",
-  //       path: "/health-library/survivorship",
-  //     },
-  //     {
-  //       label: "Blogs & Articles",
-  //       path: "/blogs",
-  //     },
-  //     {
-  //       label: "Videos & FAQs",
-  //       path: "/health-library/videos-faqs",
-  //     },
-  //   ],
-  // },
   
 {
   label: "Health Library",
@@ -341,7 +304,9 @@ export default function Header() {
     <>
       <header
         ref={headerRef}
-        className="sticky top-0 z-50 border-b border-line bg-white shadow-sm"
+         onMouseLeave={() => setActiveDropdown(null)}
+  className="sticky top-0 z-[999] border-b border-line bg-white shadow-sm"
+        // className="sticky top-0 z-50 border-b border-line bg-white shadow-sm"
       >
         {/* TOP INFORMATION STRIPn [#08614F] */}
         <div
@@ -418,26 +383,31 @@ export default function Header() {
               aria-label="Main navigation"
             > */}
             <nav
-  className="ml-auto hidden items-center gap-3 min-[1300px]:flex xl:gap-3"
-  aria-label="Main navigation"
->
+            className="ml-auto hidden items-center gap-4 min-[1300px]:flex xl:gap-5 2xl:gap-6"
+              // className="ml-auto hidden items-center gap-3 min-[1300px]:flex xl:gap-3"
+              aria-label="Main navigation"
+            >
               {navigation.map((item) => (
+                
                 <div
-                  key={item.label}
-                  className="relative flex h-full items-center"
-                  onMouseEnter={() => {
-                    if (item.children) {
-                      setActiveDropdown(item.label);
-                    }
-                  }}
-                  onMouseLeave={() => {
-                    if (item.children) {
-                      setActiveDropdown((current) =>
-                        current === item.label ? null : current
-                      );
-                    }
-                  }}
-                >
+  key={item.label}
+  // className="relative z-10 flex h-full items-center"
+  className="relative z-10 flex items-center"
+  onMouseEnter={() => {
+    if (item.children) {
+      setActiveDropdown(item.label);
+    } else {
+      setActiveDropdown(null);
+    }
+  }}
+  onMouseLeave={() => {
+    if (item.children) {
+      setActiveDropdown((current) =>
+        current === item.label ? null : current
+      );
+    }
+  }}
+>
                   <NavLink
                     to={item.path}
                     end={item.path === "/"}
@@ -449,8 +419,8 @@ export default function Header() {
                     //       : "text-ink hover:text-[#08614F]"
                     //   }`
                     // }
-                    className={({ isActive }) =>
-  `whitespace-nowrap py-6 text-[14px] min-[1450px]:text-[15px] min-[1600px]:text-[16px] font-semibold transition-colors duration-200 ${
+                   className={({ isActive }) =>
+  `whitespace-nowrap py-1 text-[16px] min-[1450px]:text-[17px] min-[1600px]:text-[18px] font-semibold transition-colors duration-200 ${
     isActive
       ? "text-[#E87744]"
       : "text-ink hover:text-[#4F7359]"
@@ -486,38 +456,39 @@ export default function Header() {
                       />
                     </button>
                   )}
+  {/* DESKTOP DROPDOWN */}
+{item.children && activeDropdown === item.label && (
+  <motion.div
+    initial={{ opacity: 0, y: -6 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.18, ease: "easeOut" }}
+    className="absolute left-0 top-full z-[1000] w-[310px] pt-0"
+    // className="absolute left-0 top-full z-[1000] w-[310px] pt-2"
+  >
+    <div className="overflow-hidden rounded-xl border border-line bg-white shadow-xl">
+      <div className="max-h-[65vh] overflow-y-auto py-2">
+        {item.children.map((child) => {
+          const Icon = child.Icon;
 
-                  {/* DESKTOP DROPDOWN */}
-                  {item.children &&
-                    activeDropdown === item.label && (
-                      <div className="absolute left-0 top-full z-[80] w-[310px] overflow-hidden rounded-b-xl border border-line bg-white shadow-xl">
-                        <div className="max-h-[65vh] overflow-y-auto py-2">
+          return (
+            <Link
+              key={child.label}
+              to={child.path}
+              onClick={closeAll}
+              className="flex min-h-[38px] items-center gap-3 border-b border-line/60 px-5 py-2 text-[16px] font-medium text-ink transition-colors last:border-0 hover:bg-[#F3F7F4] hover:text-[#08614F]"
+            >
+              {Icon && (
+                <Icon size={19} className="shrink-0 text-[#E87744]" />
+              )}
+              <span>{child.label}</span>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  </motion.div>
+)}
 
-                          {item.children.map((child) => {
-                            const Icon = child.Icon;
-
-                            return (
-                              <Link
-                                key={child.label}
-                                to={child.path}
-                                onClick={() => setActiveDropdown(null)}
-                                className="flex min-h-[48px] items-center gap-3 border-b border-line/60 px-5 py-3 text-[16px] font-medium text-ink transition-colors last:border-0 hover:bg-[#F3F7F4] hover:text-[#08614F]"
-                              >
-                                {Icon && (
-                                  <Icon
-                                    size={19}
-                                    className="shrink-0 text-[#E98A43]"
-                                  />
-                                )}
-
-                                <span>{child.label}</span>
-                              </Link>
-                            );
-                          })}
-
-                        </div>
-                      </div>
-                    )}
                 </div>
               ))}
             </nav>

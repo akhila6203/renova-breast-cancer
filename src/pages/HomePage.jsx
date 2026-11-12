@@ -18,6 +18,7 @@ import TreatmentProcess from "../components/home/TreatmentProcess";
 
 import HomeTechnologies from "../components/home/HomeTechnologies";
 import HomeTreatments from "../components/home/HomeTreatments";
+import HomeSpecialities from "../components/home/HomeSpecialities";
 
 
 export default function HomePage() {
@@ -26,8 +27,8 @@ export default function HomePage() {
       <HeroSlider />
 
       <TrustStrip />
-
       <HomePathway />
+        <HomeSpecialities />
       {/* <WaveDivider from="#FFFFFF" to="#F6F9F6" /> */}
       <HomeServices />
       <HomeDoctors />
@@ -42,9 +43,9 @@ export default function HomePage() {
       <TreatmentProcess />
 
       <HomePatientCare />
-      <TestimonialsSlider />
+      {/* <TestimonialsSlider /> */}
       <VideoSlider />
-      <PhotoGallery/>
+      {/* <PhotoGallery/> */}
       <HomeBlogs />
       <HomeContactBanner />
     </>

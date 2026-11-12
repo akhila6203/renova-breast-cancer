@@ -125,7 +125,7 @@ export const slides = [
       "From first assessment to recovery, we help you understand the next step and feel supported while you take it.",
     image: breastBanner,
 
-    primary: "Book an Appointment",
+    primary: "Appointment",
     primaryPath: "/appointments",
 
     secondary: "Explore Our Services",

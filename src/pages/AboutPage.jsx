@@ -100,6 +100,13 @@ const approachItems = [
     description:
       "Supporting patients from initial assessment and diagnosis through treatment and follow-up care.",
   },
+  {
+    icon: Heart,
+    title: "Clear Communication & Shared Decisions",
+    description:
+      "Encouraging open communication and helping patients and families understand care options and participate in informed treatment decisions.",
+  },
+
 ];
 
 const values = [
@@ -195,7 +202,7 @@ export default function AboutPage() {
 
       <section
         id="about-renova"
-        className="relative scroll-mt-10 overflow-hidden bg-[#fffdf9] px-5 pb-16 pt-14 sm:px-8 sm:pb-20 sm:pt-10 lg:px-12 lg:pb-24 lg:pt-8"
+        className="relative scroll-mt-10 overflow-hidden bg-[#fffdf9] px-5 pb-16 pt-4 sm:px-8 sm:pb-20 sm:pt-4 lg:px-12 lg:pb-24 lg:pt-6"
       >
         {/* Soft decorative curves */}
         {/* <div className="pointer-events-none absolute -right-28 top-10 h-80 w-80 rounded-full border-[35px] border-[#e7eee7]/70" /> */}
@@ -205,14 +212,14 @@ export default function AboutPage() {
 
           {/* CENTRED ABOUT RENOVA HEADING */}
           <Reveal>
-            <div className="mx-auto mb-12 max-w-4xl text-center sm:mb-16">
+            <div className="mx-auto mb-8 max-w-4xl text-center sm:mb-12">
 
               <span className="inline-flex items-center gap-2 rounded-full border border-[#dce6dc] bg-[#f1f5f0] px-5 py-2 text-xs font-bold tracking-[0.18em] text-[#304b3c] sm:text-sm">
                 <HeartHandshake size={17} className="text-[#f26322]" />
                 ABOUT RENOVA
               </span>
 
-              <h1 className="display-font mt-2 text-3xl font-bold leading-tight text-[#304b3c] sm:text-3xl lg:text-6xl">
+              <h1 className="display-font mt-2 text-2xl font-bold leading-tight text-[#304b3c] sm:text-3xl lg:text-6xl">
                 Dedicated Cancer Care,
                 <span className="mt-2 block text-[#f26322]">
                   Guided by Compassion
@@ -232,11 +239,11 @@ export default function AboutPage() {
             <Reveal direction="left">
               <div className="relative">
 
-                <span className="text-xl font-bold tracking-[0.16em] text-[#f26322]">
+                <span className="text-[16px] font-bold tracking-[0.16em] text-[#f26322] sm:text-[19px]">
                   COMPASSIONATE, PATIENT-CENTRED CARE
                 </span>
 
-                <p className="mt-5 text-base leading-8 text-[#526357] sm:text-lg">
+                <p className="mt-4 text-base leading-8 text-[#526357] sm:text-lg">
                   At RENOVA Cancer Hospital, we are committed to providing
                   dedicated cancer care with compassion, clinical expertise
                   and a patient-centred approach. We recognise that every
@@ -258,14 +265,14 @@ export default function AboutPage() {
                   guide thoughtful discussions and individual care planning.
                 </p>
 
-                <div className="mt-8 flex flex-wrap gap-3">
-
+                {/* <div className="mt-8 flex flex-wrap gap-3"> */}
+                <div className="mt-4 flex flex-row flex-nowrap items-center gap-2 sm:gap-3">
                   <a
                     href="#our-approach"
                     className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[#f26322] px-7 py-3 text-sm font-bold text-white shadow-md transition duration-300 hover:-translate-y-1 hover:bg-[#df551a] hover:shadow-lg sm:text-base"
                   >
                     Explore Our Approach
-                    <ArrowRight size={18} />
+                    {/* <ArrowRight size={18} /> */}
                   </a>
 
                   <Link
@@ -273,11 +280,9 @@ export default function AboutPage() {
                     className="inline-flex min-h-12 items-center gap-2 rounded-full border border-[#304b3c]/30 bg-white px-7 py-3 text-sm font-bold text-[#304b3c] transition duration-300 hover:-translate-y-1 hover:border-[#304b3c] hover:bg-[#304b3c] hover:text-white sm:text-base"
                   >
                     Contact Us
-                    <ArrowUpRight size={17} />
+                    {/* <ArrowUpRight size={17} /> */}
                   </Link>
-
                 </div>
-
               </div>
             </Reveal>
 
@@ -427,7 +432,7 @@ export default function AboutPage() {
           MISSION & VISION - SEPARATE IMAGES
       -------------------------------------------------- */}
 
-      <section
+      {/* <section
         id="mission-vision"
         className="scroll-mt-24 bg-[#f1f5f0] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
       >
@@ -440,10 +445,7 @@ export default function AboutPage() {
           />
 
           <div className="mt-12 space-y-8">
-
-            {/* OUR VISION */}
             <div className="grid items-center gap-0 overflow-hidden rounded-[2rem] border border-[#dce6dc] bg-white shadow-lg lg:grid-cols-2">
-
               <Reveal direction="left" className="h-full">
                 <div className="relative h-full min-h-[280px] overflow-hidden sm:min-h-[360px]">
                   <img
@@ -463,7 +465,7 @@ export default function AboutPage() {
               <Reveal direction="right">
                 <div className="relative p-7 sm:p-10 lg:p-12">
 
-                  {/* <div className="absolute -right-8 -top-8 h-36 w-36 rounded-full border-[20px] border-[#e7eee7]/70" /> */}
+                  
 
                   <span className="relative grid h-16 w-16 place-items-center rounded-2xl bg-[#fff0e8] text-[#f26322]">
                     <Eye size={32} />
@@ -483,16 +485,11 @@ export default function AboutPage() {
                     treatment.
                   </p>
 
-                  {/* <div className="relative mt-7 h-1 w-16 rounded-full bg-[#f26322]" /> */}
-
                 </div>
               </Reveal>
-
             </div>
 
-            {/* OUR MISSION */}
             <div className="grid items-center gap-0 overflow-hidden rounded-[2rem] border border-[#dce6dc] bg-white shadow-lg lg:grid-cols-2">
-
               <Reveal direction="left" className="h-full lg:order-2">
                 <div className="relative h-full min-h-[280px] overflow-hidden sm:min-h-[360px]">
                   <img
@@ -511,9 +508,6 @@ export default function AboutPage() {
 
               <Reveal direction="right" className="lg:order-1">
                 <div className="relative p-7 sm:p-10 lg:p-12">
-
-                  {/* <div className="absolute -left-8 -top-8 h-36 w-36 rounded-full border-[20px] border-[#fff0e8]/80" /> */}
-
                   <span className="relative grid h-16 w-16 place-items-center rounded-2xl bg-[#e7eee7] text-[#304b3c]">
                     <Target size={32} />
                   </span>
@@ -532,8 +526,6 @@ export default function AboutPage() {
                     for every patient.
                   </p>
 
-                  {/* <div className="relative mt-7 h-1 w-16 rounded-full bg-[#f26322]" /> */}
-
                 </div>
               </Reveal>
 
@@ -541,12 +533,12 @@ export default function AboutPage() {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* --------------------------------------------------
           CORE VALUES
       -------------------------------------------------- */}
-
+{/* 
       <section
         id="core-values"
         className="scroll-mt-24 px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
@@ -589,13 +581,13 @@ export default function AboutPage() {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* --------------------------------------------------
           EXCELLENCE THROUGH INCLUSION
       -------------------------------------------------- */}
 
-      <section
+      {/* <section
         id="inclusion"
         className="scroll-mt-24 overflow-hidden bg-[#f1f5f0] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
       >
@@ -678,22 +670,17 @@ export default function AboutPage() {
 
           </Reveal>
         </div>
-      </section>
+      </section> */}
 
       {/* --------------------------------------------------
           ONE RENOVA - FULL WIDTH, NO PAGE CONTAINER
       -------------------------------------------------- */}
 
-      <section
+      {/* <section
         id="one-renova"
         className="scroll-mt-24 w-full overflow-hidden"
       >
         <div className="relative w-full overflow-hidden bg-gradient-to-br from-[#243c30] via-[#304b3c] to-[#496c54] px-5 py-16 sm:px-8 sm:py-20 lg:px-16 lg:py-24">
-
-          {/* Decorative curves */}
-          {/* <div className="pointer-events-none absolute -right-24 -top-28 h-80 w-80 rounded-full border-[38px] border-white/[0.07]" />
-          <div className="pointer-events-none absolute -bottom-36 left-[12%] h-80 w-80 rounded-full bg-[#f26322]/15 blur-3xl" />
-          <div className="pointer-events-none absolute bottom-0 right-[25%] h-48 w-48 rounded-full border border-white/10" /> */}
 
           <Reveal>
             <div className="relative mx-auto max-w-5xl text-center">
@@ -736,7 +723,7 @@ export default function AboutPage() {
           </Reveal>
 
         </div>
-      </section>
+      </section> */}
 
       {/* --------------------------------------------------
           QUALITY & PATIENT SAFETY
@@ -824,8 +811,7 @@ export default function AboutPage() {
       {/* --------------------------------------------------
           TECHNOLOGY & INNOVATION
       -------------------------------------------------- */}
-
-      <section
+      {/* <section
         id="technology"
         className="scroll-mt-24 px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24"
       >
@@ -840,8 +826,6 @@ export default function AboutPage() {
                 loading="lazy"
                 className="h-[300px] w-full rounded-[2rem_2rem_2rem_5rem] object-cover shadow-xl sm:h-[430px]"
               />
-
-              {/* <div className="absolute -right-3 -top-3 h-24 w-24 rounded-tr-[2.5rem] border-r-4 border-t-4 border-[#f26322] sm:-right-5 sm:-top-5 sm:h-32 sm:w-32" /> */}
 
             </div>
           </Reveal>
@@ -885,7 +869,7 @@ export default function AboutPage() {
           </Reveal>
 
         </div>
-      </section>
+      </section> */}
 
       {/* --------------------------------------------------
           BOTTOM CTA
