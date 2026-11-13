@@ -23,7 +23,7 @@ export default function SpecialitiesPage() {
       const width = window.innerWidth;
 
       if (width >= 1440) {
-        setColumns(5);
+        setColumns(4);
       } else if (width >= 768) {
         setColumns(3);
       } else {
@@ -107,8 +107,8 @@ export default function SpecialitiesPage() {
       {/* Speciality Cards */}
       <section className="page-container px-5 pb-14 pt-6 sm:px-8 sm:pb-16 lg:px-12">
 
-        <div className="grid grid-cols-2 gap-x-4 gap-y-7 sm:gap-x-5 sm:gap-y-8 md:grid-cols-3 min-[1440px]:grid-cols-5">
-
+        {/* <div className="grid grid-cols-2 gap-x-4 gap-y-7 sm:gap-x-5 sm:gap-y-8 md:grid-cols-3 min-[1440px]:grid-cols-5"> */}
+        <div className="grid grid-cols-2 gap-x-4 gap-y-7 sm:gap-x-5 sm:gap-y-8 md:grid-cols-3 min-[1440px]:grid-cols-4">
           {visibleSpecialities.map((item, index) => {
             const Icon = item.Icon;
 

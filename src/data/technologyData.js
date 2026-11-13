@@ -92,10 +92,10 @@ const radixact = {
   specialities: ["Radiation Oncology"],
 
   description:
-    "An advanced helical radiation therapy system combining integrated CT imaging, intensity-modulated radiation delivery and, where configured, real-time motion tracking.",
+    "Advanced radiotherapy technology that combines CT imaging and precise radiation delivery, with motion-tracking capabilities to support accurate treatment.",
 
   detailIntro:
-    "Radixact X9 TomoTherapy is an advanced radiation therapy system designed to deliver highly targeted radiation to selected cancer treatment areas. It combines image-guided radiation therapy (IGRT), intensity-modulated radiation therapy (IMRT) and, when the Synchrony option is available, motion tracking to help manage movement during treatment.",
+    "Radixact X9 TomoTherapy is an advanced helical radiotherapy system that combines integrated CT imaging with intensity-modulated radiation therapy (IMRT) to deliver targeted radiation treatment.It also supports image-guided radiation therapy (IGRT) and, when the Synchrony option is available and configured, motion tracking to help account for tumour movement during treatment.",
 
   sections: createSections({
     images: [
@@ -118,26 +118,26 @@ const radixact = {
     overview: {
       title: "What is Radixact X9 TomoTherapy?",
       paragraphs: [
-        "Radixact X9 TomoTherapy is an advanced radiation therapy system designed to deliver precise and personalised radiation treatment. It uses image-guided radiation therapy (IGRT) and intensity-modulated radiation therapy (IMRT) to shape radiation around the planned treatment area.",
+        "Radixact X9 TomoTherapy is an advanced helical radiotherapy system designed to deliver precise and personalised radiation treatment. It uses image-guided radiation therapy (IGRT) and intensity-modulated radiation therapy (IMRT) to shape radiation delivery around the planned treatment area.",
         "Its helical delivery approach allows the treatment gantry to rotate around the patient while the treatment couch moves through the machine. This enables radiation to be delivered from multiple angles according to the individual treatment plan.",
-        "Integrated CT imaging helps the clinical team check the patient's position and treatment area. When the Synchrony motion-management option is installed and configured, the system can track selected target movements and coordinate radiation delivery accordingly.",
+        "Integrated CT imaging helps the clinical team verify the patient's position and treatment area. When the Synchrony motion-management option is installed and configured, the system can track selected target movements and coordinate radiation delivery accordingly.",
       ],
       points: [
         "Image-guided radiation therapy (IGRT).",
         "Intensity-modulated radiation therapy (IMRT).",
         "Helical radiation delivery.",
         "Integrated CT imaging.",
-        "Synchrony motion tracking when available.",
+        "Synchrony motion tracking, when available.",
         "Individualised treatment planning.",
       ],
     },
 
     need: {
-      title: "What is the Need for Radixact X9 TomoTherapy?",
+      title: "When May Radixact X9 TomoTherapy Be Considered?",
       paragraphs: [
-        "Some tumours require carefully planned radiation delivery because of their location, shape or proximity to important organs. Radixact X9 may be considered when the treating radiation oncology team believes that its image-guided and modulated radiation delivery approach is appropriate.",
-        "It may be evaluated for selected complex, irregular or difficult-to-reach tumours, including cases where nearby healthy tissues and vital organs need particular consideration.",
-        "It may be assessed for selected cancers involving the brain, prostate, lungs, head and neck, liver or spine. Suitability depends on the cancer type, stage, tumour location and the patient's overall health.",
+        "Some tumours require carefully planned radiation treatment because of their location, shape or proximity to important organs. Radixact X9 TomoTherapy may be considered when the radiation oncology team determines that its image-guided and intensity-modulated radiation delivery is appropriate.",
+        "It may be evaluated for selected complex, irregular or difficult-to-treat tumours, particularly when nearby healthy tissues and vital organs require careful consideration.",
+        "Depending on the clinical situation, it may be considered for selected cancers involving the brain, prostate, lungs, head and neck, liver or spine. Suitability depends on the cancer type, stage, tumour location and the patient's overall health.",
       ],
       points: [
         "Selected brain tumours.",
@@ -150,13 +150,13 @@ const radixact = {
     },
 
     procedure: {
-      title: "How is the Radixact X9 Procedure Performed?",
+      title: "How Is Radixact X9 TomoTherapy Performed?",
       paragraphs: [
-        "The treatment process begins with a consultation and assessment by the radiation oncology team. A CT simulation scan is generally performed to understand the tumour's size, shape and location and its relationship with nearby organs.",
-        "The radiation oncologist, medical physicist and treatment planning team prepare an individualised treatment plan. This includes determining the treatment area, radiation dose and delivery parameters.",
+        "The treatment process begins with a consultation and assessment by the radiation oncology team. A CT simulation scan is generally performed to assess the tumour's size, shape and location, along with its relationship to nearby organs.",
+        "The radiation oncologist, medical physicist and treatment planning team work together to develop an individualised treatment plan. This includes defining the treatment area, radiation dose and delivery parameters.",
         "During treatment, the patient lies on a specially designed treatment couch. The couch moves through the rotating gantry while the machine delivers planned radiation from multiple angles using its helical delivery approach.",
-        "Integrated imaging supports treatment-position verification. If the system has the appropriate Synchrony configuration and the patient's treatment is suitable for motion tracking, this technology may help manage target movement.",
-        "An individual session may take approximately 15–30 minutes in some cases. The actual appointment time varies according to positioning, imaging and treatment requirements.",
+        "Integrated CT imaging helps the clinical team verify the patient's position before and during treatment, according to the system's capabilities and clinical protocol. If the appropriate Synchrony configuration is installed and the treatment is suitable, motion-tracking technology may also help manage target movement.",
+        "A treatment session may take approximately 15–30 minutes in some cases. The actual appointment time varies depending on patient positioning, imaging and treatment requirements.",
       ],
       points: [
         "Initial consultation and clinical assessment.",
@@ -165,73 +165,73 @@ const radixact = {
         "Patient positioning on the treatment couch.",
         "Image-guided positioning verification.",
         "Helical radiation delivery.",
-        "Motion management when available and indicated.",
+        "Motion management, when available and clinically indicated.",
       ],
     },
 
     benefits: {
       title: "Benefits of Radixact X9 TomoTherapy",
       paragraphs: [
-        "Radixact X9 combines image guidance and modulated radiation delivery. For appropriately selected patients, this approach may help the treatment team shape radiation around the planned target while considering nearby healthy structures.",
-        "Integrated imaging supports positioning checks. The Synchrony option, where installed and clinically appropriate, can support motion-aware treatment delivery.",
-        "The potential benefits depend on the patient's diagnosis, treatment plan, system configuration and the experience of the clinical team.",
+        "Radixact X9 combines image guidance with intensity-modulated radiation delivery. For appropriately selected patients, this technology may help clinicians shape radiation around the planned treatment area while taking nearby healthy tissues into consideration.",
+        "Integrated CT imaging supports treatment-position verification. When installed and appropriately configured, the Synchrony option can help manage target movement during radiation delivery.",
+        "The potential benefits depend on the patient's diagnosis, treatment plan, system configuration and clinical assessment.",
       ],
       points: [
         "Individualised radiation treatment planning.",
-        "Helical delivery from multiple angles.",
+        "Helical radiation delivery from multiple angles.",
         "Integrated CT imaging for treatment guidance.",
-        "Potential to limit unnecessary radiation exposure to nearby tissues.",
-        "Motion-management support when configured.",
-        "Assessment for selected cancers in different body areas.",
+        "Radiation delivery designed around the planned treatment area.",
+        "Motion-management support when Synchrony is configured and clinically appropriate.",
+        "Treatment planning for selected cancers in different body areas.",
       ],
     },
 
     preparation: {
-      title: "Preparation Tips Before Treatment",
+      title: "How to Prepare for Radixact X9 TomoTherapy",
       paragraphs: [
-        "Before starting treatment, patients attend consultations and planning appointments with the radiation oncology team. These appointments help the team understand the patient's medical history, current medicines and treatment requirements.",
-        "Preparation requirements can differ according to the treatment area and individual plan. Patients should follow the instructions provided by their treating team.",
+        "Before starting treatment, patients attend consultations and planning appointments with the radiation oncology team. These appointments help the team review the patient's medical history, current medications and individual treatment requirements.",
+        "Preparation may vary depending on the treatment area and individual treatment plan. Patients should carefully follow the instructions provided by their treating team.",
       ],
       points: [
-        "Attend all pre-treatment consultations.",
-        "Inform the doctor about current medicines and allergies.",
+        "Attend all scheduled pre-treatment consultations.",
+        "Inform your doctor about current medications and any allergies.",
         "Follow fasting instructions only if specifically advised.",
         "Wear comfortable, loose-fitting clothing.",
-        "Avoid jewellery if instructed.",
-        "Follow positioning instructions.",
-        "Rest adequately and discuss concerns with the team.",
+        "Remove jewellery if instructed by your treatment team.",
+        "Follow the positioning instructions provided.",
+        "Get adequate rest and discuss any concerns with your care team.",
       ],
     },
 
     recovery: {
-      title: "Recovery Tips and Follow-Up Care",
+      title: "Recovery and Follow-Up Care",
       paragraphs: [
-        "Recovery after radiation therapy varies from person to person. Some patients may experience fatigue or skin changes in the treated area. Side effects depend on the treatment site, radiation dose and individual response.",
-        "Regular follow-up appointments help the team monitor recovery, assess treatment response and manage side effects.",
+        "Recovery after radiation therapy varies from person to person. Some patients may experience side effects such as fatigue or skin changes in the treated area. These effects depend on the treatment site, radiation dose and individual response.",
+        "Regular follow-up appointments help the medical team monitor recovery, assess treatment response and identify and manage any side effects.",
       ],
       points: [
-        "Get adequate rest.",
-        "Maintain a balanced diet and hydration.",
-        "Follow the recommended skin-care instructions.",
-        "Avoid scrubbing sensitive skin.",
-        "Report persistent redness, swelling or discomfort.",
-        "Attend scheduled follow-up appointments.",
+        "Get adequate rest and allow your body time to recover.",
+        "Maintain a balanced diet and drink enough fluids.",
+        "Follow the skin-care instructions provided by your treatment team.",
+        "Avoid rubbing or scrubbing sensitive skin in the treated area.",
+        "Inform your doctor about persistent redness, swelling, discomfort or other new symptoms.",
+        "Attend all scheduled follow-up appointments.",
       ],
     },
 
     conclusion: {
       title: "Conclusion",
       paragraphs: [
-        "Radixact X9 TomoTherapy combines helical radiation delivery with integrated imaging and individualised treatment planning. It may be considered for selected cancers following specialist assessment.",
-        "When the appropriate Synchrony option is installed and clinically indicated, motion tracking can support treatment delivery for selected moving targets.",
-        "The most suitable radiation therapy approach is determined by the treating radiation oncologist after reviewing the diagnosis, tumour characteristics and treatment goals.",
+        "Radixact X9 TomoTherapy combines helical radiation delivery, integrated imaging and individualised treatment planning to support precision radiotherapy for selected cancers.",
+        "When the appropriate Synchrony option is installed and clinically indicated, motion-tracking technology can help manage target movement during treatment.",
+        "The most suitable radiotherapy approach is determined by the treating radiation oncologist after reviewing the patient's diagnosis, tumour characteristics and individual treatment goals.",
       ],
       points: [
-        "Advanced image-guided radiation therapy.",
+        "Advanced image-guided radiotherapy.",
         "Individualised treatment planning.",
         "Integrated imaging and positioning verification.",
-        "Motion-management support when configured.",
-        "Specialist assessment before treatment.",
+        "Motion-management support, when configured and appropriate.",
+        "Specialist assessment and treatment planning.",
       ],
     },
   }),
@@ -298,10 +298,10 @@ const adaptiveRadiotherapy = {
   specialities: ["Radiation Oncology"],
 
   description:
-    "An adaptive treatment approach that uses updated imaging and planning workflows to account for changes in tumour position, anatomy and nearby organs during radiotherapy.",
+    "An advanced radiotherapy approach that uses updated imaging and treatment planning to account for changes in tumour position, body anatomy and nearby organs during treatment.",
 
   detailIntro:
-    "Adaptive radiotherapy allows the treatment team to review and modify a radiation plan when a patient's anatomy or tumour changes. AI-enabled tools may assist selected imaging, contouring and planning tasks, while clinical decisions remain with qualified professionals.",
+    "Updated imaging and treatment planning help the clinical team account for changes in the tumour and surrounding organs during the course of treatment. AI-assisted tools may support selected tasks such as image analysis, contouring and treatment planning. All clinical decisions and treatment adjustments remain under the supervision of qualified healthcare professionals.",
 
   sections: createSections({
     images: [
@@ -322,17 +322,17 @@ const adaptiveRadiotherapy = {
     ],
 
     overview: {
-      title: "What is AI-Assisted Adaptive Radiotherapy?",
+      title: "What Is AI-Assisted Adaptive Radiotherapy?",
       paragraphs: [
-        "Adaptive radiotherapy is a treatment approach in which the radiation plan can be reviewed and modified to account for changes in the tumour or nearby anatomy.",
-        "A patient's anatomy can change during a course of treatment because of tumour response, organ filling, weight changes or day-to-day positioning differences.",
-        "AI-enabled software may assist selected tasks such as image processing, structure contouring and planning workflows. Trained professionals review and approve treatment decisions.",
+        "Adaptive radiotherapy is a treatment approach in which radiation treatment plans can be reviewed and modified to account for changes in the tumour or surrounding anatomy.",
+        "A patient's anatomy may change during treatment due to tumour response, changes in organ filling, weight changes or variations in daily positioning.",
+        "AI-assisted software may support selected tasks such as image processing, structure contouring and treatment planning. All treatment decisions and plan adjustments are reviewed and approved by qualified healthcare professionals.",
       ],
       points: [
-        "Updated treatment-position imaging.",
-        "Assessment of tumour and organ changes.",
-        "Plan review and adaptation when indicated.",
-        "AI-assisted contouring on selected platforms.",
+        "Updated imaging for treatment-position assessment.",
+        "Assessment of changes in the tumour and surrounding organs.",
+        "Treatment plan review and adaptation when clinically indicated.",
+        "AI-assisted contouring on compatible platforms.",
         "Clinical review and quality assurance.",
       ],
     },
@@ -340,93 +340,93 @@ const adaptiveRadiotherapy = {
     need: {
       title: "Why is Adaptive Radiotherapy Needed?",
       paragraphs: [
-        "A treatment plan is initially created using the patient's anatomy at simulation. During treatment, the relationship between the tumour and nearby organs may change.",
-        "Adaptive workflows allow the clinical team to assess whether the original plan remains appropriate or whether a revised plan should be considered.",
+        "An initial radiation treatment plan is created using the patient's anatomy at the time of simulation. However, changes in the tumour and surrounding organs may occur during the course of treatment.",
+        "Adaptive radiotherapy workflows allow the clinical team to reassess the original treatment plan and determine whether adjustments are needed to maintain appropriate treatment delivery.",
       ],
       points: [
-        "Changes in tumour size or position.",
-        "Changes in nearby organ position.",
+        "Changes in tumour size or position",
+        "Changes in the position of nearby organs.",
         "Changes in patient anatomy during treatment.",
         "Selected cases requiring updated dose assessment.",
-        "Individualised treatment decisions.",
+        "Individualised treatment planning based on clinical evaluation.",
       ],
     },
 
     procedure: {
       title: "How is Adaptive Radiotherapy Performed?",
       paragraphs: [
-        "The patient undergoes imaging during the treatment course. The team reviews the current anatomy and compares it with the original treatment plan.",
-        "If adaptation is clinically appropriate, the target and nearby organs are reassessed. The treatment plan may be recalculated or modified.",
-        "AI-enabled tools may assist selected planning tasks, but qualified professionals review the images, contours, dose calculations and proposed plan before delivery.",
+        "The treatment process involves imaging during the course of radiotherapy. The clinical team reviews the patient's current anatomy and compares it with the original treatment plan.",
+        "If adaptation is clinically appropriate, the treatment area and surrounding organs are reassessed. The radiation treatment plan may then be recalculated or modified to account for these changes.",
+        "AI-assisted tools may support selected treatment-planning tasks. However, qualified professionals review the images, contours, dose calculations and proposed treatment plan before delivery.",
       ],
       points: [
         "Initial consultation and CT simulation.",
-        "Creation of the original radiation plan.",
+        "Creation of the original radiation treatment plan.",
         "Updated imaging during treatment.",
-        "Review of anatomy and dose distribution.",
-        "Plan adaptation when clinically indicated.",
-        "Quality assurance and treatment delivery.",
+        "Review of anatomical changes and dose distribution.",
+        "Treatment plan adaptation when clinically indicated.",
+        "Quality assurance and radiation delivery.",
       ],
     },
 
     benefits: {
       title: "Benefits of Adaptive Radiotherapy",
       paragraphs: [
-        "Adaptive radiotherapy can help the clinical team account for anatomical changes that occur during treatment. This may support more personalised dose delivery in selected cases.",
-        "The benefits depend on the imaging platform, software, cancer site, clinical workflow and patient-specific treatment requirements.",
+        "Adaptive radiotherapy allows the clinical team to account for changes in a patient's anatomy during treatment. In selected cases, this may support more personalised radiation delivery and treatment planning.",
+        "The potential benefits depend on the imaging system, software, cancer type, clinical workflow and individual treatment requirements.",
       ],
       points: [
-        "Treatment planning that can account for anatomical changes.",
+        "Treatment planning that accounts for anatomical changes.",
         "Updated imaging and dose assessment.",
         "Potential to improve target coverage in selected cases.",
-        "Potential to better consider nearby healthy organs.",
-        "AI-assisted workflow support where validated.",
+        "Careful consideration of nearby healthy organs.",
+        "AI-assisted treatment-planning support where validated.",
       ],
     },
 
     preparation: {
-      title: "Preparation Tips Before Treatment",
+      title: "How to Prepare for Adaptive Radiotherapy",
       paragraphs: [
-        "Preparation depends on the treatment area and the imaging requirements. The team may provide specific instructions regarding bladder filling, bowel preparation, food or fluids.",
-        "Patients should explain any difficulty remaining in the required position and inform the team about changes in their health during treatment.",
+        "Preparation may vary depending on the treatment area, imaging requirements and individual treatment plan. The clinical team may provide specific instructions regarding bladder filling, bowel preparation, food or fluid intake.",
+        "Patients should inform the treatment team if they experience difficulty maintaining the required treatment position or notice any changes in their health during treatment.",
       ],
       points: [
-        "Attend simulation and planning appointments.",
-        "Follow bladder or bowel preparation instructions if given.",
-        "Wear comfortable clothing.",
-        "Inform the team about new symptoms.",
-        "Follow positioning instructions.",
-        "Ask questions about imaging and treatment adaptation.",
+        "Attend all scheduled simulation and treatment-planning appointments.",
+        "Follow bladder or bowel preparation instructions, if provided.",
+        "Wear comfortable clothing as advised by the treatment team..",
+        "Inform the clinical team about any new symptoms or health changes.",
+        "Follow the positioning instructions provided.",
+        "Ask questions about the imaging process and treatment adaptations.",
       ],
     },
 
     recovery: {
       title: "Recovery Tips and Follow-Up Care",
       paragraphs: [
-        "Adaptive radiotherapy does not have one universal recovery pattern. Side effects depend on the body area being treated and the total radiation plan.",
-        "Patients should follow the care instructions provided by their radiation oncology team and attend follow-up appointments.",
+        "Recovery after adaptive radiotherapy varies from person to person. Side effects depend on the area being treated, the total radiation dose and the individual's response to treatment.",
+        "Patients should follow the care instructions provided by their radiation oncology team and attend all recommended follow-up appointments.",
       ],
       points: [
         "Follow the prescribed treatment and follow-up schedule.",
-        "Rest when experiencing fatigue.",
-        "Maintain hydration and balanced nutrition.",
-        "Follow site-specific skin-care instructions.",
-        "Report new or worsening symptoms.",
-        "Attend all recommended reviews.",
+        "Get adequate rest, particularly when experiencing fatigue.",
+        "Maintain good hydration and balanced nutrition.",
+        "Follow the recommended skin-care instructions for the treated area.",
+        "Inform your treatment team about any new or worsening symptoms.",
+        "Attend all scheduled follow-up reviews.",
       ],
     },
 
     conclusion: {
       title: "Conclusion",
       paragraphs: [
-        "AI-assisted adaptive radiotherapy combines updated imaging, treatment planning and selected software-supported workflows to help clinicians respond to changes in patient anatomy.",
-        "AI tools are intended to support trained professionals, not replace clinical judgement. The treating team determines whether adaptation is appropriate for an individual patient.",
+        "AI-assisted adaptive radiotherapy combines updated imaging, treatment planning and software-supported workflows to help clinicians respond to changes in a patient's anatomy during treatment.",
+        "AI tools support selected clinical tasks but do not replace professional expertise or clinical judgement. The treating radiation oncology team determines whether adaptive treatment is appropriate based on each patient's individual needs.",
       ],
       points: [
-        "Updated imaging and plan review.",
-        "Individualised treatment adaptation.",
-        "AI support for selected workflow tasks.",
-        "Clinical oversight remains essential.",
+        "Updated imaging and treatment plan review.",
+        "Individualised treatment adaptation when clinically indicated.",
+        "AI-assisted support for selected planning tasks.",
+        "Clinical expertise and oversight at every stage.",
       ],
     },
   }),

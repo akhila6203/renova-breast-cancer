@@ -27,54 +27,55 @@ const programmeStages = [
   {
     id: "b-ready",
     number: "01",
-    name: "B-READY",
+    name: "DIAGNOSIS & ASSESSMENT 01",
     label: "DIAGNOSTIC SERVICES",
-    title: "Rapid evaluation, assessment and diagnosis",
+    title: "Understanding Your Diagnosis",
     description:
-      "From an abnormal finding to an actionable diagnosis, the programme brings clinical assessment, breast imaging and pathology together. The diagnostic pathway is selected for each patient's individual needs.",
+      "A clear understanding of your diagnosis is an important first step. Your oncology team reviews the available medical information and identifies whether further investigations are needed.",
     image: diagnosisImage,
     alt: "Diagnostic imaging equipment in a clinical setting",
     highlights: [
-      "Triple assessment: clinical examination, imaging and pathology",
-      "Digital breast tomosynthesis and image-guided biopsy when appropriate",
-      "Onco-pathology, immunohistochemistry and relevant biomarker testing",
-      "Genomic profiling when clinically appropriate",
+      "Clinical assessment and specialist consultations",
+      "Review of biopsy, pathology and imaging reports",
+      "Additional investigations and biomarker testing where appropriate",
+      "Guidance on understanding your diagnosis and next steps",
     ],
     path: "/patient-care/b-ready",
   },
   {
     id: "b-ahead",
     number: "02",
-    name: "B-AHEAD",
+    name: "TREATMENT & CARE 02",
     label: "TREATMENT SERVICES",
-    title: "Advanced, high-precision, evidence-based treatment",
+    title: "Personalised Treatment Planning",
     description:
-      "Before treatment begins, patients are offered coordinated discussions with surgical, medical and radiation oncology specialists. A multidisciplinary tumour board reviews the case and supports an individualised treatment plan.",
+      "Treatment decisions depend on the type and stage of cancer, the patient's overall health and individual clinical needs. The oncology team discusses suitable treatment approaches and helps patients understand their options.",
     image: treatmentImage,
     alt: "Patient speaking with a healthcare professional",
     highlights: [
-      "Consultations with surgical, medical and radiation oncologists",
-      "Multidisciplinary tumour board review",
-      "Surgery and precision radiotherapy options when suitable",
-      "Systemic treatment and supportive care based on clinical indication",
+      "Specialist consultations and treatment discussions",
+      "Multidisciplinary team review where appropriate",
+      "Guidance on surgery, chemotherapy and radiation therapy",
+      "Information about targeted therapy and immunotherapy where suitable",
+      "Supportive care during treatment",
     ],
     path: "/patient-care/b-ahead",
   },
   {
     id: "b-you",
     number: "03",
-    name: "B-YOU",
+    name: "RECOVERY & ONGOING SUPPORT 03",
     label: "REHABILITATION SERVICES",
-    title: "Back to you: recover, rebuild and rediscover",
+    title: "Support for Recovery and Beyond",
     description:
-      "Rehabilitation is part of the care journey. Physiotherapy, lymphoedema care, nutrition, emotional support, pain management and suitable mind-body activities can help patients work towards strength, comfort and quality of life.",
+      "Care continues beyond active treatment. Appropriate supportive services can help patients manage treatment-related challenges, regain strength and maintain quality of life.",
     image: recoveryImage,
     alt: "Caregiver supporting a patient during recovery",
     highlights: [
-      "Physiotherapy and lymphoedema assessment and management",
-      "Nutrition, psychiatry and counselling support",
-      "Pain management and supervised yoga where suitable",
-      "Follow-up and long-term survivorship support",
+      "Nutrition and dietary guidance",
+      "Emotional and psychological support",
+      "Pain and symptom management & Physiotherapy and cancer rehabilitation",
+      "Family and caregiver guidance & Follow-up and survivorship support",
     ],
     path: "/patient-care/b-you",
   },
@@ -272,16 +273,15 @@ export default function PatientCarePage() {
 
     <div className="mx-auto mb-6 max-w-4xl text-center sm:mb-12">
       <p className="text-sm font-bold tracking-[0.2em] text-[#e87744]">
-        ABOUT THE PROGRAMME
+       ABOUT PATIENT CARE
       </p>
 
       <h1 className="display-font mt-4 text-3xl font-bold leading-tight text-[#263c30] sm:text-4xl lg:text-5xl">
-        Care Across Every Stage of Your Patient Journey
+        Care Across Every Stage of Your Cancer Journey
       </h1>
 
       <p className="mx-auto mt-3 max-w-4xl text-base leading-8 text-[#536458] sm:text-lg">
-        Support through diagnosis, treatment and recovery, bringing
-        together the care and guidance patients need at every stage.
+        At RENOVA Cancer Hospital, we provide guidance and support throughout diagnosis, treatment, recovery and follow-up care, helping patients and their families navigate each stage with greater confidence.
       </p>
     </div>
 
@@ -289,7 +289,7 @@ export default function PatientCarePage() {
 
       <div>
         <span className="text-sm font-bold tracking-wider text-[#e87744]">
-          RENOVA BREAST HEALTH INITIATIVE
+          RENOVA PATIENT CARE
         </span>
 
         <h2 className="display-font mt-1 text-2xl font-bold leading-snug text-[#263c30] sm:text-3xl">
@@ -297,29 +297,26 @@ export default function PatientCarePage() {
         </h2>
 
         <p className="mt-4 text-[16px] leading-6 text-[#4b5d50] sm:text-[18px]">
-          A cancer diagnosis can bring uncertainty and many questions.
-          Having the right information, specialists and support can
-          help patients understand their options and make informed
-          decisions about their care.
+        A cancer diagnosis can bring uncertainty and many questions. Having access to the right information,
+         medical guidance and supportive
+         care can help patients understand their options and make informed decisions.
         </p>
 
-        <p className="mt-4 text-[16px] leading-6 text-[#4b5d50] sm:text-[18px] ">
-          RENOVA's Breast Health Initiative is organised around
-          three connected pillars: B-READY, B-AHEAD and B-YOU.
-          Together, they address diagnostic assessment, treatment
-          planning and rehabilitation.
+        <p className="mt-4 text-[16px] leading-7 text-[#4b5d50] sm:text-[18px] ">
+         At RENOVA, patient care goes beyond medical treatment. We recognise the importance of emotional support, 
+         nutritional guidance, pain and symptom management, rehabilitation and ongoing care for patients and their families.
         </p>
 
-        <p className="mt-4 text-[16px] leading-6 text-[#4b5d50] sm:text-[18px]">
-          The care pathway is individualised according to each
-          patient's diagnosis, clinical needs and treatment plan.
+        <p className="mt-4 text-[16px] leading-7 text-[#4b5d50] sm:text-[18px]">
+         Our approach focuses on understanding each patient's individual needs and providing appropriate 
+         guidance and support throughout their cancer journey.
         </p>
 
         <Link
           to="#programme-pillars"
           className="mt-7 inline-flex min-h-12 items-center gap-3 rounded-full bg-[#476b55] px-4 py-2 font-semibold text-white transition hover:bg-[#304b3c]"
         >
-          Explore Our Programme
+          Explore Patient Care
           <ArrowRight size={18} />
         </Link>
       </div>
@@ -333,7 +330,7 @@ export default function PatientCarePage() {
           className="relative h-[280px] w-full rounded-[24px] object-cover shadow-lg sm:h-[390px] lg:h-[440px]"
         />
 
-        <div className="absolute -bottom-5 left-6 right-8 rounded-xl border border-[#e4e9e2] bg-white p-10 shadow-md sm:left-16 sm:right-20 sm:p-5">
+        <div className="absolute -bottom-5 left-6 right-8 rounded-xl border border-[#e4e9e2] bg-white p-10 shadow-md sm:left-16 sm:right-40 sm:p-5">
           <p className="text-xs font-bold tracking-wider text-[#e87744]">
             OUR THREE CONNECTED PILLARS
           </p>
@@ -365,9 +362,9 @@ export default function PatientCarePage() {
       </h2>
 
       <p className="mt-4 text-base leading-8 text-[#536458]">
-        Every patient's journey is different. Understanding your
-        diagnosis and available care options is an important
-        starting point.
+        Every patient's cancer journey is different. Understanding your diagnosis, 
+        treatment options and available support is an important first step towards 
+        making informed decisions about your care.
       </p>
     </div>
 
@@ -378,19 +375,18 @@ export default function PatientCarePage() {
           Begin With Clarity, Care and Guidance
         </h3>
 
-        <p className="mt-5 text-[15px] leading-8 text-[#4b5d50] sm:text-base">
-          After a diagnosis, your first discussions with the oncology
-          team help establish what is known about the cancer and
-          whether further investigations are needed.
+        <p className="mt-3 text-[15px] leading-7 text-[#4b5d50] sm:text-[16px]">
+          Following a diagnosis, discussions with your oncology team help you understand your condition,
+           identify any further investigations needed and explore suitable treatment options
         </p>
 
         <ul className="mt-6 space-y-4 " >
           {[
-            "Understand the type, stage and grade of the cancer.",
-            "Review pathology, biopsy and imaging findings.",
+            "Understand the type, stage and grade of your cancer.",
+            "Review pathology, biopsy and imaging reports.",
             "Discuss additional tests, including biomarker or molecular testing where appropriate.",
-            "Understand the available treatment approaches and their objectives.",
-            "Discuss questions, concerns and whether a second opinion may be useful.",
+            "Understand the available treatment options and their goals.",
+            "Discuss your questions, concerns and whether a second medical opinion may be helpful.",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
               <CheckCircle2
@@ -422,9 +418,10 @@ export default function PatientCarePage() {
       <section id="programme-pillars" className="section-padding scroll-mt-24 bg-[#f4f7f2]">
         <div className="page-container">
           <SectionTitle
-            eyebrow="THREE PILLARS OF OUR PROGRAMME"
-            title="One connected journey. Three focused pillars."
-            description="The programme brochure presents three linked pillars: rapid diagnosis, personalised treatment and structured rehabilitation. Select a pillar to explore its services in more detail."
+            eyebrow="SUPPORT THROUGHOUT YOUR CARE JOURNEY"
+            title="Connected Care. Support at Every Step."
+            description="Every patient's cancer journey is different. At RENOVA, we recognise the importance of appropriate 
+                          guidance and support from diagnosis and treatment through recovery and follow-up care."
           />
           <div className="space-y-8 lg:space-y-10">
             {programmeStages.map((stage, index) => (
@@ -698,10 +695,8 @@ export default function PatientCarePage() {
         Have Questions About Your Care Journey?
       </h2>
 
-      <p className="mt-3 text-[15px] leading-7 text-[#4b5d50]">
-        Connect with our team for appointment assistance,
-        information about available services and guidance
-        on preparing for your consultation.
+      <p className="mt-3 text-[16px] leading-7 text-[#4b5d50]">
+        Our team is here to help with appointment enquiries, information about available patient support services and guidance on preparing for your consultation.
       </p>
     </div>
 

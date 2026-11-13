@@ -14,54 +14,54 @@ import diagnosisImage from "../../assets/home/diagnosis.jpg";
 import treatmentImage from "../../assets/home/treatmentBanner3.jpg";
 import recoveryImage from "../../assets/home/patient-support.jpg";
 
-// THREE PROGRAMME PILLARS
 const programmeStages = [
   {
-    code: "B-READY",
+    code: "DIAGNOSIS & ASSESSMENT 01",
     label: "DIAGNOSTIC SERVICES",
-    heading: "Rapid evaluation, assessment and diagnosis",
+   heading: "Understanding Your Diagnosis",
     text:
-      "From an abnormal finding to an actionable diagnosis, the programme brings clinical assessment, breast imaging and pathology together. The diagnostic pathway is selected for each patient's individual needs.",
+      "A clear understanding of your diagnosis is an important first step. Your oncology team reviews the available medical information and identifies whether further investigations are needed.",
     image: diagnosisImage,
     alt: "Diagnostic imaging equipment in a clinical setting",
     points: [
-      "Triple assessment: clinical examination, imaging and pathology",
-      "Digital breast tomosynthesis and image-guided biopsy when appropriate",
-      "Onco-pathology, immunohistochemistry and relevant biomarker testing",
-      "Genomic profiling when clinically appropriate",
+      "Clinical assessment and specialist consultations",
+      "Review of biopsy, pathology and imaging reports",
+      "Additional investigations and biomarker testing where appropriate",
+      "Guidance on understanding your diagnosis and next steps",
     ],
   },
   {
-    code: "B-AHEAD",
+    code: "TREATMENT & CARE 02",
     label: "TREATMENT SERVICES",
-    heading: "Advanced, high-precision, evidence-based treatment",
+    heading: "Personalised Treatment Planning",
     text:
-      "Patients are offered coordinated discussions with surgical, medical and radiation oncology specialists. A multidisciplinary tumour board reviews the case and supports an individualised treatment plan.",
+      "Treatment decisions depend on the type and stage of cancer, the patient's overall health and individual clinical needs. The oncology team discusses suitable treatment approaches and helps patients understand their options.",
     image: treatmentImage,
     alt: "Patient speaking with a healthcare professional",
     points: [
-      "Consultations with surgical, medical and radiation oncologists",
-      "Multidisciplinary tumour board review",
-      "Surgery and precision radiotherapy options when suitable",
-      "Systemic treatment and supportive care based on clinical indication",
+      "Specialist consultations and treatment discussions",
+      "Multidisciplinary team review where appropriate",
+      "Guidance on surgery, chemotherapy and radiation therapy",
+      "Information about targeted therapy and immunotherapy where suitable & Supportive care during treatment",
     ],
   },
   {
-    code: "B-YOU",
+    code: "RECOVERY & ONGOING SUPPORT 03",
     label: "REHABILITATION SERVICES",
-    heading: "Back to you: recover, rebuild and rediscover",
+    heading: "Support for Recovery and Beyond",
     text:
-      "Rehabilitation is part of the care journey. Physiotherapy, lymphoedema care, nutrition, emotional support and pain management can help patients work towards strength, comfort and quality of life.",
+      "Care continues beyond active treatment. Appropriate supportive services can help patients manage treatment-related challenges, regain strength and maintain quality of life.",
     image: recoveryImage,
     alt: "Caregiver supporting a patient during recovery",
     points: [
-      "Physiotherapy and lymphoedema assessment and management",
-      "Nutrition, counselling and emotional support",
-      "Pain management and supervised yoga where suitable",
-      "Follow-up and long-term survivorship support",
+      "Nutrition and dietary guidance",
+      "Emotional and psychological support",
+      "Pain and symptom management & Physiotherapy and cancer rehabilitation",
+      "Family and caregiver guidance & Follow-up and survivorship support",
     ],
   },
 ];
+
 
 export default function HomePathway() {
   const reduceMotion = useReducedMotion();
@@ -85,17 +85,21 @@ export default function HomePathway() {
             >
               <SectionTitle
                 center={false}
-                eyebrow="BREAST CANCER CARE & SUPPORT"
-                title="Expert guidance for your breast health journey"
-                description="From understanding breast changes to exploring diagnosis, treatment and recovery, access clear information and compassionate support at every step."
+                eyebrow="RENOVA CANCER HOSPITAL"
+                title="Every Cancer Is Different. Your Treatment Should Be Too."
+                description="At RENOVA Cancer Hospital, we are committed to patient-centred cancer care through personalised treatment planning,
+                clinical expertise and compassionate support. From accurate diagnosis and multidisciplinary planning to treatment, 
+                recovery and follow-up, our specialists work together around the needs of each patient."
               />
-
-              <p className="max-w-2xl text-[16px] leading-7 text-ink">
-                A breast lump or an unexpected change can cause concern.
-                Many breast changes are not cancer, but it is important to
-                seek professional assessment when something feels different.
-                Qualified healthcare professionals can explain appropriate
-                examinations, investigations and possible next steps.
+              
+              {/* <p className="max-w-2xl text-[16px] leading-7 text-ink"> */}
+              <p className="mt-1 max-w-3xl text-[17px] leading-7 text-ink">
+                Every patient's cancer journey is unique. At RENOVA, our
+                multidisciplinary team focuses on understanding individual
+                needs and guiding patients through every stage of care.
+                From diagnosis and treatment to recovery and follow-up,
+                we strive to provide compassionate support and help
+                patients make informed decisions about their health.
               </p>
 
               {/* COMPASSIONATE CARE CARD */}
@@ -126,7 +130,7 @@ export default function HomePathway() {
                   </div>
                 </div>
 
-                <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+                <div className="mt-2 flex flex-wrap gap-x-4 gap-y-2">
                   {[
                     "Clear information",
                     "Supportive care",
@@ -157,10 +161,16 @@ export default function HomePathway() {
                 </Link>
 
                 <Link
-                  to="/breast-cancer"
+                  to="/doctors"
                   className="btn-secondary inline-flex items-center justify-center !py-2"
                 >
-                  Learn About Breast Cancer
+                  Meet Our Doctors  
+                </Link>
+                <Link
+                  to="/services/second-opinion"
+                  className="btn-secondary inline-flex items-center justify-center !py-2"
+                >
+                 Get a Second Opinion 
                 </Link>
               </div>
             </motion.div>

@@ -119,7 +119,7 @@ function TechnologyCard({ item, index }) {
           {item.title}
         </h3>
 
-        <p className="mt-3 flex-1 text-[15px] leading-7 text-[#59695D]">
+        <p className="mt-3 flex-1 text-[16px] leading-7 text-[#59695D] sm:text-[17px]">
           {item.description}
         </p>
 
@@ -324,26 +324,24 @@ export default function TechnologyPage() {
         </span>
 
         <h1 className="mt-6 text-3xl font-bold leading-tight text-[#263C30] sm:text-4xl lg:text-[46px]">
-          Advanced Technology for
+          Advanced Technology for 
           <span className="block text-[#E87744]">
-            More Personalised Cancer Care
+            Precision Cancer Care
+           
           </span>
         </h1>
 
         <p className="mt-6 text-[16px] leading-8 text-[#536357] sm:text-[17px]">
-          At Renova Cancer Care, advanced technology supports
-          the way our specialists understand, diagnose and treat
-          cancer. From detailed imaging and molecular diagnostics
-          to precision radiation and specialised surgical
-          procedures, each technology serves an important clinical purpose.
+         At RENOVA Cancer Hospital, advanced technology plays an important role in cancer diagnosis, treatment planning and patient care.
+          We combine specialised clinical expertise with modern treatment technologies to support personalised cancer care.
         </p>
 
         <p className="mt-4 text-[16px] leading-8 text-[#536357] sm:text-[17px]">
-          Our multidisciplinary teams bring together clinical
-          expertise and modern treatment systems to evaluate
-          individual patient needs and plan appropriate care.
-          Technology is selected according to the cancer type,
-          stage, diagnostic findings and overall health of each patient.
+         From precision radiotherapy and molecular oncology to robotic surgery and specialised cancer procedures, our technologies 
+         support clinicians in evaluating individual patient needs and planning appropriate treatment approaches.
+        </p>
+        <p className="mt-4 text-[16px] leading-8 text-[#536357] sm:text-[17px]">
+          The choice of technology depends on the cancer type, stage, diagnostic findings and overall health of each patient.
         </p>
 
         {/* KEY AREAS */}
@@ -460,29 +458,30 @@ export default function TechnologyPage() {
       {/* EXPLORE OUR TECHNOLOGY */}
       <section
         id="technology-list"
-        className="page-container scroll-mt-24 px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+        className="page-container scroll-mt-24 px-4 py-4 sm:px-6 sm:py-6 lg:px-8"
       >
         <div className="mx-auto mb-9 max-w-3xl text-center">
           <p className="text-[12px] font-extrabold uppercase tracking-[.18em] text-[#E87744]">
-            EXPLORE OUR TECHNOLOGY
+           EXPLORE OUR TECHNOLOGY
           </p>
 
           <h2 className="mt-3 text-3xl font-bold leading-tight text-[#263C30] sm:text-4xl">
-            Advanced Technology & Specialised Care
+           Advanced Technologies for Precision Cancer Care
           </h2>
 
           <p className="mt-4 text-[16px] leading-7 text-[#536357]">
-            Search and explore technologies used in cancer diagnosis,
-            treatment planning and specialised care.
+            Explore the advanced technologies used in cancer diagnosis, treatment planning and specialised cancer care at RENOVA.
           </p>
         </div>
 
         {/* SEARCH AND FILTERS - WITHOUT OUTER BOX */}
-        <div className="mb-8">
-          <div className="grid gap-4 lg:grid-cols-[1fr_250px_220px] lg:items-end">
-
+        {/* <div className="mb-8"> */}
+        <div className="mx-auto mb-8 w-full max-w-5xl">
+          <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_250px_220px] lg:items-end">
+       
             {/* SEARCH */}
-            <div>
+            {/* <div> */}
+            <div className="col-span-1 w-full sm:col-span-2 lg:col-span-1">
               <label
                 htmlFor="technology-search"
                 className="mb-2 block text-[13px] font-bold text-[#304B3C]"
@@ -510,7 +509,8 @@ export default function TechnologyPage() {
             </div>
 
             {/* SPECIALITY FILTER */}
-            <div>
+            {/* <div> */}
+            <div className="col-span-1 min-w-0 w-full">
               <label
                 htmlFor="technology-speciality-filter"
                 className="mb-2 block text-[13px] font-bold text-[#304B3C]"
@@ -524,7 +524,8 @@ export default function TechnologyPage() {
                 onChange={(event) =>
                   setSelectedSpeciality(event.target.value)
                 }
-                className="min-h-12 w-full rounded-xl border border-[#DCE5DA] bg-white px-4 text-[14px] text-[#304B3C] outline-none focus:border-[#DCE5DA] focus:outline-none focus:ring-0"
+                className="min-h-12 w-full min-w-0 rounded-xl border border-[#DCE5DA] bg-white px-2 text-[12px] text-[#304B3C] outline-none focus:border-[#DCE5DA] focus:outline-none focus:ring-0 sm:px-4 sm:text-[14px]"
+                // className="min-h-12 w-full rounded-xl border border-[#DCE5DA] bg-white px-4 text-[14px] text-[#304B3C] outline-none focus:border-[#DCE5DA] focus:outline-none focus:ring-0"
               >
                 <option value="all">All Specialities</option>
 
@@ -537,7 +538,8 @@ export default function TechnologyPage() {
             </div>
 
             {/* SORT */}
-            <div>
+            {/* <div> */}
+            <div className="col-span-1 min-w-0 w-full">
               <label
                 htmlFor="technology-sort"
                 className="mb-2 flex items-center gap-2 text-[13px] font-bold text-[#304B3C]"
@@ -550,7 +552,8 @@ export default function TechnologyPage() {
                 id="technology-sort"
                 value={sortBy}
                 onChange={(event) => setSortBy(event.target.value)}
-                className="min-h-12 w-full rounded-xl border border-[#DCE5DA] bg-white px-4 text-[14px] text-[#304B3C] outline-none focus:border-[#DCE5DA] focus:outline-none focus:ring-0"
+                className="min-h-12 w-full min-w-0 rounded-xl border border-[#DCE5DA] bg-white px-2 text-[12px] text-[#304B3C] outline-none focus:border-[#DCE5DA] focus:outline-none focus:ring-0 sm:px-4 sm:text-[14px]"
+                // className="min-h-12 w-full rounded-xl border border-[#DCE5DA] bg-white px-4 text-[14px] text-[#304B3C] outline-none focus:border-[#DCE5DA] focus:outline-none focus:ring-0"
               >
                 <option value="latest">Latest Technology</option>
                 <option value="most-viewed">Most Viewed</option>

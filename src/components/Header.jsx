@@ -1,6 +1,7 @@
 
 import { useEffect, useRef, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+// import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 import {
@@ -170,10 +171,10 @@ const navigation = [
       label: "Cancer Treatments",
       path: "/services/treatments",
     },
-    {
-      label: "Technology & Equipment",
-      path: "/technology",
-    },
+    // {
+    //   label: "Technology & Equipment",
+    //   path: "/technology",
+    // },
     {
       label: "Second Opinion",
       path: "/services/second-opinion",
@@ -235,11 +236,22 @@ const navigation = [
 ];
 
 export default function Header() {
+  const location = useLocation();
   const [open, setOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const headerRef = useRef(null);
   const closeRef = useRef(null);
+
+  const isMenuActive = (item) => {
+  if (location.pathname === item.path) return true;
+
+  return item.children?.some(
+    (child) =>
+      location.pathname === child.path ||
+      location.pathname.startsWith(`${child.path}/`)
+  ) || false;
+};
 
   const closeAll = () => {
     setActiveDropdown(null);
@@ -412,20 +424,18 @@ export default function Header() {
                     to={item.path}
                     end={item.path === "/"}
                     onClick={() => setActiveDropdown(null)}
-                    // className={({ isActive }) =>
-                    //   `whitespace-nowrap py-6 text-[16px] font-semibold transition-colors duration-200 ${
-                    //     isActive
-                    //       ? "text-[#E98A43]"
-                    //       : "text-ink hover:text-[#08614F]"
-                    //   }`
-                    // }
-                   className={({ isActive }) =>
-  `whitespace-nowrap py-1 text-[16px] min-[1450px]:text-[17px] min-[1600px]:text-[18px] font-semibold transition-colors duration-200 ${
-    isActive
-      ? "text-[#E87744]"
-      : "text-ink hover:text-[#4F7359]"
-  }`
-}
+                    className={`whitespace-nowrap py-1 text-[16px] min-[1450px]:text-[17px] min-[1600px]:text-[18px] font-semibold transition-colors duration-200 ${
+                      isMenuActive(item)
+                        ? "text-[#E87744]"
+                        : "text-ink hover:text-[#4F7359]"
+                    }`}
+                  //  className={({ isActive }) =>
+                  //     `whitespace-nowrap py-1 text-[16px] min-[1450px]:text-[17px] min-[1600px]:text-[18px] font-semibold transition-colors duration-200 ${
+                  //       isActive
+                  //         ? "text-[#E87744]"
+                  //         : "text-ink hover:text-[#4F7359]"
+                  //     }`
+                  //   }
                   >
                     {item.label}
                   </NavLink>
@@ -440,9 +450,14 @@ export default function Header() {
                       }}
                       aria-label={`Open ${item.label} dropdown`}
                       aria-expanded={activeDropdown === item.label}
+                      // className={`ml-1 rounded p-1 transition-colors ${
+                      //   activeDropdown === item.label
+                      //     ? "text-[#E98A43]"
+                      //     : "text-ink hover:text-[#08614F]"
+                      // }`}
                       className={`ml-1 rounded p-1 transition-colors ${
-                        activeDropdown === item.label
-                          ? "text-[#E98A43]"
+                        activeDropdown === item.label || isMenuActive(item)
+                          ? "text-[#E87744]"
                           : "text-ink hover:text-[#08614F]"
                       }`}
                     >
@@ -471,17 +486,34 @@ export default function Header() {
           const Icon = child.Icon;
 
           return (
-            <Link
+            // <Link
+            //   key={child.label}
+            //   to={child.path}
+            //   onClick={closeAll}
+            //   className="flex min-h-[38px] items-center gap-3 border-b border-line/60 px-5 py-2 text-[16px] font-medium text-ink transition-colors last:border-0 hover:bg-[#F3F7F4] hover:text-[#08614F]"
+            // >
+            //   {Icon && (
+            //     <Icon size={19} className="shrink-0 text-[#E87744]" />
+            //   )}
+            //   <span>{child.label}</span>
+            // </Link>
+            <NavLink
               key={child.label}
               to={child.path}
               onClick={closeAll}
-              className="flex min-h-[38px] items-center gap-3 border-b border-line/60 px-5 py-2 text-[16px] font-medium text-ink transition-colors last:border-0 hover:bg-[#F3F7F4] hover:text-[#08614F]"
+              className={({ isActive }) =>
+                `flex min-h-[38px] items-center gap-3 border-b border-line/60 px-5 py-2 text-[16px] font-medium transition-colors last:border-0 ${
+                  isActive
+                    ? "bg-[#F3F7F4] text-[#E87744]"
+                    : "text-ink hover:bg-[#F3F7F4] hover:text-[#E87744]"
+                }`
+              }
             >
               {Icon && (
                 <Icon size={19} className="shrink-0 text-[#E87744]" />
               )}
               <span>{child.label}</span>
-            </Link>
+            </NavLink>
           );
         })}
       </div>
@@ -496,14 +528,10 @@ export default function Header() {
             {/* APPOINTMENT AND MOBILE MENU */}
             {/* <div className="ml-auto flex shrink-0 items-center gap-2 2xl:ml-3"> */}
                 <div className="ml-3 flex shrink-0 items-center gap-2 min-[1300px]:ml-2">
-              {/* <Link
-                to="/appointments"
-                className="btn-header hidden sm:inline-flex"
-              > */}
               <Link
-  to="/appointments"
-  className="btn-header hidden min-[1300px]:inline-flex"
->
+                to="/appointments"
+                className="btn-header hidden min-[1300px]:inline-flex"
+              >
                 <CalendarDays size={16} />
                 Book an Appointment
               </Link>
@@ -585,13 +613,18 @@ export default function Header() {
                         to={item.path}
                         end={item.path === "/"}
                         onClick={closeAll}
-                        className={({ isActive }) =>
-                          `flex-1 py-4 text-[17px] font-semibold ${
-                            isActive
-                              ? "text-[#E98A43]"
-                              : "text-heading hover:text-[#08614F]"
-                          }`
-                        }
+                        // className={({ isActive }) =>
+                        //   `flex-1 py-4 text-[17px] font-semibold ${
+                        //     isActive
+                        //       ? "text-[#E98A43]"
+                        //       : "text-heading hover:text-[#08614F]"
+                        //   }`
+                        // }
+                        className={`flex-1 py-4 text-[17px] font-semibold ${
+                          isMenuActive(item)
+                            ? "text-[#E87744]"
+                            : "text-heading hover:text-[#08614F]"
+                        }`}
                       >
                         {item.label}
                       </NavLink>
@@ -644,12 +677,24 @@ export default function Header() {
                                 const Icon = child.Icon;
 
                                 return (
-                                  <Link
-                                    key={child.label}
-                                    to={child.path}
-                                    onClick={closeAll}
-                                    className="flex items-center gap-3 py-3 text-[16px] font-medium text-ink transition hover:text-[#08614F]"
-                                  >
+                                  // <Link
+                                  //   key={child.label}
+                                  //   to={child.path}
+                                  //   onClick={closeAll}
+                                  //   className="flex items-center gap-3 py-3 text-[16px] font-medium text-ink transition hover:text-[#08614F]"
+                                  // >
+                                  <NavLink
+                                      key={child.label}
+                                      to={child.path}
+                                      onClick={closeAll}
+                                      className={({ isActive }) =>
+                                        `flex items-center gap-3 py-3 text-[16px] font-medium transition ${
+                                          isActive
+                                            ? "text-[#E87744]"
+                                            : "text-ink hover:text-[#E87744]"
+                                        }`
+                                      }
+                                    >
                                     {Icon && (
                                       <Icon
                                         size={19}
@@ -658,7 +703,8 @@ export default function Header() {
                                     )}
 
                                     {child.label}
-                                  </Link>
+                                  {/* </Link> */}
+                                  </NavLink>
                                 );
                               })}
 

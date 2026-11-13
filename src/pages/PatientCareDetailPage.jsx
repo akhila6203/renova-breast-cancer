@@ -49,56 +49,81 @@ import survivorshipImage from "../assets/patients-support/Long-term survivorship
 const details = {
   "b-ready": {
     name: "B-READY",
+    name: "DIAGNOSIS & ASSESSMENT 01",
     label: "DIAGNOSTIC SERVICES",
-    title: "Rapid Evaluation, Assessment and Diagnosis",
+    title: "Understanding Your Diagnosis",
     description:
-      "B-READY brings together clinical assessment, advanced breast imaging, biopsy, pathology and genomic profiling to help patients understand their diagnosis and available care options. The diagnostic pathway is planned according to each patient's individual clinical needs.",
+          "A clear understanding of your diagnosis is an important first step. Your oncology team reviews the available medical information and identifies whether further investigations are needed.",
     image: diagnosisImage,
     introPoints: [
-      "Clinical breast assessment and diagnostic evaluation.",
-      "Advanced breast imaging and image-guided procedures.",
-      "Detailed pathology and biomarker assessment.",
-      "Genomic profiling when clinically appropriate.",
+      "Clinical assessment and specialist consultations",
+      "Review of biopsy, pathology and imaging reports",
+      "Additional investigations and biomarker testing where appropriate",
+      "Guidance on understanding your diagnosis and next steps",
     ],
     sections: [
       {
-        title: "Triple assessment",
+        // title: "Triple assessment",
         icon: Stethoscope,
         image: tripleAssessmentImage,
-        text:
-          "Triple assessment combines clinical examination, breast imaging and tissue diagnosis to evaluate a breast abnormality. The findings help the clinical team understand the nature of the condition and plan appropriate next steps.",
-        bullets: [
-          "Clinical breast examination by a specialist.",
-          "Appropriate breast imaging based on clinical findings.",
-          "Pathological assessment through biopsy when indicated.",
-          "Integrated review of findings for further management.",
-        ],
+        title: "Clinical Assessment and Diagnosis",
+text: "Cancer diagnosis begins with a detailed clinical assessment and review of the patient's symptoms, medical history and available investigation reports. The oncology team determines which additional tests may be required to understand the condition.",
+bullets: [
+  "Detailed medical history and clinical examination.",
+  "Review of symptoms and previous medical records.",
+  "Assessment by relevant oncology specialists.",
+  "Guidance on further investigations and diagnostic planning.",
+],
+        // text:
+        //   "Triple assessment combines clinical examination, breast imaging and tissue diagnosis to evaluate a breast abnormality. The findings help the clinical team understand the nature of the condition and plan appropriate next steps.",
+        // bullets: [
+        //   "Clinical breast examination by a specialist.",
+        //   "Appropriate breast imaging based on clinical findings.",
+        //   "Pathological assessment through biopsy when indicated.",
+        //   "Integrated review of findings for further management.",
+        // ],
       },
       {
-        title: "Digital breast tomosynthesis",
+        // title: "Digital breast tomosynthesis",
         icon: ScanLine,
         image: tomosynthesisImage,
-        text:
-          "Digital breast tomosynthesis is an advanced breast imaging technique that captures multiple images from different angles to create detailed views of breast tissue.",
-        bullets: [
-          "Provides multiple image views of breast tissue.",
-          "Helps assess overlapping breast structures.",
-          "Supports evaluation of suspicious breast findings.",
-          "Imaging is recommended according to individual clinical needs.",
-        ],
+        title: "Advanced Cancer Imaging",
+text: "Imaging investigations help identify the location, size and extent of a suspected tumour. Depending on the clinical requirement, the oncology team may recommend ultrasound, CT, MRI, PET-CT or other appropriate imaging studies.",
+bullets: [
+  "Ultrasound, CT and MRI investigations where appropriate.",
+  "PET-CT imaging for selected clinical indications.",
+  "Assessment of tumour location and disease extent.",
+  "Imaging review to support diagnosis and treatment planning.",
+],
+        // text:
+        //   "Digital breast tomosynthesis is an advanced breast imaging technique that captures multiple images from different angles to create detailed views of breast tissue.",
+        // bullets: [
+        //   "Provides multiple image views of breast tissue.",
+        //   "Helps assess overlapping breast structures.",
+        //   "Supports evaluation of suspicious breast findings.",
+        //   "Imaging is recommended according to individual clinical needs.",
+        // ],
       },
       {
-        title: "Stereotactic breast biopsy",
+        // title: "Stereotactic breast biopsy",
         icon: Microscope,
         image: biopsyImage,
-        text:
-          "Stereotactic breast biopsy is an image-guided procedure used to collect tissue samples from a specific area of the breast for laboratory examination.",
-        bullets: [
-          "Uses imaging guidance to identify the target area.",
-          "Helps obtain tissue samples from suspicious findings.",
-          "Supports accurate pathological evaluation.",
-          "The procedure is recommended when clinically indicated.",
-        ],
+        title: "Image-Guided Biopsy",
+text: "A biopsy involves collecting a tissue sample from a suspected abnormal area for laboratory examination. Image-guided techniques may be used to help obtain samples accurately from selected tumour sites.",
+bullets: [
+  "Tissue sampling from a suspected tumour or abnormal area.",
+  "Imaging guidance when required for the procedure.",
+  "Pathological examination of collected tissue.",
+  "Findings help establish the diagnosis and guide further care.",
+],
+        // text:
+        //   "Stereotactic breast biopsy is an image-guided procedure used to collect tissue samples from a specific area of the breast for laboratory examination.",
+        // bullets: [
+        //   "Uses imaging guidance to identify the target area.",
+        //   "Helps obtain tissue samples from suspicious findings.",
+        //   "Supports accurate pathological evaluation.",
+        //   "The procedure is recommended when clinically indicated.",
+        // ],
       },
       {
         title: "Onco-pathology and immunohistochemistry",
@@ -130,31 +155,40 @@ const details = {
   },
 
   "b-ahead": {
-    name: "B-AHEAD",
+    name: "TREATMENT & CARE 02",
     label: "TREATMENT SERVICES",
-    title: "Advanced, High-Precision, Evidence-Based Treatment",
+    title: "Personalised Treatment Planning",
     description:
-      "B-AHEAD brings together surgical, medical and radiation oncology specialists to develop an individualised treatment approach. Treatment decisions are guided by diagnosis, disease characteristics and each patient's clinical needs.",
+      "Treatment decisions depend on the type and stage of cancer, the patient's overall health and individual clinical needs. The oncology team discusses suitable treatment approaches and helps patients understand their options.",
     image: treatmentImage,
     introPoints: [
-      "Coordinated consultations with oncology specialists.",
-      "Multidisciplinary tumour board discussions.",
-      "Surgical and advanced radiotherapy options.",
-      "Systemic treatment and supportive care.",
+ "Specialist consultations and treatment discussions",
+      "Multidisciplinary team review where appropriate",
+      "Guidance on surgery, chemotherapy and radiation therapy",
+      "Information about targeted therapy and immunotherapy where suitable",
+      "Supportive care during treatment",
     ],
     sections: [
       {
-        title: "Consultations with all three oncology specialties",
+        // title: "Consultations with all three oncology specialties",
         icon: UsersRound,
         image: oncologyConsultationsImage,
-        text:
-          "Patients can receive coordinated consultations with surgical, medical and radiation oncology specialists. These discussions help explain the available treatment approaches and support an individualised care plan.",
-        bullets: [
-          "Consultation with surgical oncology specialists.",
-          "Consultation with medical oncology specialists.",
-          "Consultation with radiation oncology specialists.",
-          "Coordinated discussions about treatment options.",
-        ],
+        title: "Cancer Surgery",
+text: "Surgery is an important treatment option for many types of cancer. The surgical approach depends on the tumour location, type, stage and the patient's overall health. The oncology team discusses suitable surgical options for each individual case.",
+bullets: [
+  "Evaluation by surgical oncology specialists.",
+  "Assessment of suitable surgical approaches.",
+  "Tumour removal and organ-preserving procedures where appropriate.",
+  "Individualised surgical planning and post-operative care.",
+],
+        // text:
+        //   "Patients can receive coordinated consultations with surgical, medical and radiation oncology specialists. These discussions help explain the available treatment approaches and support an individualised care plan.",
+        // bullets: [
+        //   "Consultation with surgical oncology specialists.",
+        //   "Consultation with medical oncology specialists.",
+        //   "Consultation with radiation oncology specialists.",
+        //   "Coordinated discussions about treatment options.",
+        // ],
       },
       {
         title: "Multidisciplinary tumour board",
@@ -170,17 +204,25 @@ const details = {
         ],
       },
       {
-        title: "Breast-conserving and oncoplastic surgery",
+        // title: "Breast-conserving and oncoplastic surgery",
         icon: Activity,
         image: breastSurgeryImage,
-        text:
-          "Breast surgery options are considered according to tumour characteristics, clinical findings and patient preferences. Where suitable, breast-conserving and oncoplastic techniques may be discussed.",
-        bullets: [
-          "Assessment of appropriate surgical options.",
-          "Breast-conserving surgery when suitable.",
-          "Oncoplastic techniques where clinically appropriate.",
-          "Individualised surgical planning with the treating team.",
-        ],
+        title: "Advanced Radiation Therapy",
+text: "Radiation therapy uses carefully planned radiation to target cancer cells. Different techniques may be recommended depending on the tumour type, treatment area and individual clinical requirements.",
+bullets: [
+  "Specialist radiation oncology consultation.",
+  "Individualised radiation treatment planning.",
+  "External beam radiotherapy and brachytherapy where appropriate.",
+  "Image-guided and advanced radiation techniques when indicated.",
+],
+        // text:
+        //   "Breast surgery options are considered according to tumour characteristics, clinical findings and patient preferences. Where suitable, breast-conserving and oncoplastic techniques may be discussed.",
+        // bullets: [
+        //   "Assessment of appropriate surgical options.",
+        //   "Breast-conserving surgery when suitable.",
+        //   "Oncoplastic techniques where clinically appropriate.",
+        //   "Individualised surgical planning with the treating team.",
+        // ],
       },
       {
         title: "Breast brachytherapy and partial-breast irradiation",
@@ -196,17 +238,25 @@ const details = {
         ],
       },
       {
-        title: "Heart-sparing radiotherapy",
+        // title: "Heart-sparing radiotherapy",
         icon: ShieldCheck,
         image: heartSparingImage,
-        text:
-          "Heart-sparing radiotherapy techniques aim to reduce radiation exposure to the heart during selected breast cancer treatments, particularly when the left breast is being treated.",
-        bullets: [
-          "Radiotherapy planning with attention to heart exposure.",
-          "Evaluation of suitable heart-sparing techniques.",
-          "Individualised treatment positioning and planning.",
-          "Ongoing assessment by the radiation oncology team.",
-        ],
+        title: "Precision Radiotherapy Techniques",
+text: "Modern radiotherapy techniques use advanced planning and imaging systems to deliver radiation accurately while helping limit exposure to surrounding healthy tissues. The appropriate technique depends on the treatment area and clinical needs.",
+bullets: [
+  "Advanced imaging for treatment planning.",
+  "Assessment of surrounding healthy organs and tissues.",
+  "Precision treatment delivery using suitable techniques.",
+  "Monitoring and review by the radiation oncology team.",
+],
+        // text:
+        //   "Heart-sparing radiotherapy techniques aim to reduce radiation exposure to the heart during selected breast cancer treatments, particularly when the left breast is being treated.",
+        // bullets: [
+        //   "Radiotherapy planning with attention to heart exposure.",
+        //   "Evaluation of suitable heart-sparing techniques.",
+        //   "Individualised treatment positioning and planning.",
+        //   "Ongoing assessment by the radiation oncology team.",
+        // ],
       },
       {
         title: "Image-guided, adaptive and motion-tracking radiotherapy",
@@ -251,17 +301,17 @@ const details = {
   },
 
   "b-you": {
-    name: "B-YOU",
+    name: "RECOVERY & ONGOING SUPPORT 03",
     label: "REHABILITATION SERVICES",
-    title: "Back to You: Recover, Rebuild and Rediscover",
+    title: "Support for Recovery and Beyond",
     description:
-      "B-YOU focuses on rehabilitation, recovery and wellbeing. The programme brings together physical rehabilitation, nutrition, emotional support, pain management and survivorship guidance to help patients work towards improved comfort and quality of life.",
+      "Care continues beyond active treatment. Appropriate supportive services can help patients manage treatment-related challenges, regain strength and maintain quality of life.",
     image: recoveryImage,
     introPoints: [
-      "Physiotherapy and lymphoedema care.",
-      "Nutrition and emotional wellbeing support.",
-      "Pain management and mind-body wellbeing.",
-      "Long-term survivorship and follow-up guidance.",
+      "Nutrition and dietary guidance",
+      "Emotional and psychological support",
+      "Pain and symptom management & Physiotherapy and cancer rehabilitation",
+      "Family and caregiver guidance & Follow-up and survivorship support",
     ],
     sections: [
       {
@@ -330,18 +380,30 @@ const details = {
         ],
       },
       {
-        title: "The Pink Room and B-Well Wednesdays",
-        icon: CalendarDays,
-        image: pinkRoomImage,
-        text:
-          "The Pink Room and B-Well Wednesdays provide opportunities for patients to engage with supportive activities and wellbeing initiatives as part of their care journey.",
-        bullets: [
-          "A welcoming environment for patient support.",
-          "Wellbeing activities and patient engagement.",
-          "Opportunities to connect with support services.",
-          "Activities according to the programme schedule.",
-        ],
-      },
+  title: "Patient Wellness and Support Programmes",
+  icon: HeartHandshake,
+  image: pinkRoomImage,
+  text: "Patient wellness programmes provide opportunities for individuals and families to access supportive activities, connect with others and receive guidance during cancer treatment and recovery.",
+  bullets: [
+    "Patient engagement and supportive activities.",
+    "Emotional wellbeing and wellness guidance.",
+    "Opportunities for patient and caregiver interaction.",
+    "Supportive programmes based on patient needs.",
+    ],
+},
+      // {
+      //   title: "The Pink Room and B-Well Wednesdays",
+      //   icon: CalendarDays,
+      //   image: pinkRoomImage,
+      //   text:
+      //     "The Pink Room and B-Well Wednesdays provide opportunities for patients to engage with supportive activities and wellbeing initiatives as part of their care journey.",
+      //   bullets: [
+      //     "A welcoming environment for patient support.",
+      //     "Wellbeing activities and patient engagement.",
+      //     "Opportunities to connect with support services.",
+      //     "Activities according to the programme schedule.",
+      //   ],
+      // },
       {
         title: "Long-term survivorship",
         icon: ShieldCheck,
@@ -464,7 +526,8 @@ function ProgrammeHero({ item }) {
 
             <div className="absolute -bottom-4 left-4 right-4 rounded-xl border border-[#e5ebe4] bg-white p-4 shadow-md sm:left-8 sm:right-8 sm:p-5">
               <p className="text-xs font-bold tracking-[0.16em] text-[#e87744]">
-                RENOVA BREAST HEALTH INITIATIVE
+                {/* RENOVA BREAST HEALTH INITIATIVE */}
+                RENOVA CANCER CARE
               </p>
 
               <p className="mt-1 text-lg font-bold text-[#304b3c]">

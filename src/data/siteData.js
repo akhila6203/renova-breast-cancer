@@ -119,8 +119,8 @@ export function getServiceBySlug(slug) {
 
 export const slides = [
   {
-    eyebrow: "RENOVA HOSPITALS · BREAST CARE",
-    title: "Compassionate breast care, explained with clarity.",
+    eyebrow: "RENOVA HOSPITALS",
+    title: "Comprehensive Cancer Care with Compassion and Expertise",
     description:
       "From first assessment to recovery, we help you understand the next step and feel supported while you take it.",
     image: breastBanner,

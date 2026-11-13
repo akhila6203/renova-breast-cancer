@@ -15,7 +15,7 @@ export default function HomeServices() {
           </p>
 
           <h2 className="display-font mt-3 text-3xl font-bold text-[#263C30] sm:text-4xl">
-            Explore Cancer Types
+           Find Care by Cancer Type
           </h2>
 
           <p className="mt-4 text-[15px] leading-7 text-[#59695D] sm:text-base">
@@ -55,13 +55,13 @@ export default function HomeServices() {
                   {cancer.title}
                 </h3>
 
-                <p className="mt-3 flex-1 text-[14px] leading-7 text-[#59695D]">
+                <p className="mt-3 flex-1 text-[16px] leading-7 text-[#59695D] sm:text-[18px]">
                   {cancer.cardDescription}
                 </p>
 
                 <Link
                   to={`/services/cancer/${cancer.slug}`}
-                  className="mt-6 inline-flex min-h-10 items-center gap-2 self-start rounded-full bg-[#304B3C] px-5 py-2.5 text-sm font-semibold text-white transition duration-300 hover:bg-[#E87744]"
+                  className="mt-6 inline-flex min-h-10 items-center gap-2 self-start rounded-full bg-[#304B3C] px-4 py-2 text-sm font-semibold text-white transition duration-300 hover:bg-[#E87744]"
                 >
                   Know More
                   <ArrowRight size={16} />
@@ -72,10 +72,10 @@ export default function HomeServices() {
         </div>
 
         {/* View All */}
-        <div className="mt-10 text-center">
+        <div className="mt-8 text-center">
           <Link
             to="/services/cancer-types"
-            className="inline-flex items-center gap-2 rounded-full border border-[#476B55] px-7 py-3 text-sm font-bold text-[#476B55] transition duration-300 hover:border-[#E87744] hover:bg-[#E87744] hover:text-white"
+            className="inline-flex items-center gap-2 rounded-full border border-[#476B55] px-4 py-2 text-sm font-bold text-[#476B55] transition duration-300 hover:border-[#E87744] hover:bg-[#E87744] hover:text-white"
           >
             Explore All Cancer Types
             <ArrowRight size={17} />

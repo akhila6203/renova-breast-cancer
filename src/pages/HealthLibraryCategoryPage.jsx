@@ -66,10 +66,10 @@ export default function HealthLibraryCategoryPage() {
       </section>
 
       {/* CATEGORY HERO */}
-      <section className="bg-gradient-to-br from-[#E8F0EA] via-[#F6F9F6] to-[#FFF5EF] px-5 py-14 sm:px-8 sm:py-20 lg:px-12">
+      <section className="bg-gradient-to-br from-[#E8F0EA] via-[#F6F9F6] to-[#FFF5EF] px-5 py-6 sm:px-8 sm:py-10 lg:px-12">
         <div className="page-container">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-4 flex items-center justify-center gap-2">
+            <div className="mb-2 flex items-center justify-center gap-2">
               <span className="h-[3px] w-8 rounded-full bg-[#E87744]" />
               <span className="text-xs font-bold uppercase tracking-[2px] text-[#4F7359]">
                 RENOVA HEALTH LIBRARY
@@ -81,11 +81,11 @@ export default function HealthLibraryCategoryPage() {
               {category.title}
             </h1>
 
-            <p className="mt-5 text-base font-semibold leading-7 text-[#E87744] sm:text-lg">
+            <p className="mt-3 text-base font-semibold leading-7 text-[#E87744] sm:text-lg">
               {category.subtitle}
             </p>
 
-            <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-[#3D4A40]">
+            <p className="mx-auto mt-3 max-w-3xl text-base leading-6 text-[#3D4A40]">
               {category.description}
             </p>
           </div>
@@ -105,11 +105,11 @@ export default function HealthLibraryCategoryPage() {
                 What Is {category.title}?
               </h2>
 
-              <p className="mt-5 text-base leading-8 text-[#3D4A40]">
+              <p className="mt-5 text-[17px] leading-8 text-[#3D4A40]">
                 {category.introduction}
               </p>
 
-              <p className="mt-4 text-base leading-8 text-[#3D4A40]">
+              <p className="mt-4 text-[17px] leading-8 text-[#3D4A40]">
                 {category.whyItMatters}
               </p>
 
@@ -175,7 +175,7 @@ export default function HealthLibraryCategoryPage() {
                   </h3>
                 </div>
 
-                <p className="text-sm leading-8 text-[#3D4A40]">
+                <p className="text-[16px] leading-8 text-[#3D4A40] sm:text-[18px]">
                   {section.content}
                 </p>
               </article>
@@ -216,7 +216,7 @@ export default function HealthLibraryCategoryPage() {
                   <span className="text-xs font-bold text-[#E87744]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <p className="mt-1 text-sm font-semibold leading-6 text-[#243528]">
+                  <p className="mt-1 text-[16px] font-semibold leading-6 text-[#243528] sm:text-[18px]">
                     {topic}
                   </p>
                 </div>
@@ -266,7 +266,7 @@ export default function HealthLibraryCategoryPage() {
       {/* MEDICAL DISCLAIMER */}
       <section className="border-t border-[#D4E0D6] px-5 py-7 sm:px-8 lg:px-12">
         <div className="page-container">
-          <p className="text-sm leading-7 text-[#3D4A40]">
+          <p className="text-[16px] leading-7 text-[#3D4A40] sm:text-[18px]">
             <strong className="text-[#243528]">
               Medical information disclaimer:
             </strong>{" "}

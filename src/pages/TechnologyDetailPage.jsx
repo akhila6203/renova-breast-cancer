@@ -204,7 +204,7 @@ function RelatedSpecialities({ names = [] }) {
         <SectionHeading
           eyebrow="OUR EXPERTISE"
           title="Related Specialities"
-          description="Explore the specialist teams involved in delivering comprehensive cancer care."
+          description="Explore the specialist teams involved in planning and delivering personalised cancer treatment and comprehensive patient care."
         />
 
         <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-5 sm:grid-cols-2">

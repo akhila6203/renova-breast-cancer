@@ -19,7 +19,7 @@ export default function SectionTitle({
     >
       {eyebrow && (
         <p
-          className={`mb-3 text-[15px] font-bold uppercase tracking-[0.18em] ${
+          className={`mb-2 text-[15px] font-bold uppercase tracking-[0.18em] ${
             light ? "text-sky" : "text-royal"
           }`}
         >

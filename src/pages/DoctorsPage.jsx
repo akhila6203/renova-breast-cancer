@@ -31,6 +31,7 @@ export default function DoctorsPage() {
   const [speciality, setSpeciality] = useState("");
   const [location, setLocation] = useState("");
 
+
   const locations = useMemo(
     () => [
       ...new Set(
@@ -122,17 +123,17 @@ export default function DoctorsPage() {
       </nav>
 
       {/* Page heading - original layout */}
-      <section className="page-container px-5 pb-8 pt-10 text-center sm:px-8 sm:pt-14 lg:px-12">
+      <section className="page-container px-5 pb-8 pt-4 text-center sm:px-8 sm:pt-10 lg:px-12">
 
         <span className="text-sm font-bold tracking-[0.18em] text-sky">
           OUR SPECIALISTS
         </span>
 
-        <h1 className="mx-auto mt-3 max-w-3xl font-display text-3xl font-bold text-navy sm:text-4xl">
+        <h1 className="mx-auto mt-2 max-w-3xl font-display text-3xl font-bold text-navy sm:text-4xl">
           Meet Our Doctors
         </h1>
 
-        <p className="mx-auto mt-3 max-w-2xl text-base leading-7 text-[#647368] sm:text-lg">
+        <p className="mx-auto mt-2 max-w-2xl text-base leading-7 text-[#647368] sm:text-lg">
           Experienced specialists offering personalised guidance and
           coordinated breast cancer care.
         </p>
@@ -140,14 +141,13 @@ export default function DoctorsPage() {
       </section>
 
       {/* Individual search and filter boxes */}
-      <section className="page-container px-5 pb-5 sm:px-8 lg:px-12">
+      <section className="page-container px-3 pb-3 sm:px-5 lg:px-8">
 
-        <div className="flex flex-col flex-wrap items-stretch gap-3 py-3 sm:flex-row sm:items-center sm:gap-4">
-
-          {/* Search box */}
-          <label 
-          className="flex min-h-[48px] min-w-0 flex-1 items-center gap-3 rounded-xl border border-line bg-white px-4 text-royal shadow-sm transition focus-within:border-sky sm:min-w-[250px]"
-          // className="flex min-h-[48px] min-w-0 flex-1 items-center gap-3 rounded-xl border border-line bg-white px-4 text-royal shadow-sm transition hover:border-royal focus-within:border-sky focus-within:ring-2 focus-within:ring-sky/15 sm:min-w-[250px]"
+       
+        {/* <div className="mx-auto flex w-full max-w-5xl flex-col items-stretch justify-center gap-3 py-3 sm:flex-row sm:items-center sm:gap-4"> */}
+         <div className="mx-auto flex w-full max-w-5xl flex-col items-stretch justify-center gap-3 py-3 sm:flex-row sm:items-center sm:gap-4">
+          <label       
+          className="flex min-h-[48px] w-full min-w-0 items-center gap-3 rounded-xl border border-line bg-white px-4 text-royal shadow-sm transition focus-within:border-sky sm:w-[360px] sm:flex-none"
           >
 
             <Search
@@ -157,7 +157,6 @@ export default function DoctorsPage() {
 
             <input
             type="text"
-              // type="search"
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Search doctors by name or speciality"
@@ -177,22 +176,18 @@ export default function DoctorsPage() {
             )}
           </label>
 
-          {/* Speciality filter box */}
+<div className="flex w-full gap-2 sm:w-auto sm:contents">
           <label 
-          className="flex min-h-[48px] min-w-0 items-center gap-2 rounded-xl border border-line bg-white px-4 shadow-sm transition focus-within:border-sky sm:flex-none"
-          // className="flex min-h-[48px] min-w-0 items-center gap-2 rounded-xl border border-line bg-white px-4 shadow-sm transition hover:border-royal focus-within:border-sky focus-within:ring-2 focus-within:ring-sky/15 sm:flex-none"
+          className="flex min-h-[48px] w-full min-w-0 flex-1 items-center gap-2 rounded-xl border border-line bg-white px-2 shadow-sm transition focus-within:border-sky sm:w-[220px] sm:flex-none sm:px-4"
+        //  className="flex min-h-[48px] w-full min-w-0 items-center gap-2 rounded-xl border border-line bg-white px-4 shadow-sm transition focus-within:border-sky sm:w-[220px] sm:flex-none"
           >
-
-            {/* <span className="shrink-0 text-sm font-semibold text-navy">
-              Speciality
-            </span> */}
 
             <select
               value={speciality}
               onChange={(event) => setSpeciality(event.target.value)}
               aria-label="Filter by speciality"
               className="min-w-0 flex-1 cursor-pointer border-0 bg-transparent py-2 pl-1 pr-5 text-sm font-semibold text-royal outline-none focus:outline-none focus:ring-0 sm:max-w-[210px]"
-              // className="min-w-0 flex-1 cursor-pointer border-0 bg-transparent py-2 pl-1 pr-5 text-sm font-semibold text-royal outline-none focus:ring-0 sm:max-w-[210px]"
+            
             >
               <option value="">All specialities</option>
 
@@ -205,22 +200,17 @@ export default function DoctorsPage() {
 
           </label>
 
-          {/* Location filter box */}
           <label 
-          className="flex min-h-[48px] min-w-0 items-center gap-2 rounded-xl border border-line bg-white px-4 shadow-sm transition focus-within:border-sky sm:flex-none"
-          // className="flex min-h-[48px] min-w-0 items-center gap-2 rounded-xl border border-line bg-white px-4 shadow-sm transition hover:border-royal focus-within:border-sky focus-within:ring-2 focus-within:ring-sky/15 sm:flex-none"
+          className="flex min-h-[48px] w-full min-w-0 flex-1 items-center gap-2 rounded-xl border border-line bg-white px-2 shadow-sm transition focus-within:border-sky sm:w-[220px] sm:flex-none sm:px-4"
+          // className="flex min-h-[48px] min-w-0 items-center gap-2 rounded-xl border border-line bg-white px-4 shadow-sm transition focus-within:border-sky sm:flex-none"
+        
           >
-
-            {/* <span className="shrink-0 text-sm font-semibold text-navy">
-              Location
-            </span> */}
 
             <select
               value={location}
               onChange={(event) => setLocation(event.target.value)}
               aria-label="Filter by location"
               className="min-w-0 flex-1 cursor-pointer border-0 bg-transparent py-2 pl-1 pr-5 text-sm text-royal outline-none focus:outline-none focus:ring-0 sm:max-w-[220px]"
-              // className="min-w-0 flex-1 cursor-pointer border-0 bg-transparent py-2 pl-1 pr-5 text-sm  sm:max-w-[220px]"
             >
               <option value="">All locations</option>
 
@@ -232,8 +222,8 @@ export default function DoctorsPage() {
             </select>
 
           </label>
+          </div>
 
-          {/* Clear filters */}
           {hasFilters && (
             <button
               type="button"
@@ -247,7 +237,6 @@ export default function DoctorsPage() {
 
         </div>
 
-        {/* Results count - original style */}
         <div className="flex items-center justify-between py-4 text-base text-[#718075]">
           <span>
             <strong className="text-navy">

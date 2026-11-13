@@ -34,7 +34,7 @@ export default function HealthLibraryPage() {
 
 
       {/* CANCER EDUCATION CATEGORIES */}
-      <section className="bg-white px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
+      <section className="bg-white px-5 py-6 sm:px-8 sm:py-14 lg:px-12">
         <div className="page-container">
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <div className="mb-3 flex items-center justify-center gap-2">
@@ -46,13 +46,11 @@ export default function HealthLibraryPage() {
             </div>
 
             <h2 className="display-font text-3xl font-extrabold text-[#243528] sm:text-4xl">
-              Understand Cancer, One Step at a Time
+            Understand Cancer. Understand Your Options.
             </h2>
 
-            <p className="mt-5 text-base leading-8 text-[#3D4A40]">
-              Start with the basics and explore useful information about
-              diagnosis, treatment choices, prevention and supportive care.
-              Each guide explains an important part of the cancer care journey.
+            <p className="mt-5 text-base leading-7 text-[#4b4d4c]">
+              Explore trusted information about cancer diagnosis, treatment options, prevention and supportive care to help patients and families make informed decisions throughout their cancer journey.
             </p>
           </div>
 
@@ -91,7 +89,7 @@ export default function HealthLibraryPage() {
                     {category.subtitle}
                   </p>
 
-                  <p className="mt-3 flex-1 text-[18px] leading-7 text-[#3D4A40]">
+                  <p className="mt-3 flex-1 text-[18px] leading-7 text-[#5c5b5b]">
                     {category.description}
                   </p>
 
@@ -122,7 +120,7 @@ export default function HealthLibraryPage() {
       {/* DISCLAIMER */}
       <section className="border-t border-[#D4E0D6] bg-white px-5 py-8 sm:px-8 lg:px-12">
         <div className="page-container">
-          <p className="text-sm leading-7 text-[#3D4A40]">
+          <p className="text-[18px] leading-7 text-[#3D4A40]">
             <strong className="text-[#243528]">
               Medical information disclaimer:
             </strong>{" "}

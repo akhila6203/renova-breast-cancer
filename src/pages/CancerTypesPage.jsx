@@ -84,7 +84,7 @@ export default function CancerTypesPage() {
       </div>
 
       {/* HERO */}
-      <section className="relative bg-[#F1F6F0]">
+      {/* <section className="relative bg-[#F1F6F0]">
         <div className="page-container grid items-center gap-10 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-2 lg:gap-14 lg:px-8">
 
           <motion.div
@@ -162,7 +162,7 @@ export default function CancerTypesPage() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* WHAT IS CANCER */}
       <section className="page-container px-4 py-16 sm:px-6 sm:py-20 lg:px-8">

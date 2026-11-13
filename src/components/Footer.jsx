@@ -97,68 +97,40 @@ const socials = [
 const quickLinks = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/about" },
-  { label: "Services", path: "/services" },
-  { label: "Our Doctors", path: "/our-team" },
+  { label: "Specialties", path: "/specialities" },
+  { label: "Our Technology", path: "/technology" },
+  { label: "Our Doctors", path: "/doctors" },
   { label: "Patient Support", path: "/patient-care" },
-  { label: "Health Library", path: "/blogs" },
   { label: "Contact Us", path: "/contact" },
 ];
 
 const serviceLinks = [
   {
-    label: "Breast Cancer Screening",
-    path: "/services/breast-cancer-screening",
+    label: "Cancer Types",
+    path: "/services/cancer-types",
   },
   {
-    label: "Diagnosis & Imaging",
-    path: "/services/diagnostic-imaging",
+    label: "Screening & Diagnostics",
+    path: "/services/screening-diagnostics",
   },
   {
-    label: "Breast Cancer Surgery",
-    path: "/services/surgical-oncology",
+    label: "Cancer Treatments",
+    path: "/services/treatments",
   },
   {
-    label: "Medical Oncology",
-    path: "/services/medical-oncology",
-  },
-  {
-    label: "Radiation Therapy",
-    path: "/services/radiation-oncology",
-  },
-  {
-    label: "Patient Support",
-    path: "/patient-care",
+    label: "Second Opinion",
+    path: "/services/second-opinion",
   },
 ];
 
 const libraryLinks = [
   {
-    label: "Breast Cancer Basics",
-    path: "/breast-cancer",
+    label: "Blogs",
+    path: "/health-library/blogs",
   },
   {
-    label: "Treatments",
-    path: "/services",
-  },
-  {
-    label: "Technologies",
-    path: "/services",
-  },
-  {
-    label: "Blogs & Articles",
-    path: "/blogs",
-  },
-  {
-    label: "Videos",
-    path: "/blogs",
-  },
-  {
-    label: "Patient Testimonials & Gallery",
-    path: "/blogs",
-  },
-  {
-    label: "FAQs",
-    path: "/patient-care",
+    label: "Videos & FAQs",
+    path: "/health-library/videos-faqs",
   },
 ];
 
@@ -175,8 +147,9 @@ export default function Footer() {
       <div className="page-container px-5 pt-10 pb-8 sm:px-8 sm:pt-12 lg:px-10 2xl:px-12">
 
         {/* FIVE COLUMNS */}
-        {/* <div className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"> */}
-        <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 xl:grid-cols-[30%_16%_16%_16%_22%] xl:gap-x-0">
+        {/* <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 xl:grid-cols-[30%_16%_16%_16%_22%] xl:gap-x-0"> */}
+        <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 xl:grid-cols-[30%_20%_20%_30%] xl:gap-x-0">
+
 
           {/* COLUMN 1 - LOGO AND DESCRIPTION */}
           {/* <div className="min-w-0"> */}
@@ -193,11 +166,10 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="mt-5 max-w-sm text-[16px] leading-7 text-white">
-              RENOVA is dedicated to breast health and
-              comprehensive breast cancer care, bringing
-              together awareness, early detection, diagnosis,
-              personalised treatment and recovery support.
+            <p className="mt-5 max-w-sm text-[16px] leading-7 text-white sm:text-[17px]">
+              RENOVA Cancer Hospital is dedicated to comprehensive cancer care, bringing together specialist expertise,
+               advanced diagnostic and treatment approaches,
+               personalised care planning and compassionate support throughout every stage of the cancer journey.
             </p>
 
             {/* SOCIAL MEDIA */}
@@ -223,7 +195,7 @@ export default function Footer() {
 
           {/* COLUMN 2 - QUICK LINKS */}
           {/* <div className="min-w-0"> */}
-        <div className="min-w-0 xl:pr-3">
+        <div className="min-w-0 xl:px-3">
 
             <h3 className="mb-5 text-[20px] font-semibold text-white">
               Quick Links
@@ -235,7 +207,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <Link
                     to={item.path}
-                    className="text-[16px] leading-7 text-white transition-colors duration-200 hover:text-[#F0B08A]"
+                    className="text-[17px] leading-7 text-white transition-colors duration-200 hover:text-[#F0B08A]"
                   >
                     {item.label}
                   </Link>
@@ -246,65 +218,58 @@ export default function Footer() {
 
           </div>
 
-          {/* COLUMN 3 - SERVICES */}
+          
+{/* COLUMN 3 - SERVICES AND HEALTH LIBRARY */}
+<div className="min-w-0 xl:px-3">
+
+  {/* SERVICES */}
+  <h3 className="mb-5 text-[20px] font-semibold text-white">
+    Services
+  </h3>
+
+  <ul className="space-y-3">
+    {serviceLinks.map((item) => (
+      <li key={item.label}>
+        <Link
+          to={item.path}
+          className="text-[17px] leading-7 text-white transition-colors duration-200 hover:text-[#F0B08A]"
+        >
+          {item.label}
+        </Link>
+      </li>
+    ))}
+  </ul>
+
+  {/* HEALTH LIBRARY */}
+  <h3 className="mb-5 mt-8 text-[20px] font-semibold text-white">
+    Health Library
+  </h3>
+
+  <ul className="space-y-3">
+    {libraryLinks.map((item) => (
+      <li key={item.label}>
+        <Link
+          to={item.path}
+          className="text-[17px] leading-7 text-white transition-colors duration-200 hover:text-[#F0B08A]"
+        >
+          {item.label}
+        </Link>
+      </li>
+    ))}
+  </ul>
+
+</div>
+
+
+          {/* COLUMN 4 - CONTACT US */}
           {/* <div className="min-w-0"> */}
-          <div className="min-w-0 xl:pr-3">
-
-            <h3 className="mb-5 text-[20px] font-semibold text-white">
-              Services
-            </h3>
-
-            <ul className="space-y-3">
-
-              {serviceLinks.map((item) => (
-                <li key={item.label}>
-                  <Link
-                    to={item.path}
-                    className="text-[16px] leading-7 text-white transition-colors duration-200 hover:text-[#F0B08A]"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-
-            </ul>
-
-          </div>
-
-          {/* COLUMN 4 - HEALTH LIBRARY */}
-          {/* <div className="min-w-0"> */}
-          <div className="min-w-0 xl:pr-3">
-
-            <h3 className="mb-5 text-[20px] font-semibold text-white">
-              Health Library
-            </h3>
-
-            <ul className="space-y-3">
-
-              {libraryLinks.map((item) => (
-                <li key={item.label}>
-                  <Link
-                    to={item.path}
-                    className="text-[16px] leading-7 text-white transition-colors duration-200 hover:text-[#F0B08A]"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-
-            </ul>
-
-          </div>
-
-          {/* COLUMN 5 - CONTACT US */}
-          {/* <div className="min-w-0"> */}
-          <div className="min-w-0 xl:pl-2">
+          <div className="min-w-0 xl:pl-5">
 
             <h3 className="mb-5 text-[20px] font-semibold text-white">
               Contact Us
             </h3>
 
-            <div className="space-y-5 text-[16px] leading-7 text-white">
+            <div className="space-y-5 text-[18px] leading-7 text-white">
 
               {/* LOCATION */}
               <p className="flex items-start gap-3">
@@ -397,8 +362,9 @@ export default function Footer() {
           </p>
 
           <p>
-            Educational information does not replace
-            professional medical advice.
+            Educational information does not replace professional medical advice, diagnosis or treatment. 
+            {/* Educational information does not replace
+            professional medical advice. */}
           </p>
 
         </div>

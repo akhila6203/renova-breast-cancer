@@ -71,7 +71,7 @@ export default function CancerTreatmentsPage() {
     <main className="min-h-screen bg-[#FFFDFA] text-[#304B3C]">
 
       {/* HERO AND BREADCRUMB */}
-      <section className="bg-[#f7f9f7]">
+      <section className="bg-[#fefefe]">
 
         <div className="w-full border-b border-[#DCE5DA] bg-[#F1F6F0]">
           <div className="page-container px-3 py-3 sm:px-6 lg:px-4">
@@ -177,7 +177,7 @@ export default function CancerTreatmentsPage() {
       {/* EIGHT TREATMENT SERVICES */}
       <section
         id="treatment-options"
-        className="scroll-mt-28 page-container px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+        className="scroll-mt-28 page-container px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-12"
       >
         <div className="mx-auto mb-10 max-w-3xl text-center">
           <p className="text-[13px] font-extrabold uppercase tracking-[.18em] text-[#E87744]">
@@ -341,7 +341,7 @@ export default function CancerTreatmentsPage() {
         </div>
       </section>
 
-      <p className="page-container px-4 py-7 text-[13px] leading-6 text-[#68766B] sm:px-6 lg:px-8">
+      <p className="page-container px-4 py-7 text-[18px] leading-6 text-[#68766B] sm:px-6 lg:px-8">
         This content is for general education and does not replace medical
         advice. Treatment decisions are individualised by qualified
         clinicians using current evidence, regulatory guidance and the

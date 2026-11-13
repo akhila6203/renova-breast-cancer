@@ -366,7 +366,7 @@ function SecondOpinionIntroduction() {
               Understand Your Diagnosis
             </h3>
 
-            <p className="mt-3 text-[15px] leading-8 text-[#536357]">
+            <p className="mt-3 text-[16px] leading-8 text-[#536357]">
               Review the available findings from pathology, imaging,
               staging and relevant laboratory or molecular investigations
               to better understand the diagnosis.
@@ -382,7 +382,7 @@ function SecondOpinionIntroduction() {
               Discuss Treatment Choices
             </h3>
 
-            <p className="mt-3 text-[15px] leading-8 text-[#536357]">
+            <p className="mt-3 text-[16px] leading-8 text-[#536357]">
               Discuss the proposed treatment, its rationale and other
               clinically appropriate options that may be relevant to
               your individual situation.
@@ -429,7 +429,7 @@ function ReviewAreas() {
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-[15px] leading-7 text-[#536357]">
+                <p className="mt-3 text-[16px] leading-7 text-[#536357] sm:text-[17px]">
                   {item.description}
                 </p>
               </motion.div>
@@ -470,7 +470,7 @@ function BreastCancerOpinion() {
               Breast Cancer Second Opinion
             </h2>
 
-            <p className="mt-5 text-[15px] leading-8 text-[#536357] sm:text-[17px]">
+            <p className="mt-5 text-[16px] leading-8 text-[#536357] sm:text-[17px]">
               Breast cancer care may involve several decisions about
               diagnosis, tumour characteristics and treatment. A specialist
               review can help bring together available breast imaging,
@@ -478,7 +478,7 @@ function BreastCancerOpinion() {
               treatment plan.
             </p>
 
-            <p className="mt-4 text-[15px] leading-8 text-[#536357] sm:text-[17px]">
+            <p className="mt-4 text-[16px] leading-8 text-[#536357] sm:text-[17px]">
             Every breast cancer diagnosis is different. A second opinion
             can help you better understand your cancer subtype, receptor
             status, available treatment choices and the potential benefits
@@ -511,7 +511,7 @@ function BreastCancerOpinion() {
                     className="mt-1 shrink-0 text-[#E87744]"
                   />
 
-                  <span className="text-[14px] leading-7 text-[#46584A] sm:text-[15px]">
+                  <span className="text-[14px] leading-7 text-[#46584A] sm:text-[16px]">
                     {item}
                   </span>
                 </li>
@@ -561,7 +561,7 @@ function SecondOpinionProcess() {
                   {step.title}
                 </h3>
 
-                <p className="mt-3 text-[14px] leading-7 text-[#536357] sm:text-[15px]">
+                <p className="mt-3 text-[15px] leading-7 text-[#536357] sm:text-[17px]">
                   {step.description}
                 </p>
               </div>
@@ -619,7 +619,7 @@ function RequiredDocuments() {
                   className="mt-1 shrink-0 text-[#E87744]"
                 />
 
-                <span className="text-[14px] leading-7 text-[#536357] sm:text-[15px]">
+                <span className="text-[15px] leading-7 text-[#536357] sm:text-[17px]">
                   {document}
                 </span>
               </li>
@@ -634,7 +634,7 @@ function RequiredDocuments() {
               className="mt-1 shrink-0 text-[#E87744]"
             />
 
-            <p className="text-[14px] leading-7 text-[#46584A] sm:text-[15px]">
+            <p className="text-[15px] leading-7 text-[#46584A] sm:text-[16px]">
               Original pathology slides, tissue blocks or imaging files
               may be requested separately if needed for a more detailed
               review. You can initially share the reports that are
@@ -675,7 +675,7 @@ function TreatmentOptions() {
                 {category.title}
               </h3>
 
-              <p className="mt-4 text-[15px] leading-8 text-[#536357]">
+              <p className="mt-4 text-[16px] leading-8 text-[#536357]">
                 {category.description}
               </p>
 
@@ -687,7 +687,7 @@ function TreatmentOptions() {
                       className="mt-1 shrink-0 text-[#E87744]"
                     />
 
-                    <span className="text-[14px] leading-7 text-[#46584A] sm:text-[15px]">
+                    <span className="text-[15px] leading-7 text-[#46584A] sm:text-[18px]">
                       {item}
                     </span>
                   </li>
@@ -709,7 +709,7 @@ function TreatmentOptions() {
                 Important Information About Emerging Therapies
               </h3>
 
-              <p className="mt-2 text-[14px] leading-7 text-[#745E4D] sm:text-[15px]">
+              <p className="mt-2 text-[15px] leading-7 text-[#745E4D] sm:text-[17px]">
                 Availability, approved indications, regulatory status,
                 eligibility and access to newer therapies vary by country
                 and over time. Some approaches may remain investigational
@@ -743,7 +743,7 @@ function FrequentlyAskedQuestions() {
         <div className="mx-auto max-w-4xl divide-y divide-[#E3EAE1]">
           {faqs.map((faq, index) => (
             <details key={index} className="group py-5">
-              <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-[15px] font-bold leading-7 text-[#304B3C] marker:hidden sm:text-[17px]">
+              <summary className="flex cursor-pointer list-none items-start justify-between gap-4 text-[16px] font-bold leading-7 text-[#304B3C] marker:hidden sm:text-[18px]">
                 <span>{faq.question}</span>
 
                 <ChevronRight
@@ -752,7 +752,7 @@ function FrequentlyAskedQuestions() {
                 />
               </summary>
 
-              <p className="mt-4 pr-7 text-[14px] leading-8 text-[#536357] sm:text-[16px]">
+              <p className="mt-4 pr-7 text-[15px] leading-8 text-[#536357] sm:text-[18px]">
                 {faq.answer}
               </p>
             </details>
