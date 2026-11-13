@@ -14,40 +14,66 @@ import {
   screeningDiagnosticsOverview,
 } from "../data/screeningDiagnosticsData";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 const icons = [ScanLine, ShieldCheck, ClipboardList, Microscope];
 
 function Breadcrumb() {
   return (
     <nav
-  aria-label="Breadcrumb"
-  className="flex flex-wrap items-center gap-2 text-[15px] sm:text-[16px]"
->
-  <Link to="/" className="font-semibold text-[#476B55] hover:text-[#E87744]">
-    Home
-  </Link>
-  <span className="text-[#9AA89C]">/</span>
-  <Link to="/services" className="font-semibold text-[#476B55] hover:text-[#E87744]">
-    Services
-  </Link>
-  <span className="text-[#9AA89C]">/</span>
-  <span aria-current="page" className="font-bold text-[#E87744]">
-    Screening & Diagnostics
-  </span>
-</nav>
+      aria-label="Breadcrumb"
+      className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${appointmentsWave})`,
+      }}
+    >
+      <div className="page-container relative z-10 mx-auto px-5 py-3 sm:px-8 lg:px-12">
+        <ol className="flex flex-wrap items-center gap-2 text-[15px] sm:text-[16px]">
+          <li>
+            <Link
+              to="/"
+              className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+            >
+              Home
+            </Link>
+          </li>
+
+          <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+            /
+          </li>
+
+          <li>
+            <Link
+              to="/services"
+              className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+            >
+              Services
+            </Link>
+          </li>
+
+          <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+            /
+          </li>
+
+          <li
+            aria-current="page"
+            className="font-bold text-white drop-shadow-md"
+          >
+            Screening &amp; Diagnostics
+          </li>
+        </ol>
+      </div>
+    </nav>
   );
 }
 
 export default function ScreeningDiagnosticsPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#FFFDFA] text-[#304B3C]">
-      <section className="bg-[#fbfcfb]">
-      {/* <section className="bg-[#c5c7c5]"> */}
-        {/* <div className="page-container px-4 py-5 sm:px-6 lg:px-8"><Breadcrumb /></div> */}
- <div className="w-full border-b border-[#DCE5DA] bg-[#f5f9f5]">
-  <div className="page-container px-4 py-4 sm:px-6 lg:px-8">
-    <Breadcrumb />
-  </div>
-</div>
+      <section className="bg-[#fbfcfb]">  
+
+      <Breadcrumb />
+
         <div className="page-container grid items-center gap-10 px-4 pb-14 pt-7 sm:px-6 md:pb-20 lg:grid-cols-[1.05fr_.95fr] lg:gap-14 lg:px-8 lg:pt-10">
           <motion.div initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-flex rounded-full bg-white px-4 py-2 text-[13px] font-bold uppercase tracking-[.16em] text-[#476B55] shadow-sm">RENOVA CANCER CARE</span>

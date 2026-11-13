@@ -32,36 +32,53 @@ const treatmentIcons = [
   Syringe,
 ];
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 function Breadcrumb() {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="flex flex-wrap items-center gap-2 text-[15px] sm:text-[16px]"
+      className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${appointmentsWave})`,
+      }}
     >
-      <Link
-        to="/"
-        className="font-semibold text-[#476B55] hover:text-[#E87744]"
-      >
-        Home
-      </Link>
+      <div className="page-container relative z-10 mx-auto px-5 py-3 sm:px-8 lg:px-12">
+        <ol className="flex flex-wrap items-center gap-2 text-[15px] sm:text-[16px]">
+          <li>
+            <Link
+              to="/"
+              className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+            >
+              Home
+            </Link>
+          </li>
 
-      <span className="text-[#9AA89C]">/</span>
+          <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+            /
+          </li>
 
-      <Link
-        to="/services"
-        className="font-semibold text-[#476B55] hover:text-[#E87744]"
-      >
-        Services
-      </Link>
+          <li>
+            <Link
+              to="/services"
+              className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+            >
+              Services
+            </Link>
+          </li>
 
-      <span className="text-[#9AA89C]">/</span>
+          <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+            /
+          </li>
 
-      <span
-        aria-current="page"
-        className="font-bold text-[#535252]"
-      >
-        Cancer Treatments
-      </span>
+          <li
+            aria-current="page"
+            className="font-bold text-white drop-shadow-md"
+          >
+            Cancer Treatments
+          </li>
+        </ol>
+      </div>
     </nav>
   );
 }
@@ -73,11 +90,7 @@ export default function CancerTreatmentsPage() {
       {/* HERO AND BREADCRUMB */}
       <section className="bg-[#fefefe]">
 
-        <div className="w-full border-b border-[#DCE5DA] bg-[#F1F6F0]">
-          <div className="page-container px-3 py-3 sm:px-6 lg:px-4">
-            <Breadcrumb />
-          </div>
-        </div>
+        <Breadcrumb />
 
         <div className="page-container grid items-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.05fr_.95fr] lg:gap-14 lg:px-8 lg:py-20">
 

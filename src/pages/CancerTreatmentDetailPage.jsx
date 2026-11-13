@@ -12,45 +12,66 @@ import {
 
 import { treatmentServices } from "../data/treatmentServicesData";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 function Breadcrumb({ title }) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="flex flex-wrap items-center gap-2 text-[15px] sm:text-[16px]"
+      className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${appointmentsWave})`,
+      }}
     >
-      <Link
-        to="/"
-        className="font-semibold text-[#476B55] hover:text-[#E87744]"
-      >
-        Home
-      </Link>
+      <div className="page-container relative z-10 mx-auto px-5 py-3 sm:px-8 lg:px-12">
+        <ol className="flex flex-wrap items-center gap-2 text-[15px] sm:text-[16px]">
+          <li>
+            <Link
+              to="/"
+              className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+            >
+              Home
+            </Link>
+          </li>
 
-      <ChevronRight size={15} className="text-[#9AA89C]" />
+          <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+            /
+          </li>
 
-      <Link
-        to="/services"
-        className="font-semibold text-[#476B55] hover:text-[#E87744]"
-      >
-        Services
-      </Link>
+          <li>
+            <Link
+              to="/services"
+              className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+            >
+              Services
+            </Link>
+          </li>
 
-      <ChevronRight size={15} className="text-[#9AA89C]" />
+          <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+            /
+          </li>
 
-      <Link
-        to="/services/treatments"
-        className="font-semibold text-[#476B55] hover:text-[#E87744]"
-      >
-        Cancer Treatments
-      </Link>
+          <li>
+            <Link
+              to="/services/treatments"
+              className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+            >
+              Cancer Treatments
+            </Link>
+          </li>
 
-      <ChevronRight size={15} className="text-[#9AA89C]" />
+          <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+            /
+          </li>
 
-      <span
-        aria-current="page"
-        className="font-bold text-[#E87744]"
-      >
-        {title}
-      </span>
+          <li
+            aria-current="page"
+            className="font-bold text-white drop-shadow-md"
+          >
+            {title}
+          </li>
+        </ol>
+      </div>
     </nav>
   );
 }
@@ -130,11 +151,7 @@ export default function CancerTreatmentDetailPage() {
     <main className="min-h-screen bg-[#FFFDFA] text-[#304B3C]">
 
       {/* BREADCRUMB */}
-      <div className="w-full border-b border-[#DCE5DA] bg-[#F6F8F4]">
-        <div className="page-container px-4 py-4 sm:px-6 lg:px-8">
-          <Breadcrumb title={service.title} />
-        </div>
-      </div>
+      <Breadcrumb title={service.title} />
 
       {/* HERO */}
       <section className="bg-[#F1F6F0]">

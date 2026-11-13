@@ -8,6 +8,8 @@ import {
   CalendarDays,
 } from "lucide-react";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 import { motion, useReducedMotion } from "framer-motion";
 import { specialities } from "../data/specialitiesData";
 
@@ -61,29 +63,38 @@ export default function SpecialitiesPage() {
     <main className="min-h-screen overflow-hidden bg-[#fffdf9] text-[#344638]">
 
       {/* Breadcrumb */}
-      <nav
-        aria-label="Breadcrumb"
-        className="border-b border-[#e7ebe3] bg-[#f5f8f2]"
+     {/* BREADCRUMB */}
+<nav
+  aria-label="Breadcrumb"
+  className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${appointmentsWave})`,
+  }}
+>
+  <div className="page-container relative z-10 mx-auto px-5 py-3 sm:px-8 lg:px-12">
+    <ol className="flex items-center gap-2 text-sm sm:text-base">
+      <li>
+        <Link
+          to="/"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+        /
+      </li>
+
+      <li
+        aria-current="page"
+        className="font-bold text-white drop-shadow-md"
       >
-        <div className="page-container px-5 py-3 sm:px-8 lg:px-12">
-          <ol className="flex items-center gap-2 text-sm sm:text-base">
-            <li>
-              <Link
-                to="/"
-                className="font-medium text-[#e87744] transition-colors duration-300 hover:text-[#4f7359]"
-              >
-                Home
-              </Link>
-            </li>
-
-            <li className="text-[#aab5aa]">/</li>
-
-            <li className="font-semibold text-[#344638]">
-              Specialities
-            </li>
-          </ol>
-        </div>
-      </nav>
+        Specialities
+      </li>
+    </ol>
+  </div>
+</nav>
 
       {/* Centered heading */}
       <section className="page-container px-5 pb-5 pt-10 text-center sm:px-8 sm:pt-14 lg:px-12">

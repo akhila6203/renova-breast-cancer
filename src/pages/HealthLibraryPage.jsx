@@ -4,6 +4,8 @@ import { ArrowRight, BookOpen } from "lucide-react";
 import { healthCategories } from "../data/healthLibraryData";
 import HealthLibraryTabs from "../components/health-library/HealthLibraryTabs";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 export default function HealthLibraryPage() {
   const [searchParams] = useSearchParams();
   const requestedTab = searchParams.get("tab");
@@ -15,7 +17,42 @@ export default function HealthLibraryPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* BREADCRUMB */}
-      <section className="border-b border-[#D4E0D6] bg-[#F6F9F6]">
+      {/* BREADCRUMB */}
+<nav
+  aria-label="Breadcrumb"
+  className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${appointmentsWave})`,
+  }}
+>
+  <div className="page-container relative z-10 mx-auto px-5 py-4 sm:px-8 lg:px-12">
+    <ol className="flex items-center gap-2 text-[15px]">
+      <li>
+        <Link
+          to="/"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li
+        aria-hidden="true"
+        className="text-white/90 drop-shadow-md"
+      >
+        /
+      </li>
+
+      <li
+        aria-current="page"
+        className="font-bold text-white drop-shadow-md"
+      >
+        Health Library
+      </li>
+    </ol>
+  </div>
+</nav>
+      {/* <section className="border-b border-[#D4E0D6] bg-[#F6F9F6]">
         <div className="page-container px-5 py-4 sm:px-8 lg:px-12">
           <nav
             aria-label="Breadcrumb"
@@ -30,7 +67,7 @@ export default function HealthLibraryPage() {
             </span>
           </nav>
         </div>
-      </section>
+      </section> */}
 
 
       {/* CANCER EDUCATION CATEGORIES */}

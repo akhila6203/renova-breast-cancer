@@ -16,6 +16,8 @@ import { Link } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle";
 import { hospital } from "../data/siteData";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 const socialLinks = [
   {
     name: "Facebook",
@@ -67,16 +69,23 @@ const locations = [
 export default function ContactPage() {
   return (
   <main className="min-h-screen overflow-hidden bg-[#fffdf9] text-[#304b3c]">
-       <nav
+       {/* <nav
   aria-label="Breadcrumb"
   className="border-b border-[#e5e9e3] bg-[#f7f9f6]"
+> */}
+<nav
+  aria-label="Breadcrumb"
+  className="relative overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${appointmentsWave})`,
+  }}
 >
   <div className="page-container px-5 py-4 sm:px-8 lg:px-12">
     <ol className="flex items-center gap-2 text-[16px]">
       <li>
         <Link
           to="/"
-          className="font-medium text-[#476b55] transition-colors hover:text-[#f26322]"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#f26322]"
         >
           Home
         </Link>
@@ -88,7 +97,8 @@ export default function ContactPage() {
 
       <li
         aria-current="page"
-        className="font-semibold text-[#263c30]"
+        className="font-bold text-white drop-shadow-md"
+        // className="font-semibold text-[#263c30]"
       >
         Contact Us
       </li>

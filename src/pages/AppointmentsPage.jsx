@@ -12,17 +12,54 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 export default function AppointmentsPage() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#fffdf9] text-[#304b3c]">
-      {/* BREADCRUMB */}
-      <nav
-        aria-label="Breadcrumb"
-        className="border-b border-[#e5e9e3] bg-[#f7f9f6]"
+ 
+        {/* BREADCRUMB */}
+<nav
+  aria-label="Breadcrumb"
+  className="relative overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${appointmentsWave})`,
+  }}
+>
+  <div className="page-container relative z-10 mx-auto px-5 py-4 sm:px-8 lg:px-12">
+    <ol className="flex items-center gap-2 text-[15px]">
+      <li>
+        <Link
+          to="/"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#f26322]"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li className="text-white/90 drop-shadow-md" aria-hidden="true">
+        /
+      </li>
+
+      <li
+        aria-current="page"
+        className="font-bold text-white drop-shadow-md"
       >
-        <div className="page-container mx-auto px-5 py-4 sm:px-8 lg:px-12">
+        Appointments
+      </li>
+    </ol>
+  </div>
+</nav>
+{/* <nav
+  aria-label="Breadcrumb"
+  className="relative overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${appointmentsWave})`,
+  }}
+>
+  <div className="page-container relative z-10 mx-auto px-5 py-4 sm:px-8 lg:px-12">
           <ol className="flex items-center gap-2 text-[15px]">
             <li>
               <Link
@@ -45,7 +82,7 @@ export default function AppointmentsPage() {
             </li>
           </ol>
         </div>
-      </nav>
+      </nav> */}
 
       {/* PAGE HEADING */}
       {/* <section className="mx-auto w-full max-w-5xl px-5 pt-10 text-center sm:px-8 sm:pt-12 lg:px-12"> */}

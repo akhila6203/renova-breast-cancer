@@ -9,6 +9,8 @@ import {
 
 import BlogCard from "../components/health-library/BlogCard";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 export default function HealthLibraryCategoryPage() {
   const { slug } = useParams();
 
@@ -41,7 +43,52 @@ export default function HealthLibraryCategoryPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* BREADCRUMB */}
-      <section className="border-b border-[#D4E0D6] bg-[#F6F9F6]">
+      {/* BREADCRUMB */}
+<nav
+  aria-label="Breadcrumb"
+  className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${appointmentsWave})`,
+  }}
+>
+  <div className="page-container relative z-10 mx-auto px-5 py-4 sm:px-8 lg:px-12">
+    <ol className="flex flex-wrap items-center gap-2 text-sm">
+      <li>
+        <Link
+          to="/"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li className="text-white/90 drop-shadow-md" aria-hidden="true">
+        /
+      </li>
+
+      <li>
+        <Link
+          to="/health-library"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Health Library
+        </Link>
+      </li>
+
+      <li className="text-white/90 drop-shadow-md" aria-hidden="true">
+        /
+      </li>
+
+      <li
+        aria-current="page"
+        className="font-bold text-white drop-shadow-md"
+      >
+        {category.title}
+      </li>
+    </ol>
+  </div>
+</nav>
+      {/* <section className="border-b border-[#D4E0D6] bg-[#F6F9F6]">
         <div className="page-container px-5 py-4 sm:px-8 lg:px-12">
           <nav
             aria-label="Breadcrumb"
@@ -63,7 +110,8 @@ export default function HealthLibraryCategoryPage() {
             </span>
           </nav>
         </div>
-      </section>
+      </section> */}
+      
 
       {/* CATEGORY HERO */}
       <section className="bg-gradient-to-br from-[#E8F0EA] via-[#F6F9F6] to-[#FFF5EF] px-5 py-6 sm:px-8 sm:py-10 lg:px-12">

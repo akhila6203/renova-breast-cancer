@@ -16,6 +16,8 @@ import {
 
 import BlogCard from "../components/health-library/BlogCard";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 const INITIAL_BLOGS = 16;
 const LOAD_MORE_COUNT = 8;
 
@@ -61,7 +63,52 @@ export default function HealthLibraryBlogsPage() {
     <main className="min-h-screen bg-white">
 
       {/* BREADCRUMB */}
-      <section className="border-b border-[#D4E0D6] bg-[#F6F9F6]">
+      {/* BREADCRUMB */}
+<nav
+  aria-label="Breadcrumb"
+  className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${appointmentsWave})`,
+  }}
+>
+  <div className="page-container relative z-10 mx-auto px-5 py-4 sm:px-8 lg:px-12">
+    <ol className="flex items-center gap-2 overflow-x-auto whitespace-nowrap text-sm">
+      <li>
+        <Link
+          to="/"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li className="text-white/90 drop-shadow-md" aria-hidden="true">
+        /
+      </li>
+
+      <li>
+        <Link
+          to="/health-library"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Health Library
+        </Link>
+      </li>
+
+      <li className="text-white/90 drop-shadow-md" aria-hidden="true">
+        /
+      </li>
+
+      <li
+        aria-current="page"
+        className="font-bold text-white drop-shadow-md"
+      >
+        Blogs
+      </li>
+    </ol>
+  </div>
+</nav>
+      {/* <section className="border-b border-[#D4E0D6] bg-[#F6F9F6]">
         <div className="page-container px-5 py-4 sm:px-8 lg:px-12">
           <nav
             aria-label="Breadcrumb"
@@ -90,7 +137,7 @@ export default function HealthLibraryBlogsPage() {
             </span>
           </nav>
         </div>
-      </section>
+      </section> */}
 
       {/* BLOGS MAIN CONTENT */}
       <section className="page-container px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
@@ -281,121 +328,6 @@ export default function HealthLibraryBlogsPage() {
     </main>
   );
 }
-
-
-
-
-
-
-
-
-
-// import { useMemo, useState } from "react";
-// import { Link } from "react-router-dom";
-// import { Search } from "lucide-react";
-// import { healthBlogs, healthCategories } from "../data/healthLibraryData";
-// import BlogCard from "../components/health-library/BlogCard";
-
-// export default function HealthLibraryBlogsPage() {
-//   const [search, setSearch] = useState("");
-//   const [selectedCategory, setSelectedCategory] = useState("all");
-
-//   const filteredBlogs = useMemo(() => {
-//     return healthBlogs.filter(blog => {
-//       const searchTerm = search.trim().toLowerCase();
-
-// const matchesSearch =
-//   blog.title.toLowerCase().includes(searchTerm) ||
-//   blog.excerpt.toLowerCase().includes(searchTerm) ||
-//   blog.category.toLowerCase().includes(searchTerm);
-
-//       const matchesCategory =
-//         selectedCategory === "all" ||
-//         blog.categorySlug === selectedCategory;
-
-//       return matchesSearch && matchesCategory;
-//     });
-//   }, [search, selectedCategory]);
-
-//   return (
-//     <main className="min-h-screen bg-white">
-//       <section className="bg-[#f1f7fa] py-14">
-//         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-//           <div className="flex items-center gap-2 text-sm text-slate-500">
-//             <Link to="/">Home</Link>
-//             <span>/</span>
-//             <Link to="/health-library">Health Library</Link>
-//             <span>/</span>
-//             <span className="text-[#23658a]">Blogs</span>
-//           </div>
-
-//           <div className="mx-auto mt-12 max-w-3xl text-center">
-//             <span className="text-xs font-bold uppercase tracking-widest text-teal-700">
-//               RENOVA HEALTH LIBRARY
-//             </span>
-//             <h1 className="mt-3 text-4xl font-bold text-[#173b56] sm:text-5xl">
-//               Health Library Blogs
-//             </h1>
-//             <p className="mt-4 leading-7 text-slate-600">
-//               Explore helpful articles about cancer, diagnosis, treatments,
-//               prevention and survivorship.
-//             </p>
-//           </div>
-//         </div>
-//       </section>
-
-//       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-//         <div className="mb-9 flex flex-col gap-4 sm:flex-row">
-//           <label className="flex min-h-12 flex-1 items-center gap-3 rounded-md border border-slate-200 px-4">
-//             <Search size={19} className="text-slate-400" />
-//             <input
-//               type="search"
-//               value={search}
-//               onChange={event => setSearch(event.target.value)}
-//               placeholder="Search health articles..."
-//               className="w-full bg-transparent text-sm outline-none"
-//             />
-//           </label>
-
-//           <select
-//             value={selectedCategory}
-//             onChange={event => setSelectedCategory(event.target.value)}
-//             className="min-h-12 rounded-md border border-slate-200 bg-white px-4 text-sm text-slate-700 outline-none focus:border-teal-600"
-//           >
-//             <option value="all">All Categories</option>
-//             {healthCategories.map(category => (
-//               <option key={category.slug} value={category.slug}>
-//                 {category.title}
-//               </option>
-//             ))}
-//           </select>
-//         </div>
-
-//         <p className="mb-5 text-sm text-slate-500">
-//           Showing {filteredBlogs.length} articles
-//         </p>
-
-//         {filteredBlogs.length > 0 ? (
-//           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-//             {filteredBlogs.map(blog => (
-//               <BlogCard key={blog.slug} blog={blog} />
-//             ))}
-//           </div>
-//         ) : (
-//           <div className="py-20 text-center">
-//             <h2 className="text-2xl font-bold text-[#173b56]">
-//               No articles found
-//             </h2>
-//             <p className="mt-3 text-slate-500">
-//               Try another search or select a different category.
-//             </p>
-//           </div>
-//         )}
-//       </section>
-//     </main>
-//   );
-// }
-
 
 
 

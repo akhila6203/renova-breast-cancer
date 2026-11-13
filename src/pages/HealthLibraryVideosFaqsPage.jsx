@@ -15,6 +15,8 @@ import {
   healthFaqs,
 } from "../data/healthLibraryData";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 const INITIAL_VIDEOS = 16;
 const LOAD_MORE_VIDEOS = 8;
 
@@ -120,7 +122,52 @@ const getVideoEmbedUrl = (video) => {
     <main className="min-h-screen bg-white">
 
       {/* BREADCRUMB STRIP */}
-      <section className="border-b border-[#D4E0D6] bg-[#F6F9F6]">
+      {/* BREADCRUMB */}
+<nav
+  aria-label="Breadcrumb"
+  className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${appointmentsWave})`,
+  }}
+>
+  <div className="page-container relative z-10 mx-auto px-5 py-4 sm:px-8 lg:px-12">
+    <ol className="flex items-center gap-2 overflow-x-auto whitespace-nowrap text-sm">
+      <li>
+        <Link
+          to="/"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li className="text-white/90 drop-shadow-md" aria-hidden="true">
+        /
+      </li>
+
+      <li>
+        <Link
+          to="/health-library"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Health Library
+        </Link>
+      </li>
+
+      <li className="text-white/90 drop-shadow-md" aria-hidden="true">
+        /
+      </li>
+
+      <li
+        aria-current="page"
+        className="font-bold text-white drop-shadow-md"
+      >
+        Videos & FAQs
+      </li>
+    </ol>
+  </div>
+</nav>
+      {/* <section className="border-b border-[#D4E0D6] bg-[#F6F9F6]">
         <div className="page-container px-5 py-4 sm:px-8 lg:px-12">
           <nav
             aria-label="Breadcrumb"
@@ -149,7 +196,7 @@ const getVideoEmbedUrl = (video) => {
             </span>
           </nav>
         </div>
-      </section>
+      </section> */}
 
       {/* MAIN CONTENT */}
       <section className="page-container px-5 py-10 sm:px-8 sm:py-14 lg:px-12 lg:py-16">

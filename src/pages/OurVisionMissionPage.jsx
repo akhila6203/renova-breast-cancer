@@ -17,6 +17,8 @@ import {
   Sparkles,
 } from "lucide-react";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 import SectionTitle from "../components/SectionTitle";
 
 import breastBanner from "../assets/home/about-breast-care1.jpg";
@@ -118,40 +120,51 @@ export default function OurVisionMissionPage() {
     <main className="min-h-screen overflow-hidden bg-[#fffdf9] text-[#304b3c]">
 
       {/* BREADCRUMB */}
-      <nav
-        aria-label="Breadcrumb"
-        className="border-b border-[#e5e9e3] bg-[#f7f9f6]"
+      {/* BREADCRUMB */}
+<nav
+  aria-label="Breadcrumb"
+  className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${appointmentsWave})`,
+  }}
+>
+  <div className="page-container relative z-10 mx-auto px-5 py-3 sm:px-8 lg:px-12">
+    <ol className="flex flex-wrap items-center gap-2 text-sm sm:text-base">
+      <li>
+        <Link
+          to="/"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+        /
+      </li>
+
+      <li>
+        <Link
+          to="/about"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          About Us
+        </Link>
+      </li>
+
+      <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+        /
+      </li>
+
+      <li
+        aria-current="page"
+        className="font-bold text-white drop-shadow-md"
       >
-        <div className="page-container px-5 py-3 sm:px-8 lg:px-12">
-          <ol className="flex flex-wrap items-center gap-2 text-sm sm:text-base">
-            <li>
-              <Link
-                to="/"
-                className="font-semibold text-[#304b3c] transition-colors hover:text-[#f26322]"
-              >
-                Home
-              </Link>
-            </li>
-
-            <li className="text-[#aab5aa]">/</li>
-
-            <li>
-              <Link
-                to="/about"
-                className="font-semibold text-[#304b3c] transition-colors hover:text-[#f26322]"
-              >
-                About Us
-              </Link>
-            </li>
-
-            <li className="text-[#aab5aa]">/</li>
-
-            <li className="font-semibold text-[#304b3c]">
-              Our Vision &amp; Mission
-            </li>
-          </ol>
-        </div>
-      </nav>
+        Our Vision &amp; Mission
+      </li>
+    </ol>
+  </div>
+</nav>
 
       {/* PAGE HEADING */}
       <section className=" px-5 pb-8 pt-12 sm:px-8 sm:pt-16 lg:px-12">

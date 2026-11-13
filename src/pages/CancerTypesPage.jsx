@@ -16,27 +16,40 @@ import {
   cancerOverview,
 } from "../data/cancerTypeContent";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 function Breadcrumb() {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="flex flex-wrap items-center gap-2 text-[15px] sm:text-base"
+      className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${appointmentsWave})`,
+      }}
     >
-      <Link
-        to="/"
-        className="font-semibold text-[#476B55] transition hover:text-[#E87744]"
-      >
-        Home
-      </Link>
+      <div className="page-container relative z-10 mx-auto px-5 py-3 sm:px-8 lg:px-12">
+        <ol className="flex flex-wrap items-center gap-2 text-[15px] sm:text-base">
+          <li>
+            <Link
+              to="/"
+              className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+            >
+              Home
+            </Link>
+          </li>
 
-      <ChevronRight size={16} className="text-[#8B9B8D]" />
+          <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+            /
+          </li>
 
-      <span
-        aria-current="page"
-        className="font-bold text-[#3b3a3a]"
-      >
-        Cancer Types
-      </span>
+          <li
+            aria-current="page"
+            className="font-bold text-white drop-shadow-md"
+          >
+            Cancer Types
+          </li>
+        </ol>
+      </div>
     </nav>
   );
 }
@@ -77,11 +90,7 @@ export default function CancerTypesPage() {
     <main className="overflow-x-clip bg-[#fffdf9]">
 
       {/* BREADCRUMB */}
-      <div className="border-b border-[#E8EDE6] bg-[#F4F7F2]">
-        <div className="page-container px-4 py-5 sm:px-6 lg:px-8">
-          <Breadcrumb />
-        </div>
-      </div>
+      <Breadcrumb />
 
       {/* HERO */}
       {/* <section className="relative bg-[#F1F6F0]">

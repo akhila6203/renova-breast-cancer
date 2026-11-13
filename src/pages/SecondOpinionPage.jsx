@@ -22,6 +22,8 @@ import {
 
 import secondOpinionImage from "../assets/services/second-opinion-consultation.jpg";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 /* --------------------------------------------------
    PAGE DATA
 -------------------------------------------------- */
@@ -214,29 +216,47 @@ function Breadcrumb() {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="flex flex-wrap items-center gap-2 text-sm sm:text-[15px]"
+      className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${appointmentsWave})`,
+      }}
     >
-      <Link
-        to="/"
-        className="font-semibold text-[#476B55] transition hover:text-[#E87744]"
-      >
-        Home
-      </Link>
+      <div className="page-container relative z-10 mx-auto px-5 py-3 sm:px-8 lg:px-12">
+        <ol className="flex flex-wrap items-center gap-2 text-[15px] sm:text-[16px]">
+          <li>
+            <Link
+              to="/"
+              className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+            >
+              Home
+            </Link>
+          </li>
 
-      <ChevronRight size={15} className="text-[#9AA89C]" />
+          <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+            /
+          </li>
 
-      <Link
-        to="/services"
-        className="font-semibold text-[#476B55] transition hover:text-[#E87744]"
-      >
-        Services
-      </Link>
+          <li>
+            <Link
+              to="/services"
+              className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+            >
+              Services
+            </Link>
+          </li>
 
-      <ChevronRight size={15} className="text-[#9AA89C]" />
+          <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+            /
+          </li>
 
-      <span className="font-bold text-[#E87744]" aria-current="page">
-        Second Opinion
-      </span>
+          <li
+            aria-current="page"
+            className="font-bold text-white drop-shadow-md"
+          >
+            Second Opinion
+          </li>
+        </ol>
+      </div>
     </nav>
   );
 }
@@ -825,12 +845,7 @@ export default function SecondOpinionPage() {
     <main className="min-h-screen bg-[#FFFDFA] text-[#304B3C]">
 
       {/* BREADCRUMB */}
-
-      <div className="border-b border-[#DCE5DA] bg-[#F6F8F4]">
-        <div className="page-container px-4 py-4 sm:px-6 lg:px-8">
-          <Breadcrumb />
-        </div>
-      </div>
+      <Breadcrumb />
 
       <SecondOpinionHero />
 

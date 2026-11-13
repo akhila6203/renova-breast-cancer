@@ -20,6 +20,7 @@ import { getSpecialityBySlug } from "../data/specialitiesData";
 import { doctors } from "../data/doctorsData";
 import ContentVideoCarousel from "../components/ContentVideoCarousel";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
 // Existing local project images
 import assessmentImage from "../assets/home/assessment.jpg";
 import breastCareOneImage from "../assets/home/breastCare1.jpg";
@@ -222,37 +223,52 @@ const renderTechnologyCard = (technology) => (
     <main className="min-h-screen overflow-hidden bg-[#fffdf9] text-ink">
 
       {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="border-b border-line bg-mist">
-        <div className="page-container px-5 py-3 sm:px-8 lg:px-12">
-          <ol className="flex flex-wrap items-center gap-2 text-base">
-            <li>
-              <Link
-                to="/"
-                className="font-semibold text-royal transition hover:text-sky"
-              >
-                Home
-              </Link>
-            </li>
+      {/* BREADCRUMB */}
+<nav
+  aria-label="Breadcrumb"
+  className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${appointmentsWave})`,
+  }}
+>
+  <div className="page-container relative z-10 mx-auto px-5 py-3 sm:px-8 lg:px-12">
+    <ol className="flex flex-wrap items-center gap-2 text-base">
+      <li>
+        <Link
+          to="/"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Home
+        </Link>
+      </li>
 
-            <li className="text-[#aab5aa]">/</li>
+      <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+        /
+      </li>
 
-            <li>
-              <Link
-                to="/specialities"
-                className="font-semibold text-royal transition hover:text-sky"
-              >
-                Specialities
-              </Link>
-            </li>
+      <li>
+        <Link
+          to="/specialities"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Specialities
+        </Link>
+      </li>
 
-            <li className="text-[#aab5aa]">/</li>
+      <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+        /
+      </li>
 
-            <li className="font-semibold text-navy">
-              {speciality.title}
-            </li>
-          </ol>
-        </div>
-      </nav>
+      <li
+        aria-current="page"
+        className="font-bold text-white drop-shadow-md"
+      >
+        {speciality.title}
+      </li>
+    </ol>
+  </div>
+</nav>
+
 
       {/* About speciality */}
       <section className="w-full px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">

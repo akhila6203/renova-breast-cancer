@@ -17,6 +17,8 @@ import {
 
 import ContentVideoCarousel from "../components/ContentVideoCarousel";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 function getYouTubeId(url = "") {
   const id =
     url.match(
@@ -98,7 +100,39 @@ export default function DoctorsPage() {
     <main className="min-h-screen overflow-hidden bg-[#fffdf9] text-ink">
 
       {/* Breadcrumb */}
-      <nav
+      {/* BREADCRUMB */}
+<nav
+  aria-label="Breadcrumb"
+  className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${appointmentsWave})`,
+  }}
+>
+  <div className="page-container relative z-10 mx-auto px-5 py-3 sm:px-8 lg:px-12">
+    <ol className="flex items-center gap-2 text-base">
+      <li>
+        <Link
+          to="/"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+        /
+      </li>
+
+      <li
+        aria-current="page"
+        className="font-bold text-white drop-shadow-md"
+      >
+        Doctors
+      </li>
+    </ol>
+  </div>
+</nav>
+      {/* <nav
         aria-label="Breadcrumb"
         className="border-b border-line bg-mist"
       >
@@ -120,7 +154,7 @@ export default function DoctorsPage() {
             </li>
           </ol>
         </div>
-      </nav>
+      </nav> */}
 
       {/* Page heading - original layout */}
       <section className="page-container px-5 pb-8 pt-4 text-center sm:px-8 sm:pt-10 lg:px-12">

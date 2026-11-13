@@ -19,6 +19,11 @@ import {
   mammographyTechnology,
 } from "../data/technologyData";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
+/* ---------------------------------------------
+   BREADCRUMB
+--------------------------------------------- */
 /* ---------------------------------------------
    BREADCRUMB
 --------------------------------------------- */
@@ -26,35 +31,47 @@ function Breadcrumb({ items }) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="flex flex-wrap items-center gap-2 text-[15px] sm:text-[16px]"
+      className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${appointmentsWave})`,
+      }}
     >
-      {items.map((item, index) => {
-        const active = index === items.length - 1;
+      <div className="page-container relative z-10 mx-auto px-5 py-3 sm:px-8 lg:px-12">
+        <ol className="flex flex-wrap items-center gap-2 text-[15px] sm:text-[16px]">
+          {items.map((item, index) => {
+            const active = index === items.length - 1;
 
-        return (
-          <div key={item.label} className="flex items-center gap-2">
-            {index > 0 && (
-              <ChevronRight size={16} className="text-[#8B9B8D]" />
-            )}
+            return (
+              <li key={item.label} className="flex items-center gap-2">
+                {index > 0 && (
+                  <span
+                    aria-hidden="true"
+                    className="text-white/90 drop-shadow-md"
+                  >
+                    /
+                  </span>
+                )}
 
-            {active ? (
-              <span
-                aria-current="page"
-                className="font-bold text-[#E87744]"
-              >
-                {item.label}
-              </span>
-            ) : (
-              <Link
-                to={item.path}
-                className="font-semibold text-[#476B55] transition hover:text-[#E87744]"
-              >
-                {item.label}
-              </Link>
-            )}
-          </div>
-        );
-      })}
+                {active ? (
+                  <span
+                    aria-current="page"
+                    className="font-bold text-white drop-shadow-md"
+                  >
+                    {item.label}
+                  </span>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </li>
+            );
+          })}
+        </ol>
+      </div>
     </nav>
   );
 }
@@ -272,24 +289,21 @@ export default function CancerProgramPage() {
 
   return (
     <main className="overflow-x-clip bg-[#fffdf9]">
+     
       {/* ---------------------------------------
-          BREADCRUMB
+        BREADCRUMB
       --------------------------------------- */}
-      <div className="border-b border-[#E8EDE6] bg-[#F4F7F2]">
-        <div className="page-container px-4 py-5 sm:px-6 lg:px-8">
-          <Breadcrumb
-            items={[
-              { label: "Home", path: "/" },
-              {
-                label: "Cancer Types",
-                path: "/services#cancer-types",
-              },
-              { label: cancer.title },
-            ]}
-          />
-        </div>
-      </div>
-
+      <Breadcrumb
+        items={[
+          { label: "Home", path: "/" },
+          {
+            label: "Cancer Types",
+            path: "/services#cancer-types",
+          },
+          { label: cancer.title },
+        ]}
+      />
+      
       {/* ---------------------------------------
           TOP HERO SECTION
 

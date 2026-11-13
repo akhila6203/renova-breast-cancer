@@ -15,6 +15,8 @@ import {
   Stethoscope,
 } from "lucide-react";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 // Programme hero images
 import diagnosisImage from "../assets/home/diagnosis.jpg";
 import treatmentImage from "../assets/home/treatmentBanner3.jpg";
@@ -425,47 +427,92 @@ bullets: [
 
 function PageBreadcrumb({ name }) {
   return (
-    <nav
-      aria-label="Breadcrumb"
-      className="w-full border-b border-[#e4e9e2] bg-[#f7f9f6]"
-    >
-      <div className="page-container w-full px-5 py-3 sm:px-8 lg:px-12">
-        <ol className="flex w-full flex-wrap items-center gap-2 text-sm">
-          <li>
-            <Link
-              to="/"
-              className="font-semibold text-[#476b55] transition-colors hover:text-[#e87744]"
-            >
-              Home
-            </Link>
-          </li>
+    
+<nav
+  aria-label="Breadcrumb"
+  className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${appointmentsWave})`,
+  }}
+>
+  <div className="page-container relative z-10 mx-auto w-full px-5 py-3 sm:px-8 lg:px-12">
+    <ol className="flex w-full flex-wrap items-center gap-2 text-sm">
+      <li>
+        <Link
+          to="/"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Home
+        </Link>
+      </li>
 
-          <li aria-hidden="true" className="text-[#9aa89c]">
-            /
-          </li>
+      <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+        /
+      </li>
 
-          <li>
-            <Link
-              to="/patient-care"
-              className="font-semibold text-[#476b55] transition-colors hover:text-[#e87744]"
-            >
-              Patient Support
-            </Link>
-          </li>
+      <li>
+        <Link
+          to="/patient-care"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Patient Support
+        </Link>
+      </li>
 
-          <li aria-hidden="true" className="text-[#9aa89c]">
-            /
-          </li>
+      <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+        /
+      </li>
 
-          <li
-            aria-current="page"
-            className="font-semibold text-[#263c30]"
-          >
-            {name}
-          </li>
-        </ol>
-      </div>
-    </nav>
+      <li
+        aria-current="page"
+        className="font-bold text-white drop-shadow-md"
+      >
+        {name}
+      </li>
+    </ol>
+  </div>
+</nav>
+    // <nav
+    //   aria-label="Breadcrumb"
+    //   className="w-full border-b border-[#e4e9e2] bg-[#f7f9f6]"
+    // >
+    //   <div className="page-container w-full px-5 py-3 sm:px-8 lg:px-12">
+    //     <ol className="flex w-full flex-wrap items-center gap-2 text-sm">
+    //       <li>
+    //         <Link
+    //           to="/"
+    //           className="font-semibold text-[#476b55] transition-colors hover:text-[#e87744]"
+    //         >
+    //           Home
+    //         </Link>
+    //       </li>
+
+    //       <li aria-hidden="true" className="text-[#9aa89c]">
+    //         /
+    //       </li>
+
+    //       <li>
+    //         <Link
+    //           to="/patient-care"
+    //           className="font-semibold text-[#476b55] transition-colors hover:text-[#e87744]"
+    //         >
+    //           Patient Support
+    //         </Link>
+    //       </li>
+
+    //       <li aria-hidden="true" className="text-[#9aa89c]">
+    //         /
+    //       </li>
+
+    //       <li
+    //         aria-current="page"
+    //         className="font-semibold text-[#263c30]"
+    //       >
+    //         {name}
+    //       </li>
+    //     </ol>
+    //   </div>
+    // </nav>
   );
 }
 

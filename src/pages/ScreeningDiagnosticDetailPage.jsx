@@ -4,16 +4,80 @@ import { motion } from "framer-motion";
 import { ArrowRight, CalendarDays, CheckCircle2, ChevronDown, ChevronRight, ClipboardCheck } from "lucide-react";
 import { screeningDiagnosticServices } from "../data/screeningDiagnosticsData";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
+
 function Breadcrumb({ title }) {
   return (
-    <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-[15px] sm:text-[16px]">
-      <Link to="/" className="font-semibold text-[#476B55] hover:text-[#E87744]">Home</Link><ChevronRight size={15} className="text-[#9AA89C]" />
-      <Link to="/services" className="font-semibold text-[#476B55] hover:text-[#E87744]">Services</Link><ChevronRight size={15} className="text-[#9AA89C]" />
-      <Link to="/services/screening-diagnostics" className="font-semibold text-[#476B55] hover:text-[#E87744]">Screening & Diagnostics</Link><ChevronRight size={15} className="text-[#9AA89C]" />
-      <span aria-current="page" className="font-bold text-[#E87744]">{title}</span>
+    <nav
+      aria-label="Breadcrumb"
+      className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${appointmentsWave})`,
+      }}
+    >
+      <div className="page-container relative z-10 mx-auto px-5 py-3 sm:px-8 lg:px-12">
+        <ol className="flex flex-wrap items-center gap-2 text-[15px] sm:text-[16px]">
+          <li>
+            <Link
+              to="/"
+              className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+            >
+              Home
+            </Link>
+          </li>
+
+          <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+            /
+          </li>
+
+          <li>
+            <Link
+              to="/services"
+              className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+            >
+              Services
+            </Link>
+          </li>
+
+          <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+            /
+          </li>
+
+          <li>
+            <Link
+              to="/services/screening-diagnostics"
+              className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+            >
+              Screening &amp; Diagnostics
+            </Link>
+          </li>
+
+          <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+            /
+          </li>
+
+          <li
+            aria-current="page"
+            className="font-bold text-white drop-shadow-md"
+          >
+            {title}
+          </li>
+        </ol>
+      </div>
     </nav>
   );
 }
+// function Breadcrumb({ title }) {
+//   return (
+//     <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-[15px] sm:text-[16px]">
+//       <Link to="/" className="font-semibold text-[#476B55] hover:text-[#E87744]">Home</Link><ChevronRight size={15} className="text-[#9AA89C]" />
+//       <Link to="/services" className="font-semibold text-[#476B55] hover:text-[#E87744]">Services</Link><ChevronRight size={15} className="text-[#9AA89C]" />
+//       <Link to="/services/screening-diagnostics" className="font-semibold text-[#476B55] hover:text-[#E87744]">Screening & Diagnostics</Link><ChevronRight size={15} className="text-[#9AA89C]" />
+//       <span aria-current="page" className="font-bold text-[#E87744]">{title}</span>
+//     </nav>
+//   );
+// }
 
 export default function ScreeningDiagnosticDetailPage() {
   const { slug } = useParams();
@@ -42,7 +106,10 @@ export default function ScreeningDiagnosticDetailPage() {
 
   return (
 <main className="min-h-screen bg-[#FFFDFA] text-[#304B3C]">
-      <div className="border-b border-[#E3EAE1] bg-[#F6F8F4] px-4 py-4 sm:px-6 lg:px-8"><div className="page-container"><Breadcrumb title={service.title} /></div></div>
+
+      {/* BREADCRUMB */}
+      <Breadcrumb title={service.title} />
+     
       <section className="bg-[#F1F6F0]">
         <div className="page-container grid items-center gap-9 px-4 py-12 sm:px-6 sm:py-16 lg:grid-cols-[1.05fr_.95fr] lg:gap-14 lg:px-8 lg:py-20">
           <motion.div initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>

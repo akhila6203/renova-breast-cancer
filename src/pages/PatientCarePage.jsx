@@ -23,6 +23,8 @@ import diagnosisImage from "../assets/home/diagnosis.jpg";
 import treatmentImage from "../assets/home/treatmentBanner3.jpg";
 import recoveryImage from "../assets/home/patient-support.jpg";
 
+import appointmentsWave from "../assets/appointments-wave.jpg";
+
 const programmeStages = [
   {
     id: "b-ready",
@@ -195,15 +197,46 @@ const approvedPatientStories = [];
 
 function Breadcrumbs() {
   return (
-    <nav aria-label="Breadcrumb" className="border-b border-[#e4e9e2] bg-[#f7f9f6]">
-      <div className="page-container px-5 py-3 sm:px-8 lg:px-12">
-        <ol className="flex items-center gap-2 text-sm">
-          <li><Link to="/" className="font-semibold text-[#476b55] hover:text-[#e87744]">Home</Link></li>
-          <li aria-hidden="true" className="text-[#9aa89c]">/</li>
-          <li aria-current="page" className="font-semibold text-[#263c30]">Patient Support</li>
-        </ol>
-      </div>
-    </nav>
+    <nav
+  aria-label="Breadcrumb"
+  className="relative w-full overflow-hidden border-b border-[#dce5da] bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${appointmentsWave})`,
+  }}
+>
+  <div className="page-container relative z-10 mx-auto px-5 py-3 sm:px-8 lg:px-12">
+    <ol className="flex items-center gap-2 text-sm">
+      <li>
+        <Link
+          to="/"
+          className="font-semibold text-white drop-shadow-md transition-colors hover:text-[#E87744]"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li aria-hidden="true" className="text-white/90 drop-shadow-md">
+        /
+      </li>
+
+      <li
+        aria-current="page"
+        className="font-bold text-white drop-shadow-md"
+      >
+        Patient Support
+      </li>
+    </ol>
+  </div>
+</nav>
+    // <nav aria-label="Breadcrumb" className="border-b border-[#e4e9e2] bg-[#f7f9f6]">
+    //   <div className="page-container px-5 py-3 sm:px-8 lg:px-12">
+    //     <ol className="flex items-center gap-2 text-sm">
+    //       <li><Link to="/" className="font-semibold text-[#476b55] hover:text-[#e87744]">Home</Link></li>
+    //       <li aria-hidden="true" className="text-[#9aa89c]">/</li>
+    //       <li aria-current="page" className="font-semibold text-[#263c30]">Patient Support</li>
+    //     </ol>
+    //   </div>
+    // </nav>
   );
 }
 
