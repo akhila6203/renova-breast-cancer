@@ -23,6 +23,11 @@ import diagnosisImage from "../assets/home/diagnosis.jpg";
 import treatmentImage from "../assets/home/treatmentBanner3.jpg";
 import recoveryImage from "../assets/home/patient-support.jpg";
 
+import nextStepsImage from "../assets/patients-support/understanding-next-steps.jpg";
+import newlyDiagnosedImage from "../assets/patients-support/newly-diagnosed.jpg";
+import firstAppointmentImage from "../assets/patients-support/first-appointment.jpg";
+import oncologistQuestionsImage from "../assets/patients-support/oncologist-questions.jpg";
+
 import appointmentsWave from "../assets/appointments-wave.jpg";
 
 const programmeStages = [
@@ -135,8 +140,8 @@ const patientPreparationSections = [
     title: "Newly Diagnosed: What Happens Next?",
     description:
       "A new cancer diagnosis can feel overwhelming. Start by understanding three important things: what exactly the diagnosis is, how extensive the cancer is, and which treatment choices are available.",
-    image: diagnosisImage,
-    alt: "Patient discussing a diagnosis with a doctor",
+    image: newlyDiagnosedImage,
+    alt: "Newly diagnosed patient discussing cancer care with an oncologist",
     points: [
       "What exactly is my diagnosis?",
       "What stage is the cancer?",
@@ -153,8 +158,8 @@ const patientPreparationSections = [
     title: "Preparing for Your First Appointment",
     description:
       "Bring all available medical information so your care team can review your case efficiently and understand your medical history.",
-    image: treatmentImage,
-    alt: "Doctor reviewing medical information",
+    image: firstAppointmentImage,
+    alt: "Doctor reviewing medical reports and scans with a patient",
     points: [
       "Pathology and biopsy reports",
       "Imaging reports and scan images",
@@ -436,7 +441,8 @@ export default function PatientCarePage() {
 
       <div>
         <img
-          src={diagnosisImage}
+          // src={diagnosisImage}
+           src={nextStepsImage}
           alt="Cancer diagnostic assessment"
           loading="lazy"
           className="h-[280px] w-full rounded-[24px] object-cover shadow-lg sm:h-[390px]"
@@ -594,8 +600,8 @@ export default function PatientCarePage() {
 
       <div>
         <img
-          src={recoveryImage}
-          alt="Patient receiving support from a healthcare professional"
+           src={oncologistQuestionsImage}
+  alt="Patient discussing questions with an oncologist"
           loading="lazy"
           className="h-[300px] w-full rounded-[24px] object-cover shadow-md sm:h-[460px]"
         />

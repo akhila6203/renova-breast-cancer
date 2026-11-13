@@ -25,6 +25,7 @@ import breastBanner from "../assets/home/about-breast-care1.jpg";
 import patientCareImage from "../assets/home/patient-care1.jpg";
 import diagnosticImagingImage from "../assets/home/diagnostic-imaging1.jpg";
 import treatmentImage from "../assets/home/cancer-treatment1.jpg";
+import missionExpertiseImage from "../assets/home/mission-expertise.jpg";
 
 // REUSABLE REVEAL ANIMATION
 function Reveal({
@@ -247,7 +248,8 @@ export default function OurVisionMissionPage() {
 
                 <div className="relative h-[240px] shrink-0 overflow-hidden sm:h-[300px]">
                   <img
-                    src={treatmentImage}
+                    // src={treatmentImage}
+                    src={missionExpertiseImage}
                     alt="Our mission to support patients through cancer care"
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"

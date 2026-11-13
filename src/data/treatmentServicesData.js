@@ -1,12 +1,12 @@
-import cancerTreatmentImage from "../assets/home/cancer-treatment1.jpg";
-import surgeryImage from "../assets/home/surgical-oncology.jpg";
-import medicalOncologyImage from "../assets/home/medical-oncology.jpg";
-import radiationImage from "../assets/home/radiation-oncology.jpg";
-import precisionImage from "../assets/patients-support/Genomic profiling.jpg";
-import cellularImage from "../assets/patients-support/Systemic treatment.jpg";
-import stemCellImage from "../assets/patients-support/Supportive care.jpg";
-import interventionalImage from "../assets/home/diagnostic-imaging.jpg";
-import dayCareImage from "../assets/patients-support/Oncology consultations.jpg";
+import cancerTreatmentImage from "../assets/treatments/cancer-treatment-overview.jpg";
+import surgeryImage from "../assets/treatments/surgical-oncology.jpg";
+import medicalOncologyImage from "../assets/treatments/medical-oncology.jpg";
+import radiationImage from "../assets/treatments/radiation-oncology.jpg";
+import precisionImage from "../assets/treatments/precision-oncology.jpg";
+import cellularImage from "../assets/treatments/cellular-therapy.jpg";
+import stemCellImage from "../assets/treatments/stem-cell-transplant.jpg";
+import interventionalImage from "../assets/treatments/interventional-oncology.jpg";
+import dayCareImage from "../assets/treatments/day-care-treatment.jpg";
 
 export const treatmentOverview = {
   title: "Cancer Treatments",

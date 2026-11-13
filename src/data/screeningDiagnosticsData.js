@@ -1,8 +1,10 @@
-import mammographyImage from "../assets/patients-support/Digital breast tomosynthesis.jpg";
-import screeningImage from "../assets/home/breast-screening.jpg";
-import diagnosisImage from "../assets/home/diagnosisBanner.jpg";
-import pathologyImage from "../assets/patients-support/Onco-pathology.jpg";
-import molecularImage from "../assets/patients-support/Genomic profiling.jpg";
+
+
+import mammographyImage from "../assets/screening-diagnostics/3d-mammography.jpg";
+import screeningImage from "../assets/screening-diagnostics/screening-early-detection.jpg";
+import diagnosisImage from "../assets/screening-diagnostics/diagnosis-staging.jpg";
+import pathologyImage from "../assets/screening-diagnostics/pathology-diagnostics.jpg";
+import molecularImage from "../assets/screening-diagnostics/molecular-diagnostics.jpg";
 
 export const screeningDiagnosticServices = [
   {

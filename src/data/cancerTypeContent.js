@@ -1,4 +1,4 @@
-import breastImage from "../assets/home/breast-banner.png";
+import breastImage from "../assets/services1.jpg";
 import lungImage from "../assets/home/diagnostic-imaging1.jpg";
 import headNeckImage from "../assets/home/assessment.jpg";
 

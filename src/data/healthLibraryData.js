@@ -1,3 +1,21 @@
+import cancerBasicsImg from "../assets/healthlibrary/cancer-basics.jpg";
+import cancerSymptomsImg from "../assets/healthlibrary/cancer-symptoms.jpg";
+import diagnosisTestsImg from "../assets/healthlibrary/diagnosis-tests.jpg";
+import cancerTreatmentsImg from "../assets/healthlibrary/cancer-treatments.jpg";
+import cancerInnovationImg from "../assets/healthlibrary/cancer-innovation.jpg";
+import cancerPreventionImg from "../assets/healthlibrary/cancer-prevention.jpg";
+import livingWithCancerImg from "../assets/healthlibrary/living-with-cancer.jpg";
+import survivorshipImg from "../assets/healthlibrary/survivorship.jpg";
+
+
+import diagnosedImg from "../assets/healthlibrary/blogs/diagnosed.jpg";
+import oncologistQuestionsImg from "../assets/healthlibrary/blogs/oncologist-questions.jpg";
+import secondOpinionImg from "../assets/healthlibrary/blogs/second-opinion.jpg";
+import tumourBoardImg from "../assets/healthlibrary/blogs/tumour-board.jpg";
+import biopsyImg from "../assets/healthlibrary/blogs/biopsy.jpg";
+import cancerStagingImg from "../assets/healthlibrary/blogs/cancer-staging.jpg";
+
+
 
 export const healthCategories = [
   {
@@ -10,8 +28,7 @@ export const healthCategories = [
       "Cancer develops when changes in the genetic material of cells affect the way they grow, divide and repair themselves. Normally, the body controls cell growth and removes damaged cells. When these controls stop working properly, abnormal cells may continue to multiply and may form a mass called a tumour. Not all cancers form solid tumours; for example, many blood cancers affect cells in the blood or bone marrow.",
     whyItMatters:
       "Understanding the basic terms used in cancer care can help patients and families follow medical discussions, understand reports and prepare questions for their doctors. Cancer is not one single disease. Its behaviour and treatment depend on the type of cells involved, the location, stage, grade and other test findings.",
-    image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85",
+    image: cancerBasicsImg,
     topics: [
       "What Is Cancer?",
       "How Cancer Develops",
@@ -66,8 +83,7 @@ export const healthCategories = [
       "Symptoms are changes in the body that a person notices. Some cancers cause clear symptoms, while others may cause few or no symptoms in their early stages. Many symptoms associated with cancer can also be caused by common non-cancerous conditions. A symptom alone cannot confirm cancer; medical assessment is needed to understand its cause.",
     whyItMatters:
       "Paying attention to persistent, unexplained or unusual changes can help people seek medical advice at the right time. Do not wait for symptoms to become severe before speaking with a healthcare professional. Screening may also be recommended for certain people even when they feel well.",
-    image:
-      "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1000&q=85",
+   image: cancerSymptomsImg,
     topics: [
       "Common Warning Signs",
       "Symptoms by Cancer Type",
@@ -122,8 +138,7 @@ export const healthCategories = [
       "Cancer diagnosis is a step-by-step process. A doctor reviews symptoms and medical history, performs an examination and selects tests based on the suspected condition. Imaging tests can help locate an abnormal area, while a biopsy may provide cells or tissue for examination. Not every patient needs every test.",
     whyItMatters:
       "Understanding why a test is being recommended can make the diagnostic process easier to follow. Ask what the test is intended to find, how to prepare, when results may be available and what the possible next steps are. Your treating team should explain the findings in the context of your individual case.",
-    image:
-      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=85",
+    image: diagnosisTestsImg,
     topics: [
       "What Is a Cancer Biopsy?",
       "Understanding a Pathology Report",
@@ -179,8 +194,7 @@ export const healthCategories = [
       "Cancer treatment aims to control or remove cancer, reduce the chance of it returning, relieve symptoms or support quality of life. Some people receive one type of treatment, while others receive a combination. Treatment planning is individualised and may involve several specialists working together.",
     whyItMatters:
       "Knowing the purpose of each treatment can help patients understand the proposed plan and take part in decisions. Ask your treating team about the expected benefit, possible side effects, alternatives, treatment schedule and how progress will be monitored. The most appropriate plan depends on the individual diagnosis.",
-    image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=85",
+   image: cancerTreatmentsImg,
     topics: [
       "Surgery",
       "Chemotherapy",
@@ -242,8 +256,7 @@ export const healthCategories = [
       "Cancer research includes laboratory studies, clinical trials and improvements to existing treatments. New approaches may aim to target cancer cells more precisely, use the immune system, improve imaging or deliver treatment to specific areas. A treatment described as new or advanced is not automatically suitable for every patient.",
     whyItMatters:
       "Patients may hear about new therapies in the media or online. It is important to understand whether a treatment is approved for the particular cancer and clinical situation, available in the relevant setting, or still being studied in a clinical trial. Discuss claims about new treatments with a qualified oncology team.",
-    image:
-      "https://images.unsplash.com/photo-1581093458791-9d42e3c6e5f2?auto=format&fit=crop&w=1000&q=85",
+   image: cancerInnovationImg,
     topics: [
       "Antibody-Drug Conjugates",
       "Bispecific Antibodies",
@@ -303,8 +316,7 @@ export const healthCategories = [
       "A risk factor is something that may increase the chance of developing a disease. Having a risk factor does not mean a person will definitely develop cancer, and people can develop cancer without any clearly identified risk factor. Risk varies depending on the type of cancer and a combination of influences.",
     whyItMatters:
       "Some risk factors can be changed, while others cannot. Avoiding tobacco, limiting alcohol, protecting skin from excessive ultraviolet exposure, maintaining a healthy lifestyle and following appropriate vaccination and screening guidance can help reduce certain cancer risks. Prevention cannot eliminate every cancer risk.",
-    image:
-      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1000&q=85",
+    image: cancerPreventionImg,
     topics: [
       "Tobacco and Cancer",
       "Alcohol and Cancer Risk",
@@ -359,8 +371,7 @@ export const healthCategories = [
       "Living with cancer involves more than medical treatment. People may experience changes in appetite, sleep, energy, mood, physical comfort, family responsibilities and work. These experiences differ from person to person and may change during different stages of care.",
     whyItMatters:
       "Supportive care aims to help manage symptoms and improve quality of life alongside cancer treatment. Patients should tell their care team about new symptoms or difficulties rather than trying to manage every problem alone. A coordinated team may include doctors, nurses, dietitians, rehabilitation professionals and counsellors.",
-    image:
-      "https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=1000&q=85",
+    image: livingWithCancerImg,
     topics: [
       "Nutrition During Treatment",
       "Managing Cancer Fatigue",
@@ -416,8 +427,7 @@ export const healthCategories = [
       "Cancer survivorship describes the experience of living with, through and beyond cancer. For some people, this stage begins soon after diagnosis; for others, it becomes a major focus after active treatment ends. Recovery can be gradual, and each person's experience is different.",
     whyItMatters:
       "Finishing treatment does not always mean that every effect disappears immediately. Follow-up care helps monitor health, identify possible late effects, manage ongoing symptoms and support emotional wellbeing. Patients should know whom to contact if a new concern develops between scheduled appointments.",
-    image:
-      "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1000&q=85",
+    image: survivorshipImg,
     topics: [
       "Life After Cancer Treatment",
       "Follow-Up Care",
@@ -464,45 +474,54 @@ export const healthCategories = [
 ];
 
 
+const blogImages = {
+  "diagnosed-what-next": diagnosedImg,
+  "questions-for-oncologist": oncologistQuestionsImg,
+  "second-opinion": secondOpinionImg,
+  "tumour-board": tumourBoardImg,
+  "understanding-biopsy": biopsyImg,
+  "cancer-staging": cancerStagingImg,  
+};
+
 const blogTitles = [
   ["diagnosed-what-next", "Just Diagnosed With Cancer: What Should You Do Next?", "cancer-basics"],
   ["questions-for-oncologist", "Questions to Ask Your Oncologist", "cancer-basics"],
   ["second-opinion", "When Should You Consider a Second Opinion?", "cancer-basics"],
   ["tumour-board", "What Happens in a Tumour Board?", "cancer-basics"],
   ["understanding-biopsy", "Understanding a Cancer Biopsy", "diagnosis-tests"],
-  ["pathology-report", "How to Understand a Pathology Report", "diagnosis-tests"],
+  // ["pathology-report", "How to Understand a Pathology Report", "diagnosis-tests"],
   ["cancer-staging", "Cancer Staging Explained", "diagnosis-tests"],
-  ["ct-mri-pet", "CT, MRI and PET Scans: What Is the Difference?", "diagnosis-tests"],
-  ["molecular-testing", "Molecular Testing in Cancer", "diagnosis-tests"],
-  ["liquid-biopsy", "What Is a Liquid Biopsy?", "diagnosis-tests"],
-  ["biomarkers", "Cancer Biomarkers and Treatment Decisions", "diagnosis-tests"],
-  ["chemotherapy-guide", "Chemotherapy: What Patients Should Know", "cancer-treatments"],
-  ["immunotherapy-guide", "How Does Immunotherapy Work?", "cancer-treatments"],
-  ["targeted-therapy", "Understanding Targeted Therapy", "cancer-treatments"],
-  ["precision-oncology", "What Is Precision Oncology?", "cancer-treatments"],
-  ["adc-treatment", "Antibody-Drug Conjugates Explained", "latest-treatments-innovation"],
-  ["car-t", "CAR T-Cell Therapy: A Patient Guide", "latest-treatments-innovation"],
-  ["til-therapy", "What Is TIL Therapy?", "latest-treatments-innovation"],
-  ["bispecific-antibodies", "Bispecific Antibodies in Cancer Care", "latest-treatments-innovation"],
-  ["theranostics", "Understanding Theranostics", "latest-treatments-innovation"],
-  ["sbrt", "What Is Stereotactic Body Radiation Therapy?", "latest-treatments-innovation"],
-  ["stereotactic-radiosurgery", "Stereotactic Radiosurgery Explained", "latest-treatments-innovation"],
-  ["mr-guided-radiation", "What Is MR-Guided Radiation Therapy?", "latest-treatments-innovation"],
-  ["proton-therapy", "Proton Therapy: What Patients Should Know", "latest-treatments-innovation"],
-  ["cyberknife", "Understanding CyberKnife", "latest-treatments-innovation"],
-  ["gamma-knife", "What Is Gamma Knife Treatment?", "latest-treatments-innovation"],
-  ["robotic-surgery", "Robotic Surgery in Cancer Care", "cancer-treatments"],
-  ["hipec", "What Is HIPEC?", "cancer-treatments"],
-  ["nutrition-treatment", "Nutrition During Cancer Treatment", "living-with-cancer"],
-  ["cancer-fatigue", "Managing Fatigue During Cancer Treatment", "living-with-cancer"],
-  ["exercise-cancer", "Exercise During Cancer Treatment", "living-with-cancer"],
-  ["mental-health", "Looking After Your Mental Health", "living-with-cancer"],
-  ["caregiver-support", "How to Support Someone With Cancer", "living-with-cancer"],
-  ["after-treatment", "What Happens After Cancer Treatment?", "survivorship"],
-  ["recurrence-fear", "Coping With the Fear of Recurrence", "survivorship"],
-  ["returning-to-work", "Returning to Work After Cancer", "survivorship"],
-  ["long-term-effects", "Long-Term Effects After Cancer Treatment", "survivorship"],
-  ["follow-up-care", "Why Follow-Up Care Matters", "survivorship"]
+  // ["ct-mri-pet", "CT, MRI and PET Scans: What Is the Difference?", "diagnosis-tests"],
+  // ["molecular-testing", "Molecular Testing in Cancer", "diagnosis-tests"],
+  // ["liquid-biopsy", "What Is a Liquid Biopsy?", "diagnosis-tests"],
+  // ["biomarkers", "Cancer Biomarkers and Treatment Decisions", "diagnosis-tests"],
+  // ["chemotherapy-guide", "Chemotherapy: What Patients Should Know", "cancer-treatments"],
+  // ["immunotherapy-guide", "How Does Immunotherapy Work?", "cancer-treatments"],
+  // ["targeted-therapy", "Understanding Targeted Therapy", "cancer-treatments"],
+  // ["precision-oncology", "What Is Precision Oncology?", "cancer-treatments"],
+  // ["adc-treatment", "Antibody-Drug Conjugates Explained", "latest-treatments-innovation"],
+  // ["car-t", "CAR T-Cell Therapy: A Patient Guide", "latest-treatments-innovation"],
+  // ["til-therapy", "What Is TIL Therapy?", "latest-treatments-innovation"],
+  // ["bispecific-antibodies", "Bispecific Antibodies in Cancer Care", "latest-treatments-innovation"],
+  // ["theranostics", "Understanding Theranostics", "latest-treatments-innovation"],
+  // ["sbrt", "What Is Stereotactic Body Radiation Therapy?", "latest-treatments-innovation"],
+  // ["stereotactic-radiosurgery", "Stereotactic Radiosurgery Explained", "latest-treatments-innovation"],
+  // ["mr-guided-radiation", "What Is MR-Guided Radiation Therapy?", "latest-treatments-innovation"],
+  // ["proton-therapy", "Proton Therapy: What Patients Should Know", "latest-treatments-innovation"],
+  // ["cyberknife", "Understanding CyberKnife", "latest-treatments-innovation"],
+  // ["gamma-knife", "What Is Gamma Knife Treatment?", "latest-treatments-innovation"],
+  // ["robotic-surgery", "Robotic Surgery in Cancer Care", "cancer-treatments"],
+  // ["hipec", "What Is HIPEC?", "cancer-treatments"],
+  // ["nutrition-treatment", "Nutrition During Cancer Treatment", "living-with-cancer"],
+  // ["cancer-fatigue", "Managing Fatigue During Cancer Treatment", "living-with-cancer"],
+  // ["exercise-cancer", "Exercise During Cancer Treatment", "living-with-cancer"],
+  // ["mental-health", "Looking After Your Mental Health", "living-with-cancer"],
+  // ["caregiver-support", "How to Support Someone With Cancer", "living-with-cancer"],
+  // ["after-treatment", "What Happens After Cancer Treatment?", "survivorship"],
+  // ["recurrence-fear", "Coping With the Fear of Recurrence", "survivorship"],
+  // ["returning-to-work", "Returning to Work After Cancer", "survivorship"],
+  // ["long-term-effects", "Long-Term Effects After Cancer Treatment", "survivorship"],
+  // ["follow-up-care", "Why Follow-Up Care Matters", "survivorship"]
 ];
 
 export const healthBlogs = blogTitles.map(
@@ -518,7 +537,8 @@ export const healthBlogs = blogTitles.map(
       category: category?.title || "Cancer Care",
       categorySlug,
       excerpt: `Learn about ${title.toLowerCase()} through clear, patient-friendly cancer education and useful questions to discuss with your care team.`,
-      image: category?.image || healthCategories[0].image,
+      // image: category?.image || healthCategories[0].image,
+      image: blogImages[slug] || category?.image || healthCategories[0].image,
       readTime: "5 min read",
       content: [
         `Understanding ${title.toLowerCase()} can help patients and families feel more prepared during cancer care.`,

@@ -5,7 +5,7 @@ export default function BrandLogo({ onClick, compact = false }) {
   return (
     <Link to="/" className="flex min-w-0 shrink-0 items-center gap-2.5" onClick={onClick}>
       <img
-        src="/renova-logo.png"
+        src="/logo2.jpg"
         alt={`${hospital.name} ${hospital.nameLine2}`}
         // className={`w-auto object-contain ${compact ? "h-10" : "h-12 sm:h-[3.25rem]"}`}
         className={`w-auto object-contain ${compact ? "h-14" : "h-14 sm:h-16"}`}
