@@ -5,7 +5,7 @@ export const serviceDetailContent = {
   "breast-cancer-screening": {
     overviewTitle: "Screening with clarity and respect",
     overview:
-      "Breast cancer screening looks for signs of cancer before symptoms appear. At RENOVA Hospitals, screening is discussed in the context of your age, family history and local guidelines — not as a one-size-fits-all rule.",
+      "Breast cancer screening looks for signs of cancer before symptoms appear. At Kaizen Oncology Hospitals, screening is discussed in the context of your age, family history and local guidelines — not as a one-size-fits-all rule.",
     highlights: [
       "Mammography and clinical breast examination when appropriate",
       "Risk-based conversations about when to start and how often to screen",
@@ -40,7 +40,7 @@ export const serviceDetailContent = {
   "diagnostic-imaging": {
     overviewTitle: "Imaging that supports confident decisions",
     overview:
-      "Diagnostic imaging helps specialists understand a breast change in detail. RENOVA’s breast unit combines mammography, ultrasound and, when clinically appropriate, MRI — chosen to match your symptoms rather than a fixed checklist.",
+      "Diagnostic imaging helps specialists understand a breast change in detail. Kaizen Oncology’s breast unit combines mammography, ultrasound and, when clinically appropriate, MRI — chosen to match your symptoms rather than a fixed checklist.",
     highlights: [
       "Triple assessment pathway: examination, imaging and biopsy when needed",
       "Image-guided biopsy for precise tissue sampling",
@@ -133,7 +133,7 @@ export const serviceDetailContent = {
   "radiation-oncology": {
     overviewTitle: "Precise radiotherapy after local treatment",
     overview:
-      "Radiation oncology uses focused beams to destroy remaining cancer cells after surgery or to relieve symptoms. At RENOVA, treatment is planned using imaging so healthy tissue receives as little dose as possible.",
+      "Radiation oncology uses focused beams to destroy remaining cancer cells after surgery or to relieve symptoms. At Kaizen Oncology, treatment is planned using imaging so healthy tissue receives as little dose as possible.",
     highlights: [
       "Whole-breast or partial-breast irradiation when suitable",
       "Boost doses to the tumour bed when indicated",
@@ -164,7 +164,7 @@ export const serviceDetailContent = {
   "patient-support": {
     overviewTitle: "Support beyond the prescription",
     overview:
-      "Patient support covers appointments, preparation for procedures, recovery, nutrition, psychology and survivorship. RENOVA’s breast programme treats emotional wellbeing as part of clinical care, not an optional extra.",
+      "Patient support covers appointments, preparation for procedures, recovery, nutrition, psychology and survivorship. Kaizen Oncology’s breast programme treats emotional wellbeing as part of clinical care, not an optional extra.",
     highlights: [
       "Breast care nurse navigators for each stage of the pathway",
       "Counselling and carer support referrals",

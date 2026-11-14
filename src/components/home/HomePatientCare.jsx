@@ -78,7 +78,7 @@ export default function HomePatientCare() {
 
           {/* DESCRIPTION */}
           <p className="mx-auto mt-2 max-w-5xl text-center text-[16px] leading-7 text-[#526457]">
-            At RENOVA Cancer Hospital, we understand that cancer care
+            At Kaizen Oncology Cancer Hospital, we understand that cancer care
             involves more than medical treatment. We support patients
             and their families with guidance, comfort and care throughout
             every stage of their cancer journey.

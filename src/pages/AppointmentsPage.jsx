@@ -231,16 +231,16 @@ export default function AppointmentsPage() {
     className="mt-2 min-h-11 w-full rounded-xl border border-[#cfded0] bg-[#fffdf9] px-3 py-2.5 text-[15px] font-normal text-[#304b3c] outline-none transition focus:border-[#304b3c] focus:ring-2 focus:ring-[#304b3c]/10"
   />
 </label>
-{/* PREFERRED RENOVA LOCATION */}
+{/* PREFERRED Kaizen Oncology LOCATION */}
 <label className="block text-[15px] font-semibold text-[#304b3c]">
-  Preferred RENOVA Location
+  Preferred Kaizen Oncology Location
 
   <select
     name="preferredLocation"
     defaultValue=""
     className="mt-2 min-h-11 w-full rounded-xl border border-[#cfded0] bg-[#fffdf9] px-3 py-2.5 text-[15px] font-normal text-[#304b3c] outline-none transition focus:border-[#304b3c] focus:ring-2 focus:ring-[#304b3c]/10"
   >
-    <option value="">Choose a RENOVA location</option>
+    <option value="">Choose a Kaizen Oncology location</option>
     <option value="Care Hospitals - Hi-tech City">
       kims Hospitals - Hi-tech City
     </option>

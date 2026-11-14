@@ -573,8 +573,8 @@ function ProgrammeHero({ item }) {
 
             <div className="absolute -bottom-4 left-4 right-4 rounded-xl border border-[#e5ebe4] bg-white p-4 shadow-md sm:left-8 sm:right-8 sm:p-5">
               <p className="text-xs font-bold tracking-[0.16em] text-[#e87744]">
-                {/* RENOVA BREAST HEALTH INITIATIVE */}
-                RENOVA CANCER CARE
+                {/*Kaizen Oncology BREAST HEALTH INITIATIVE */}
+                Kaizen Oncology CANCER CARE
               </p>
 
               <p className="mt-1 text-lg font-bold text-[#304b3c]">
@@ -747,7 +747,7 @@ export default function PatientCareDetailPage() {
 
             <div className="max-w-2xl">
               <p className="text-xs font-bold tracking-[0.18em] text-[#f3a078]">
-                RENOVA PATIENT SUPPORT
+                Kaizen Oncology PATIENT SUPPORT
               </p>
 
               <h2 className="display-font mt-3 text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-4xl">

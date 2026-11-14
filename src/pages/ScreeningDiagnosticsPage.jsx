@@ -81,7 +81,7 @@ export default function ScreeningDiagnosticsPage() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-flex rounded-full bg-white px-4 py-2 text-[13px] font-bold uppercase tracking-[.16em] text-[#476B55] shadow-sm">
-              RENOVA CANCER CARE
+              Kaizen Oncology CANCER CARE
             </span>
             <h1 className="mt-5 text-4xl font-bold leading-tight text-[#263C30] sm:text-5xl lg:text-[56px]">
               Screening & <span className="text-[#E87744]">Diagnostics</span>

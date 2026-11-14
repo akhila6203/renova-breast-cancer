@@ -60,12 +60,12 @@ export default function HomeWhy() {
 
         {/* SECTION HEADING */}
         <SectionTitle
-          eyebrow="WHY RENOVA"
-          title="Why Choose RENOVA?"
+          eyebrow="WHY Kaizen Oncology"
+          title="Why Choose Kaizen Oncology?"
           description="A connected approach to cancer care, bringing together clinical expertise, personalised treatment and compassionate support for patients and families."
         />
 
-        {/* WHY RENOVA CARDS */}
+        {/* WHY Kaizen Oncology CARDS */}
         <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
 
           {items.map(({ icon: Icon, number, title, text }, index) => (

@@ -72,7 +72,7 @@ export default function HeroSlider() {
             backgroundImage: `url("${slide.image}")`,
           }}
           role="img"
-          aria-label="RENOVA breast care"
+          aria-label="Kaizen Oncology breast care"
         />
       </AnimatePresence>
 

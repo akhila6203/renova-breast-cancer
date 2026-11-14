@@ -347,7 +347,7 @@ export default function TechnologyPage() {
         </h1>
 
         <p className="mt-6 text-[16px] leading-8 text-[#536357] sm:text-[17px]">
-         At RENOVA Cancer Hospital, advanced technology plays an important role in cancer diagnosis, treatment planning and patient care.
+         At Kaizen Oncology Cancer Hospital, advanced technology plays an important role in cancer diagnosis, treatment planning and patient care.
           We combine specialised clinical expertise with modern treatment technologies to support personalised cancer care.
         </p>
 
@@ -485,7 +485,7 @@ export default function TechnologyPage() {
           </h2>
 
           <p className="mt-4 text-[16px] leading-7 text-[#536357]">
-            Explore the advanced technologies used in cancer diagnosis, treatment planning and specialised cancer care at RENOVA.
+            Explore the advanced technologies used in cancer diagnosis, treatment planning and specialised cancer care at Kaizen Oncology.
           </p>
         </div>
 

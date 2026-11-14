@@ -11,6 +11,9 @@ import hipecImage from "../assets/home/diagnostic-imaging.jpg";
 import mammographyImage from "../assets/patients-support/Digital breast tomosynthesis.jpg";
 import breastInitiativeImage from "../assets/patients-support/Pink Room and B-Well Wednesdays.jpg";
 
+import medicalOncologyImage from "../assets/treatments/medical-oncology.jpg";
+
+
 // Reusable section builder.
 // Each technology still has its own content and images.
 const createSections = ({
@@ -679,7 +682,7 @@ const dibh = {
   slug: "dibh-abc",
   title: "Deep Inspiration Breath Hold (DIBH) Using ABC",
   category: "RADIOTHERAPY",
-  image: dibhImage,
+  image: medicalOncologyImage ,
   imageAlt: "Deep inspiration breath hold radiotherapy",
   specialities: ["Radiation Oncology"],
 
@@ -1676,7 +1679,7 @@ const breastHealthInitiative = {
     "A breast health awareness initiative that helps people understand breast changes, screening options, risk assessment and when to seek medical advice.",
 
   detailIntro:
-    "Breast Health Initiative content is designed to encourage awareness, timely assessment and informed conversations about breast health. Campaign activities should reflect the programmes and services actually conducted by RENOVA.",
+    "Breast Health Initiative content is designed to encourage awareness, timely assessment and informed conversations about breast health. Campaign activities should reflect the programmes and services actually conducted by Kaizen Oncology.",
 
   sections: createSections({
     images: [
@@ -1701,7 +1704,7 @@ const breastHealthInitiative = {
       paragraphs: [
         "A Breast Health Initiative is an awareness and education programme designed to help people understand breast health, recognise changes and learn about screening and clinical assessment.",
         "Awareness activities may include educational sessions, information about possible warning signs, risk-assessment discussions and guidance on how to access breast care services.",
-        "Campaign activities and services should be described according to the programmes RENOVA actually conducts.",
+        "Campaign activities and services should be described according to the programmes Kaizen Oncology actually conducts.",
       ],
       points: [
         "Breast health education.",

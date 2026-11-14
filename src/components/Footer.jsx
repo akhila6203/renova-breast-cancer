@@ -4,6 +4,8 @@ import {
   Phone,
   Mail,
   Clock,
+  // Kaizen Oncology 
+  // RENOVA
   ArrowUpRight,
 } from "lucide-react";
 
@@ -167,7 +169,7 @@ export default function Footer() {
             </Link>
 
             <p className="mt-5 max-w-sm text-[16px] leading-7 text-white sm:text-[17px]">
-              RENOVA Cancer Hospital is dedicated to comprehensive cancer care, bringing together specialist expertise,
+              Kaizen Oncology is dedicated to comprehensive cancer care, bringing together specialist expertise,
                advanced diagnostic and treatment approaches,
                personalised care planning and compassionate support throughout every stage of the cancer journey.
             </p>

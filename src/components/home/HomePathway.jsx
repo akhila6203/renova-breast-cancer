@@ -85,16 +85,16 @@ export default function HomePathway() {
             >
               <SectionTitle
                 center={false}
-                eyebrow="RENOVA CANCER HOSPITAL"
+                eyebrow="Kaizen Oncology CANCER HOSPITAL"
                 title="Every Cancer Is Different. Your Treatment Should Be Too."
-                description="At RENOVA Cancer Hospital, we are committed to patient-centred cancer care through personalised treatment planning,
+                description="At Kaizen Oncology Cancer Hospital, we are committed to patient-centred cancer care through personalised treatment planning,
                 clinical expertise and compassionate support. From accurate diagnosis and multidisciplinary planning to treatment, 
                 recovery and follow-up, our specialists work together around the needs of each patient."
               />
               
               {/* <p className="max-w-2xl text-[16px] leading-7 text-ink"> */}
               <p className="mt-1 max-w-3xl text-[17px] leading-7 text-ink">
-                Every patient's cancer journey is unique. At RENOVA, our
+                Every patient's cancer journey is unique. At Kaizen Oncology, our
                 multidisciplinary team focuses on understanding individual
                 needs and guiding patients through every stage of care.
                 From diagnosis and treatment to recovery and follow-up,
@@ -218,7 +218,7 @@ export default function HomePathway() {
             <SectionTitle
               eyebrow="YOUR BREAST CARE JOURNEY"
               title="One connected journey. Three focused pillars."
-              description="Explore RENOVA's connected approach to breast cancer diagnosis, personalised treatment and rehabilitation."
+              description="Explore Kaizen Oncology's connected approach to breast cancer diagnosis, personalised treatment and rehabilitation."
             />
           </motion.div>
 

@@ -215,7 +215,7 @@ export default function DoctorDetailsPage() {
           <div className="py-2 lg:py-5">
 
             <span className="text-sm font-bold tracking-[0.18em] text-sky">
-              RENOVA SPECIALIST
+              Kaizen Oncology SPECIALIST
             </span>
 
             <h1 className="mt-2 font-display text-3xl font-bold leading-tight text-navy sm:text-4xl">

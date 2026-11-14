@@ -11,13 +11,13 @@ import radiationOncology from "../assets/home/radiation-oncology.jpg";
 import patientSupport from "../assets/home/patient-support.jpg";
 
 export const hospital = {
-  name: "RENOVA",
+  name: "Kaizen Oncology",
   nameLine2: "Hospitals",
   tagline: "Specialist Breast Care Programme",
-  email: "care@renovahospitals.com",
+  email: "care@kaizenoncologyhospitals.com",
   phoneDisplay: "+91 00000 00000",
   phoneHref: "tel:+910000000000",
-  address: "Replace with your verified RENOVA Hospitals address, Hyderabad.",
+  address: "Hi-tech City | Banjara Hills | Nampally | Masab Tank, Hyderabad.",
  hours: "Monday – Sunday: 9:00 AM – 8:00 PM (Sample timings)",
   whatsappNumber: "910000000000",
 };
@@ -28,7 +28,7 @@ export const brochures = [
     tag: "B-READY · B-AHEAD · B-YOU",
     title: "Breast care pathway brochure",
     description:
-      "Overview of diagnostic assessment, treatment services and recovery support at RENOVA Hospitals. Add your verified 02.pdf to public/brochures/02.pdf.",
+      "Overview of diagnostic assessment, treatment services and recovery support at Kaizen Oncology Hospitals. Add your verified 02.pdf to public/brochures/02.pdf.",
     file: "/brochures/02.pdf",
   },
   {
@@ -119,7 +119,7 @@ export function getServiceBySlug(slug) {
 
 export const slides = [
   {
-    eyebrow: "RENOVA HOSPITALS",
+    eyebrow: "Kaizen Oncology HOSPITALS",
     title: "Comprehensive Cancer Care with Compassion and Expertise",
     description:
       "From first assessment to recovery, we help you understand the next step and feel supported while you take it.",
@@ -374,7 +374,7 @@ export const blogs = [
     description:
       "Anxiety, uncertainty and family strain are common. Support is part of care, not an extra.",
     image:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80",
+      "https://images..com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80",
     path: "/blogs#emotional-wellbeing",
   },
   {

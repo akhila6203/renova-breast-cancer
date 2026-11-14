@@ -849,7 +849,7 @@ export default function CancerProgramPage() {
 
                 <p className="mt-4 text-[18px] leading-8 text-[#46574B]">
                   {cancer.closing ||
-                    "Understanding your condition and available treatment options is an important step towards informed care decisions. At RENOVA Cancer Hospital, our aim is to support patients with clear guidance, personalised care planning and compassionate support throughout their cancer journey."}
+                    "Understanding your condition and available treatment options is an important step towards informed care decisions. At Kaizen Oncology Cancer Hospital, our aim is to support patients with clear guidance, personalised care planning and compassionate support throughout their cancer journey."}
                 </p>
               </div>
             </div>

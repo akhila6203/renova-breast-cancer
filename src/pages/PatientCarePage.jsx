@@ -319,7 +319,7 @@ export default function PatientCarePage() {
       </h1>
 
       <p className="mx-auto mt-3 max-w-4xl text-base leading-8 text-[#536458] sm:text-lg">
-        At RENOVA Cancer Hospital, we provide guidance and support throughout diagnosis, treatment, recovery and follow-up care, helping patients and their families navigate each stage with greater confidence.
+        At Kaizen Oncology Cancer Hospital, we provide guidance and support throughout diagnosis, treatment, recovery and follow-up care, helping patients and their families navigate each stage with greater confidence.
       </p>
     </div>
 
@@ -327,7 +327,7 @@ export default function PatientCarePage() {
 
       <div>
         <span className="text-sm font-bold tracking-wider text-[#e87744]">
-          RENOVA PATIENT CARE
+          Kaizen Oncology PATIENT CARE
         </span>
 
         <h2 className="display-font mt-1 text-2xl font-bold leading-snug text-[#263c30] sm:text-3xl">
@@ -341,7 +341,7 @@ export default function PatientCarePage() {
         </p>
 
         <p className="mt-4 text-[16px] leading-7 text-[#4b5d50] sm:text-[18px] ">
-         At RENOVA, patient care goes beyond medical treatment. We recognise the importance of emotional support, 
+         At Kaizen Oncology, patient care goes beyond medical treatment. We recognise the importance of emotional support, 
          nutritional guidance, pain and symptom management, rehabilitation and ongoing care for patients and their families.
         </p>
 
@@ -459,7 +459,7 @@ export default function PatientCarePage() {
           <SectionTitle
             eyebrow="SUPPORT THROUGHOUT YOUR CARE JOURNEY"
             title="Connected Care. Support at Every Step."
-            description="Every patient's cancer journey is different. At RENOVA, we recognise the importance of appropriate 
+            description="Every patient's cancer journey is different. At Kaizen Oncology, we recognise the importance of appropriate 
                           guidance and support from diagnosis and treatment through recovery and follow-up care."
           />
           <div className="space-y-8 lg:space-y-10">
@@ -693,7 +693,7 @@ export default function PatientCarePage() {
     </div>
 
     {/* <p className="mt-7 text-sm leading-6 text-[#657468]">
-      Please contact RENOVA to confirm the availability of individual
+      Please contact Kaizen Oncology to confirm the availability of individual
       services, international patient assistance and insurance support.
     </p> */}
 
@@ -710,7 +710,7 @@ export default function PatientCarePage() {
     eyebrow="PATIENT STORIES"
     title="Stories of Strength and Support"
     subtitle="Explore genuine patient experiences and educational
-        videos shared by RENOVA, helping patients and families
+        videos shared by Kaizen Oncology, helping patients and families
         understand different aspects of cancer care."
     items={patientTestimonialItems}
     slidesPerView={4}

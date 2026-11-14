@@ -66,7 +66,7 @@ export default function HomeAboutTeaser() {
 
           <p className="mt-5 text-[17px] leading-7 text-[#425b4c] sm:text-[18px]">
             A cancer diagnosis can bring many questions and uncertainties.
-            At RENOVA Cancer Hospital, we believe every patient deserves
+            At Kaizen Oncology Cancer Hospital, we believe every patient deserves
             clear information, compassionate guidance and personalised care.
           </p>
 
@@ -179,7 +179,7 @@ export default function HomeAboutTeaser() {
 //             center={false}
 //             eyebrow="WHO WE ARE"
 //             title="Comprehensive Cancer Care, with People at the Heart of Every Step"
-//             description="A cancer diagnosis can bring many questions and uncertainties. At RENOVA Cancer Hospital, we believe every patient deserves clear information, compassionate guidance and personalised care."
+//             description="A cancer diagnosis can bring many questions and uncertainties. At Kaizen Oncology Cancer Hospital, we believe every patient deserves clear information, compassionate guidance and personalised care."
 //           />
 
 //           <p className="mt-2 text-[17px] leading-6 text-[#304b3c]">

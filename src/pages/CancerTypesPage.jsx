@@ -102,7 +102,7 @@ export default function CancerTypesPage() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-flex rounded-full bg-white px-4 py-2 text-sm font-bold uppercase tracking-wider text-[#476B55] shadow-sm">
-              RENOVA CANCER HOSPITAL
+              Kaizen Oncology CANCER HOSPITAL
             </span>
 
             <h1 className="mt-6 text-4xl font-bold leading-tight text-[#263C30] sm:text-5xl lg:text-[54px]">

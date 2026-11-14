@@ -17,7 +17,7 @@ relatedTechnologySlugs: [
     cardDescription:
       "Learn about breast cancer, possible warning signs, diagnostic tests and individual treatment options.",
     overview:
-      "No one should have to face breast cancer alone. At RENOVA Cancer Hospital, we believe every patient deserves compassionate care, clear guidance and support throughout their journey. You may be reading this because you or someone you care about has been diagnosed with breast cancer. Understanding possible signs, risk factors and available treatment options can help you feel better prepared to speak with your healthcare team.",
+      "No one should have to face breast cancer alone. At Kaizen Oncology Cancer Hospital, we believe every patient deserves compassionate care, clear guidance and support throughout their journey. You may be reading this because you or someone you care about has been diagnosed with breast cancer. Understanding possible signs, risk factors and available treatment options can help you feel better prepared to speak with your healthcare team.",
     overviewSecond:
   "Breast cancer can develop in one or both breasts and may affect people differently. Some breast cancers grow slowly, while others may grow more quickly. The specific type, grade and stage help doctors understand how the cancer may behave and which treatment options may be appropriate. A specialist may also consider hormone receptor and HER2 test results when planning treatment.",
 
@@ -157,7 +157,7 @@ overviewThird:
       },
     ],
     closing:
-      "At RENOVA Cancer Hospital, our aim is to help patients understand their diagnosis and explore appropriate treatment options through specialist assessment and personalised care planning.",
+      "At Kaizen Oncology Cancer Hospital, our aim is to help patients understand their diagnosis and explore appropriate treatment options through specialist assessment and personalised care planning.",
   },
 
   {
@@ -319,7 +319,7 @@ overviewThird:
       },
     ],
     closing:
-      "At RENOVA Cancer Hospital, our aim is to support patients with clear guidance, personalised care planning and compassionate support throughout their cancer journey.",
+      "At Kaizen Oncology Cancer Hospital, our aim is to support patients with clear guidance, personalised care planning and compassionate support throughout their cancer journey.",
   },
 
   {
@@ -338,7 +338,7 @@ relatedTechnologySlugs: [
     cardDescription:
       "Explore cancers affecting areas such as the mouth, throat, voice box, nose, sinuses and salivary glands.",
     overview:
-      "Understanding head and neck cancers is an important step towards informed care. At RENOVA Cancer Hospital, we believe every patient deserves compassionate care, clear guidance and support throughout their cancer journey. Learning about possible symptoms, risk factors and available treatment options can help patients recognise unusual changes, seek timely medical advice and make informed decisions.",
+      "Understanding head and neck cancers is an important step towards informed care. At Kaizen Oncology Cancer Hospital, we believe every patient deserves compassionate care, clear guidance and support throughout their cancer journey. Learning about possible symptoms, risk factors and available treatment options can help patients recognise unusual changes, seek timely medical advice and make informed decisions.",
     overviewSecond:
   "Head and neck cancers include several different conditions, and the symptoms and treatment approach depend on the area where the cancer begins. These cancers may affect important functions such as speaking, swallowing, breathing and eating. Identifying the exact location and type of cancer helps the healthcare team plan suitable treatment.",
 
@@ -478,7 +478,7 @@ overviewThird:
       },
     ],
     closing:
-      "At RENOVA Cancer Hospital, our aim is to support patients with clear guidance, personalised care planning and compassionate support throughout their cancer journey.",
+      "At Kaizen Oncology Cancer Hospital, our aim is to support patients with clear guidance, personalised care planning and compassionate support throughout their cancer journey.",
   },
 ];
 

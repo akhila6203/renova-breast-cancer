@@ -120,7 +120,7 @@ export default function HealthLibraryCategoryPage() {
             <div className="mb-2 flex items-center justify-center gap-2">
               <span className="h-[3px] w-8 rounded-full bg-[#E87744]" />
               <span className="text-xs font-bold uppercase tracking-[2px] text-[#4F7359]">
-                RENOVA HEALTH LIBRARY
+                Kaizen Oncology HEALTH LIBRARY
               </span>
               <span className="h-[3px] w-8 rounded-full bg-[#E87744]" />
             </div>
@@ -246,7 +246,7 @@ export default function HealthLibraryCategoryPage() {
 
             <p className="mt-4 text-base leading-8 text-[#3D4A40]">
               These are the main subjects covered in this section of the
-              RENOVA Health Library.
+              Kaizen Oncology Health Library.
             </p>
           </div>
 

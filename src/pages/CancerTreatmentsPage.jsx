@@ -100,7 +100,7 @@ export default function CancerTreatmentsPage() {
             transition={{ duration: 0.55 }}
           >
             <span className="inline-flex rounded-full bg-white px-4 py-2 text-[12px] font-extrabold tracking-[.16em] text-[#476B55] shadow-sm">
-              RENOVA CANCER CARE
+             Kaizen Oncology CANCER CARE
             </span>
 
             <h1 className="mt-5 text-4xl font-bold leading-tight text-[#263C30] sm:text-5xl lg:text-[56px]">
@@ -315,7 +315,7 @@ export default function CancerTreatmentsPage() {
 
             <p className="mt-2 text-[16px] leading-7 text-[#705B4E]">
               The therapies described are educational information. A
-              treatment should be presented as available at RENOVA only
+              treatment should be presented as available at Kaizen Oncology only
               after the hospital confirms that it is approved, staffed,
               equipped and clinically provided at the relevant location.
               Suitability must be determined by the treating specialist.

@@ -40,7 +40,7 @@ export default function HealthLibraryTabs({ initialTab = "blogs" }) {
         <div className="mb-3 flex items-center justify-center gap-2">
           <span className="h-[3px] w-8 rounded-full bg-[#E87744]" />
           <span className="text-xs font-bold uppercase tracking-[2px] text-[#4F7359]">
-            RENOVA HEALTH LIBRARY
+            Kaizen Oncology HEALTH LIBRARY
           </span>
           <span className="h-[3px] w-8 rounded-full bg-[#E87744]" />
         </div>
@@ -158,7 +158,7 @@ export default function HealthLibraryTabs({ initialTab = "blogs" }) {
 
                   <div className="p-5">
                     <span className="text-xs font-bold uppercase tracking-wider text-[#4F7359]">
-                      {video.category || "RENOVA EDUCATION"}
+                      {video.category || "Kaizen Oncology EDUCATION"}
                     </span>
 
                     <h3 className="mt-2 line-clamp-2 text-base font-bold leading-6 text-[#243528]">

@@ -386,7 +386,7 @@ export default function OurVisionMissionPage() {
             </h2>
 
             <p className="mt-6 text-base leading-8 text-[#526357] sm:text-lg">
-              At RENOVA Cancer Hospital, we believe that excellence in
+              At Kaizen Oncology Cancer Hospital, we believe that excellence in
               cancer care comes from respecting individual differences,
               valuing diverse perspectives and working together towards
               a shared goal.
@@ -421,9 +421,9 @@ export default function OurVisionMissionPage() {
         </div>
       </section>
 
-      {/* ONE RENOVA */}
+      {/* ONE Kaizen Oncology */}
       <section
-        id="one-renova"
+        id="one-Kaizen Oncology"
         className="scroll-mt-24 w-full overflow-hidden"
       >
         <div className="relative w-full overflow-hidden bg-gradient-to-br from-[#243c30] via-[#304b3c] to-[#496c54] px-5 py-16 sm:px-8 sm:py-20 lg:px-16 lg:py-24">
@@ -433,7 +433,7 @@ export default function OurVisionMissionPage() {
 
               <span className="inline-flex items-center gap-2 text-sm font-bold tracking-[0.2em] text-[#ffb38d]">
                 <Handshake size={20} />
-                ONE RENOVA
+                ONE Kaizen Oncology
               </span>
 
               <h2 className="display-font mt-5 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
@@ -510,7 +510,7 @@ export default function OurVisionMissionPage() {
             </p>
 
             <p className="mt-4 text-base leading-8 text-[#526357] sm:text-lg">
-              RENOVA's verified technology portfolio can be introduced
+              Kaizen Oncology's verified technology portfolio can be introduced
               here at a high level, with detailed information about
               available equipment and services presented in the
               Technology &amp; Equipment section under Cancer Care Services.

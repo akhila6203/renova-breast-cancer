@@ -730,7 +730,7 @@ export default function Header() {
               <div className="space-y-3 border-t border-line bg-mist px-5 py-5 text-[16px] text-ink">
 
                 <p className="font-bold text-navy">
-                  Contact RENOVA
+                  Contact Kaizen
                 </p>
 
                 <p className="flex gap-3">

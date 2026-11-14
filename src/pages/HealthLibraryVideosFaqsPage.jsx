@@ -343,7 +343,7 @@ const getVideoEmbedUrl = (video) => {
 
                       {/* <div className="mt-4 flex items-center justify-between border-t border-[#D4E0D6] pt-4">
                         <span className="text-xs font-semibold text-[#4F7359]">
-                          RENOVA Health Library
+                          Kaizen Oncology Health Library
                         </span>
 
                         <PlayCircle
@@ -369,7 +369,7 @@ const getVideoEmbedUrl = (video) => {
                 </h2>
 
                 <p className="mt-3 text-base text-[#3D4A40]">
-                  RENOVA educational videos will be available here soon.
+                  Kaizen Oncology educational videos will be available here soon.
                 </p>
               </div>
             )}
@@ -612,7 +612,7 @@ const getVideoEmbedUrl = (video) => {
 
                   <p className="max-w-md text-sm leading-7 text-white/70">
                     The video player will be available once the YouTube
-                    video ID is added to the RENOVA Health Library data.
+                    video ID is added to the Kaizen Oncology Health Library data.
                   </p>
 
                 </div>
@@ -624,7 +624,7 @@ const getVideoEmbedUrl = (video) => {
             <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
 
               <p className="text-xs font-semibold text-[#4F7359] sm:text-sm">
-                RENOVA Health Library
+                Kaizen Oncology Health Library
               </p>
 
               <button
